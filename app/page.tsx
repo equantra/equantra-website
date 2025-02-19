@@ -1,101 +1,162 @@
+import { Menu } from "lucide-react";
 import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+    <div className="flex flex-col min-h-screen bg-black">
+      {/* Navigation */}
+      <nav className="fixed w-full z-50 px-4 md:px-6 py-4">
+        <div className="container mx-auto flex justify-between items-center">
+          <div className="flex items-center">
             <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
+              src="/logo.svg"
+              alt="Equantra Logo"
+              width={120}
+              height={40}
+              className="h-8 w-auto"
             />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+          </div>
+          <div className="flex items-center gap-4">
+            <button className="px-6 py-2 rounded-full bg-white text-black font-medium hover:bg-gray-100 transition-colors">
+              Contact us
+            </button>
+            <button className="p-2 text-white md:hidden">
+              <Menu className="h-6 w-6" />
+            </button>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </nav>
+
+      {/* Hero Section */}
+      <section className="relative min-h-screen flex items-center justify-center px-4 md:px-6">
+        {/* Geometric Pattern Background */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="geometric-pattern opacity-20" />
+        </div>
+        
+        {/* Content */}
+        <div className="relative z-10 text-center space-y-6 max-w-4xl mx-auto">
+          <h1 className="text-5xl md:text-7xl font-bold text-white tracking-tight">
+            EQUANTRA
+          </h1>
+          <p className="text-xl md:text-2xl text-gray-300">
+            Lorem ipsum dolor sit ametLorem ipsum dolor sit amet
+          </p>
+          <button className="mt-8 px-8 py-3 rounded-full bg-white text-black font-medium hover:bg-gray-100 transition-colors inline-flex items-center">
+            Get in touch →
+          </button>
+        </div>
+      </section>
+
+      {/* Services Section */}
+      <section className="py-20 px-4 md:px-6 relative">
+        <div className="container mx-auto">
+          <h2 className="text-3xl font-bold text-white text-center mb-16">
+            SERVICES
+          </h2>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {services.map((service, index) => (
+              <div
+                key={index}
+                className="p-8 rounded-3xl bg-gradient-to-b from-gray-900 to-black border border-gray-800 hover:border-gray-700 transition-all"
+              >
+                <div className="mb-6">
+                  <service.icon className="h-12 w-12 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-4">{service.title}</h3>
+                <p className="text-gray-400">{service.description}</p>
+              </div>
+            ))}
+          </div>
+          
+          {/* Carousel Dots */}
+          <div className="flex justify-center gap-2 mt-8">
+            {[0, 1, 2, 3, 4].map((dot) => (
+              <button
+                key={dot}
+                className={`h-2 w-2 rounded-full ${
+                  dot === 0 ? "bg-white" : "bg-gray-600"
+                }`}
+                aria-label={`Go to slide ${dot + 1}`}
+              />
+            ))}
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
+
+const services = [
+  {
+    title: "Mobile Development",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    icon: ({ className }: { className?: string }) => (
+      <svg
+        className={className}
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M12 18h-1.5a1 1 0 0 1-1-1v-1a1 1 0 0 1 1-1H12m0 3v-3m0 3v3m0-3h1.5a1 1 0 0 0 1-1v-1a1 1 0 0 0-1-1H12m-7 2h-.5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h13a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H17"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </svg>
+    ),
+  },
+  {
+    title: "Unity Development",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    icon: ({ className }: { className?: string }) => (
+      <svg
+        className={className}
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18z"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+        <path
+          d="m14.5 9-5 6m0-6 5 6m-2.5-3h5"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </svg>
+    ),
+  },
+  {
+    title: "Game Development",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    icon: ({ className }: { className?: string }) => (
+      <svg
+        className={className}
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M6 12h4m-2-2v4m7-5 1.5-1.5m-3 1.5h4M12 4v2m0 12v2M4 12H2m20 0h-2M6.34 17.66l-1.41 1.41m12.73 0 1.41-1.41M6.34 6.34 4.93 4.93m12.73 0 1.41 1.41"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </svg>
+    ),
+  },
+];
