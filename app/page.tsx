@@ -2,7 +2,9 @@ import Image from "next/image";
 import ServicesSection from "./LandingPage/Services";
 import ParticlesComponent from "./LandingPage/ParticlesComponent";
 import Navbar from "./Navbar";
-import HeroSection from "./LandingPage/HeroSection"
+import HeroSection from "./LandingPage/HeroSection";
+import CaseStudies from "./LandingPage/CaseStudies";
+import Blog from "./LandingPage/Blog";
 
 
 
@@ -25,6 +27,10 @@ export default function Home() {
 
       
       <ServicesSection />
+
+      <CaseStudies />
+
+      <Blog />
     </div>
   );
 }

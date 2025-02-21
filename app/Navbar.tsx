@@ -24,7 +24,7 @@ const Navbar = () => {
     <nav
       onMouseEnter={() => setHovering(true)}
       onMouseLeave={() => setHovering(false)}
-      className={`sticky top-0 left-0 w-full z-10 px-4 md:px-6 py-4 transition-colors duration-300 ${
+      className={`sticky top-0 left-0 w-full z-20 px-4 md:px-6 py-4 transition-colors duration-300 ${
         isHovering || scrolling ? "bg-white backdrop-filter backdrop-blur-md bg-opacity-10" : "bg-transparent"
       }`}
     >
@@ -37,7 +37,7 @@ const Navbar = () => {
           />
         </div>
         <div className="flex items-center gap-4">
-          <button className={`px-6 py-2 rounded-full bg-black text-white font-medium hover:bg-gray-100 hover:text-black transition-colors`}>
+          <button className={`px-6 py-2 rounded-full bg-white text-black font-medium hover:bg-gray-100 hover:text-black transition-colors`}>
             Contact us
           </button>
           <button className={`p-2 text-white `}>

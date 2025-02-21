@@ -48,6 +48,11 @@ export default {
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
+      dropShadow: {
+        xl: "0px 5px 5px rgba(44, 25, 80, 0.2)", // Customize `drop-shadow-xl`
+        hover_xl: "5px 15px 5px rgba(44, 25, 80, 0.2)"
+      },
+      
     },
   },
   plugins: [],
