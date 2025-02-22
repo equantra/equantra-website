@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -97,3 +98,10 @@
   height: 100%;
   background: radial-gradient(circle at center, transparent 0%, rgba(0, 0, 0, 0.8) 100%);
 }
+
+@layer base {
+  html, body {
+    @apply overflow-x-hidden;
+  }
+}
+
