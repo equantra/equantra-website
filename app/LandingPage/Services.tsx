@@ -1,11 +1,17 @@
 import React from "react";
 import { TabletSmartphone, Computer, Gamepad2, LayoutTemplate } from 'lucide-react'
+import Image from "next/image";
 
 const ServicesSection: React.FC = () => {
   return (
     <section className=" bg-white relative space-y-10 pb-20">
       <div className="relative inline-block flex items-center justify-center">
-        <img src="./other/headingContainer.svg" />
+        <Image 
+          src="/other/headingContainer.svg" 
+          alt="Services heading container"
+          width={300}
+          height={100}
+        />
         {/* <h2 className="text-center top-1/2 left-1/2 -translate-x-1/3 -translate-y-1/2 text-white text-3xl font-bold text-white">
           Services
         </h2> */}

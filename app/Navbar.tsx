@@ -2,6 +2,7 @@
 
 import { Menu } from "lucide-react";
 import { useState, useEffect } from "react";
+import Image from "next/image";
 
 const Navbar = () => {
   const [isHovering, setHovering] = useState(false);
@@ -30,10 +31,13 @@ const Navbar = () => {
     >
       <div className="mx-auto flex justify-between items-center px-20">
         <div className="flex items-center">
-          <img
+          <Image
             src="/logo-full.svg"
             alt="Equantra Logo"
+            width={150}
+            height={48}
             className="h-12 w-auto"
+            priority
           />
         </div>
         <div className="flex items-center gap-4">
