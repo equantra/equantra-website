@@ -6,12 +6,7 @@ const ServicesSection: React.FC = () => {
   return (
     <section className=" bg-white relative space-y-10 pb-20">
       <div className="relative inline-block flex items-center justify-center">
-        <Image 
-          src="/other/headingContainer.svg" 
-          alt="Services heading container"
-          width={300}
-          height={100}
-        />
+      <img src="./other/headingContainer.svg" />
         <div className="w-full h-full top-0 left-0 absolute flex justify-center items-center">
           <h2 className="text-white text-3xl">Services</h2>
         </div>
