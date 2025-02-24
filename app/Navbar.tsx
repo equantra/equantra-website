@@ -29,7 +29,7 @@ const Navbar = () => {
         isHovering || scrolling ? "bg-white backdrop-filter backdrop-blur-md bg-opacity-10" : "bg-transparent"
       }`}
     >
-      <div className="mx-auto flex justify-between items-center px-20">
+      <div className="mx-auto flex justify-between items-center px-4 md:px-20">
         <div className="flex items-center">
           <Image
             src="/logo-full.svg"
@@ -41,7 +41,7 @@ const Navbar = () => {
           />
         </div>
         <div className="flex items-center gap-4">
-          <button className={`px-6 py-2 rounded-full bg-white text-black font-medium hover:bg-gray-100 hover:text-black transition-colors`}>
+          <button className={`invisible px-6 py-2 rounded-full bg-white text-black font-medium hover:bg-gray-100 hover:text-black transition-colors md:visible`}>
             Contact us
           </button>
           <button className={`p-2 text-white `}>

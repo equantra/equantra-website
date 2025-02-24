@@ -8,13 +8,13 @@ const ServicesSection: React.FC = () => {
       <div className="relative inline-block flex items-center justify-center">
       <img src="./other/headingContainer.svg" />
         <div className="w-full h-full top-0 left-0 absolute flex justify-center items-center">
-          <h2 className="text-white text-3xl">Services</h2>
+          <h2 className="text-white text-xl  md:text-3xl">Services</h2>
         </div>
       </div>
       <div className="container mx-auto w-full flex justify-center">
         
         <div className="w-full m-20">
-        <div className="grid grid-cols-1 md:grid-cols-4 sm:grid-cols-2 xs:grid-cols-1 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 sm:grid-cols-2 gap-8">
           {services.map((service, index) => (
             <div
               key={index}

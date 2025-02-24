@@ -19,11 +19,11 @@ const CaseStudies = () => {
       <div className="relative flex items-center justify-center">
         <img className="invert" src="./other/headingContainer.svg" />
         <div className="absolute top-0 left-0 w-full h-full flex justify-center items-center">
-          <h2 className="text-black text-3xl">Case Studies</h2>
+          <h2 className="text-black text-xl  md:text-3xl">Case Studies</h2>
         </div>
       </div>
 
-      <div className="relative w-full flex justify-center my-10 h-full min-h-[500px]">
+      <div className="relative w-full flex justify-center my-10 h-full min-h-500px md:min-h-[500px]">
         <Swiper
           modules={[Navigation]}
           slidesPerView="5"
@@ -63,25 +63,25 @@ const CaseStudies = () => {
            
 
             return (
-              <SwiperSlide key={index} className="overflow-visible min-w-[200px] cursor-pointer select-none">
+              <SwiperSlide key={index} className="overflow-visible min-w-[100px] md:min-w-[200px] cursor-pointer select-none">
                 <div
                   className="relative bg-black text-white p-4 rounded-2xl transition-transform duration-300 hover:p-2"
                   style={{ transform: `skewY(${skewY}deg) translateY(${translateY}px)` }} 
                 >
                   <img src={item.imageSrc} className="w-full h-full object-cover grayscale hover:grayscale-0" alt="" />
                   <div className="absolute bottom-0 left-0 w-full bg-black bg-opacity-50 text-white p-8 hover:p-4">
-                    <h2 className="text-md">{item.title}</h2>
-                    <p className="text-xs">{item.description}</p>
+                    <h2 className="text-sm md:text-md">{item.title}</h2>
+                    <p className="hidden md:text-xs">{item.description}</p>
                   </div>
                 </div>
               </SwiperSlide>
             );
           })}
         </Swiper>
-        <div className="z-10 absolute bottom-2 left-[44%] flex items-center justify-center">
+        <div className="z-10 absolute bottom-0  md:bottom-2 left-[44%] flex items-center justify-center">
           <div className="flex space-x-8 text-white">
-            <CircleChevronLeft onClick={() => swiperRef.current?.slidePrev()} className="cursor-pointer" size={48}/>
-            <CircleChevronRight onClick={() => swiperRef.current?.slideNext()} className="cursor-pointer" size={48} />
+            <CircleChevronLeft onClick={() => swiperRef.current?.slidePrev()} className="cursor-pointer w-10 h-10 md:w-16 md:h-16" />
+            <CircleChevronRight onClick={() => swiperRef.current?.slideNext()} className="cursor-pointer w-10 h-10 md:w-16 md:h-16" />
           </div>
         </div>
       </div>

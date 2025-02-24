@@ -4,6 +4,9 @@ import Navbar from "./Navbar";
 import HeroSection from "./LandingPage/HeroSection";
 import CaseStudies from "./LandingPage/CaseStudies";
 import Blog from "./LandingPage/Blog";
+import Clients from "./LandingPage/Clients";
+import Contact from "./LandingPage/Contact";
+import Footer from "./LandingPage/Footer";
 
 export default function Home() {
   return (
@@ -24,6 +27,12 @@ export default function Home() {
       <CaseStudies />
 
       <Blog />
+
+      <Clients />
+
+      <Contact />
+
+      <Footer />
     </div>
   );
 }
