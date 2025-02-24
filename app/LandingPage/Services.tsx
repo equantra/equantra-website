@@ -12,9 +12,6 @@ const ServicesSection: React.FC = () => {
           width={300}
           height={100}
         />
-        {/* <h2 className="text-center top-1/2 left-1/2 -translate-x-1/3 -translate-y-1/2 text-white text-3xl font-bold text-white">
-          Services
-        </h2> */}
         <div className="w-full h-full top-0 left-0 absolute flex justify-center items-center">
           <h2 className="text-white text-3xl">Services</h2>
         </div>
