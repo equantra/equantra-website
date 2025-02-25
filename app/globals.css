@@ -105,3 +105,15 @@
   }
 }
 
+.swiper-button-next,
+.swiper-button-prev {
+  display: none !important;
+}
+
+
+/* .cutout-section {
+  -webkit-mask-image: linear-gradient(to right, transparent 40%, black 41%);
+  mask-image: linear-gradient(to right, transparent 40%, black 41%);
+} */
+
+
