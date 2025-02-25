@@ -3,10 +3,10 @@ import React from 'react'
 const Blog = () => {
   return(
     <React.Fragment>
-      <section className='z-10 bg-white w-full min-h-screen flex flex-col'>
+      <section className='z-10 bg-white w-full pb-14 md:pb-24 flex flex-col'>
         <div className="relative inline-block flex items-center justify-center select-none w-full">
           <img className="w-full" src="./other/headingContainerLeft.svg" />
-          <div className="w-full h-full top-0 left-0 absolute flex justify-start items-center ml-20 sm:ml-32 md:ml-36 lg:ml-64">
+          <div className="w-full h-full top-0 left-0 absolute flex justify-start items-center ml-16 sm:ml-32 md:ml-36 lg:ml-64">
             <h2 className="text-white text-xl md:text-3xl">Blog</h2>
           </div>
         </div>

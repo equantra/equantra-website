@@ -54,7 +54,7 @@ const CaseStudies = () => {
           breakpoints={{
             240: {slidesPerView: 2},
             640: { slidesPerView: 3 }, // From sm (640px) onwards, show 3 slides
-            768: { slidesPerView: 4 }, // From md (768px) onwards, show 4 slides
+            768: { slidesPerView: 5 }, // From md (768px) onwards, show 4 slides
             1024: { slidesPerView: 5 }, // From lg (1024px) onwards, show 5 slides
           }}
           onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
@@ -100,7 +100,7 @@ const CaseStudies = () => {
             );
           })}
         </Swiper>
-        <div className="z-10 absolute bottom-0  md:bottom-20 left-[44%] flex items-center justify-center">
+        <div className="z-10 absolute bottom-0  md:bottom-20 left-[36%] md:left-[44%] flex items-center justify-center">
           <div className="flex space-x-8 text-white">
             <CircleChevronLeft onClick={() => swiperRef.current?.slidePrev()} className="cursor-pointer w-10 h-10 md:w-16 md:h-16" />
             <CircleChevronRight onClick={() => swiperRef.current?.slideNext()} className="cursor-pointer w-10 h-10 md:w-16 md:h-16" />

@@ -24,7 +24,7 @@ const Clients = () => {
       <section className="overflow-hidden">
       <div className="relative flex items-center justify-center select-none w-full">
           <img className="invert w-full" src="./other/headingContainerLeft.svg" />
-          <div className="w-full h-full top-0 left-0 absolute flex justify-start items-center ml-20 sm:ml-32 md:ml-36 lg:ml-64">
+          <div className="w-full h-full top-0 left-0 absolute flex justify-start items-center ml-16 sm:ml-32 md:ml-36 lg:ml-64">
             <h2 className="text-black text-xl md:text-3xl">Clients</h2>
           </div>
         </div>
