@@ -1,13 +1,25 @@
 "use client"
 
-import React, {useRef} from "react";
+import React, {useRef, useState, useEffect} from "react";
 import { TabletSmartphone, Computer, Gamepad2, LayoutTemplate } from 'lucide-react'
 
-import { motion, useInView } from "framer-motion";
+
+import { motion } from "framer-motion";
 
 const ServicesSection: React.FC = () => {
   const ref = useRef(null);
-  const isInView = useInView(ref, {once:true, margin: "-20px"})
+   const [isInView, setIsInView] = useState(false);
+  
+    useEffect(() => {
+      const observer = new IntersectionObserver(
+        ([entry]) => setIsInView(entry.isIntersecting),
+        { rootMargin: "-50px", threshold: 0.1 }
+      );
+  
+      if (ref.current) observer.observe(ref.current);
+      return () => observer.disconnect();
+    }, []);
+  
   return (
     <section id="services" className=" bg-white relative space-y-10 pb-20">
       <div className="relative inline-block flex items-center justify-center">

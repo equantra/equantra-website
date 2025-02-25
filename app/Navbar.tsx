@@ -66,13 +66,13 @@ const Navbar = () => {
       <div className={`z-40 absolute top-20 right-10 md:right-24 bg-gray-900 rounded-lg drop-shadow-lg stroke-white ${menuOpen ? "visible" : "invisible"}`}>
         <div className="flex flex-col">
         <ul className="flex flex-col items-center py-2">
-          <li><a onClick={() => handleScroll("home")} className="block text-white px-8 py-2 hover:bg-gray-700 cursor-pointer">Home</a></li>
-          <li><a onClick={() => handleScroll("services")} className="block text-white px-8 py-2 hover:bg-gray-700 cursor-pointer">Services</a></li>
-          <li><a onClick={() => handleScroll("case-studies")} className="block text-white px-8 py-2 hover:bg-gray-700 cursor-pointer">Case Studies</a></li>
-          <li><a href="#" className="block text-white px-8 py-2 hover:bg-gray-700 cursor-pointer">Team</a></li>
+          <li><span onClick={() => handleScroll("home")} className="block text-white px-8 py-2 hover:bg-gray-700 cursor-pointer">Home</span></li>
+          <li><span onClick={() => handleScroll("services")} className="block text-white px-8 py-2 hover:bg-gray-700 cursor-pointer">Services</span></li>
+          <li><span onClick={() => handleScroll("case-studies")} className="block text-white px-8 py-2 hover:bg-gray-700 cursor-pointer">Case Studies</span></li>
+          <li><span className="block text-white px-8 py-2 hover:bg-gray-700 cursor-pointer">Team</span></li>
           {menuOpen && (
             <li className="md:hidden">
-              <a onClick={() => handleScroll("contact")} className="block text-white px-8 py-2 hover:bg-gray-700 cursor-pointer">Contact</a>
+              <span onClick={() => handleScroll("contact")} className="block text-white px-8 py-2 hover:bg-gray-700 cursor-pointer">Contact</span>
             </li>
           )}
         </ul>

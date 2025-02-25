@@ -1,3 +1,5 @@
+"use client"
+
 import React from "react";
 
 const Contact = () => {
@@ -27,16 +29,26 @@ const Contact = () => {
       <div className="w-full md:w-1/2 bg-white p-10 drop-shadow-xl  md:rounded-r-lg flex flex-col justify-center items-center">
         <h3 className="text-black text-xl font-bold">Get in touch</h3>
         <div className="space-y-8 w-full px-8">
-        <input type="text" placeholder="Your name" className="w-full p-2 mt-2 border-b border-gray-500 outline-none focus:border-black transition" />
-        <input type="email" placeholder="Your email ID" className="w-full p-2 mt-2 border-b border-gray-500 outline-none focus:border-black transition" />
+        <input suppressHydrationWarning type="text" placeholder="Your name" className="w-full p-2 mt-2 border-b border-gray-500 outline-none focus:border-black transition" />
+        <input suppressHydrationWarning type="email" placeholder="Your email ID" className="w-full p-2 mt-2 border-b border-gray-500 outline-none focus:border-black transition" />
         <div className="flex space-x-2">
-          <input type="text" placeholder="+91" className="w-1/6 p-2 border-b border-gray-500 outline-none focus:border-black transition text-center" />
-          <input type="text" placeholder="Phone no" className="w-5/6 p-2 border-b border-gray-500 outline-none focus:border-black transition" />
+          <input suppressHydrationWarning type="text" placeholder="+91" className="w-1/6 p-2 border-b border-gray-500 outline-none focus:border-black transition text-center" />
+          <input suppressHydrationWarning type="text" placeholder="Phone no" className="w-5/6 p-2 border-b border-gray-500 outline-none focus:border-black transition" />
         </div>
        
-        <textarea placeholder="How can we help?" className="w-full p-2 mt-2 border border-gray-500 focus:border-gray-800 transition rounded-lg"></textarea>
-        <button className="w-full bg-[#4C02E0] text-white px-8 py-2 mt-4 rounded-full ">Submit</button>
+        <textarea
+        suppressHydrationWarning
+        defaultValue=""
+        placeholder="How can we help?"
+        className="w-full p-2 mt-2 border border-gray-500 focus:border-gray-800 transition rounded-lg"
+        ></textarea>
 
+      {/* FIXED: Wrapped button in a div for spacing */}
+        <div className="mt-4">
+          <button suppressHydrationWarning className="w-full bg-[#4C02E0] text-white px-8 py-2 rounded-full">
+            <span>Submit</span>
+          </button>
+        </div>
         </div>
         
       </div>

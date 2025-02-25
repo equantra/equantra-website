@@ -1,12 +1,24 @@
 "use client"
-import React, {useRef} from "react"
+
+import React, {useRef, useEffect, useState} from "react"
 import {CircleUser} from "lucide-react";
 
-import { motion, useInView } from "framer-motion";
+import { motion } from "framer-motion";
 
 const Clients = () => {
   const ref = useRef(null);
-  const isInView = useInView(ref, {once:true, margin: "-10px"})
+   const [isInView, setIsInView] = useState(false);
+  
+    useEffect(() => {
+      const observer = new IntersectionObserver(
+        ([entry]) => setIsInView(entry.isIntersecting),
+        { rootMargin: "-50px", threshold: 0.1 } // Adjust threshold as needed
+      );
+  
+      if (ref.current) observer.observe(ref.current);
+      return () => observer.disconnect();
+    }, []);
+  
   return(
    <React.Fragment>
       <section className="overflow-hidden">
@@ -27,17 +39,16 @@ const Clients = () => {
                 </mask>
               </defs>
               <foreignObject width="100%" height="100%" mask="url(#imageMask)">
-                <div className="w-full h-full">
+                <span className="w-full h-full">
                   <img
                     src="./other/sampleImg.png"
                     className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
                     alt="Masked Image"
                   />
-                </div>
+                </span>
               </foreignObject>
             </svg>
           </div>
-
 
           <motion.div
             initial={{ opacity: 0, y: 40 }}

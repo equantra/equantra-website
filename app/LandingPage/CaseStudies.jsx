@@ -1,22 +1,30 @@
 "use client";
 
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation } from "swiper/modules";
 import { CircleChevronLeft, CircleChevronRight } from "lucide-react";
 
-import { motion, useInView } from "framer-motion";
+import { motion } from "framer-motion";
 
 
 const CaseStudies = () => {
   const ref = useRef(null);
-  const isInView = useInView(ref, {once:true, margin: "-10px"})
+ const [isInView, setIsInView] = useState(false);
   const [activeIndex, setActiveIndex] = useState(2);
   const swiperRef = useRef(null);
 
-  console.log("Swiper ref is: ", swiperRef);
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => setIsInView(entry.isIntersecting),
+      { rootMargin: "-50px", threshold: 0.1 } // Adjust threshold as needed
+    );
+
+    if (ref.current) observer.observe(ref.current);
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <div id="case-studies">

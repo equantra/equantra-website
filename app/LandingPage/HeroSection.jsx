@@ -1,6 +1,6 @@
 "use client"
 
-import React, {useRef} from "react"
+import React, {useRef, useState, useEffect} from "react"
 
 import { Montserrat } from "next/font/google";
 
@@ -14,7 +14,17 @@ const montserrat = Montserrat({
 
 const HeroSection = () => {
   const ref = useRef(null);
-  const isInView = useInView(ref, {once:true, margin: "-50px"})
+  const [isInView, setIsInView] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => setIsInView(entry.isIntersecting),
+      { rootMargin: "-50px", threshold: 0.1 } // Adjust threshold as needed
+    );
+
+    if (ref.current) observer.observe(ref.current);
+    return () => observer.disconnect();
+  }, []);
 
   const handleScroll = (id) => {
     const section = document.getElementById(id);
@@ -66,10 +76,11 @@ const HeroSection = () => {
       </section>
       <div ref={ref} className="z-4 relative w-2/3 flex flex-col items-center justify-center my-24 md:my-40 mx-auto">
           <motion.img className="size-1/2 mb-6" src="./other/illustration.svg"
-            initial={{ opacity: 0, y: 20, scale: 0.95 }}
-            animate={isInView ? { opacity: 1, y: 0, scale: 1 } : {}}
-            transition={{ duration: 1, ease: "easeOut" }}
-            whileHover={{ x: [0, -10, 10, 0], y: [0, -10, 10, 0] }}
+          initial={{ opacity: 0, y: 20, scale: 0.95 }}
+          animate={isInView ? { opacity: 1, y: 0, scale: 1 } : {}}
+          transition={{ duration: 1, ease: "easeOut" }}
+          whileHover={{ x: [0, -10, 10, 0], y: [0, -10, 10, 0] }}
+
           ></motion.img>
           <p className="text-md sm:text-lg md:text-2xl text-gray-300">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
