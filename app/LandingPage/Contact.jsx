@@ -28,7 +28,7 @@ const Contact = () => {
 
       <div className="w-full md:w-1/2 bg-white p-10 drop-shadow-xl  md:rounded-r-lg flex flex-col justify-center items-center">
         <h3 className="text-black text-xl font-bold">Get in touch</h3>
-        <form className="space-y-8 w-full px-8" netlify="true">
+        <form className="space-y-8 w-full px-8">
           <input 
             suppressHydrationWarning 
             type="text" 
