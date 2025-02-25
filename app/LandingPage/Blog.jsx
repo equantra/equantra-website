@@ -3,7 +3,7 @@ import React from 'react'
 const Blog = () => {
   return(
     <React.Fragment>
-      <section className='z-10 bg-white w-full min-h-screen flex flex-col'>
+      <section className='z-10 bg-white w-full pb-10 flex flex-col'>
         <div className="relative inline-block flex items-center justify-center select-none w-full">
           <img className="w-full" src="./other/headingContainerLeft.svg" />
           <div className="w-full h-full top-0 left-0 absolute flex justify-start items-center ml-20 sm:ml-32 md:ml-36 lg:ml-64">
@@ -34,21 +34,21 @@ const Blog = () => {
 
 const blogs =  [
   {
-    title: "Lorem ipsum dolor sit",
+    title: "The Future of Mobile App Development",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "Explore emerging trends in mobile development, from cross-platform frameworks to AI integration. Learn how these innovations are shaping the next generation of mobile applications.",
     imageSource: "./other/blogSampleImg.png"
   },
   {
-    title: "Lorem ipsum dolor sit",
+    title: "Blockchain Technology in Enterprise",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "Discover how businesses are leveraging blockchain beyond cryptocurrencies. From supply chain management to secure data sharing, blockchain is transforming enterprise operations.",
     imageSource: "./other/blogSampleImg.png"
   },
   {
-    title: "Lorem ipsum dolor sit",
+    title: "UI/UX Design Best Practices",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "Master the fundamentals of creating intuitive user experiences. We cover essential principles of modern interface design, accessibility considerations, and user-centric development.",
     imageSource: "./other/blogSampleImg.png"
   },
 

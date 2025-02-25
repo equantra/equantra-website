@@ -113,12 +113,7 @@ const CaseStudies = () => {
 };
 
 const CaseStudiesItems = [
-  {
-    title: "Big Data Development",
-    description:
-      "Leveraging advanced analytics and machine learning to transform massive datasets into actionable insights. Our big data solutions help businesses make data-driven decisions and uncover hidden opportunities.",
-    imageSrc: './other/CSImage.png'
-  },
+  
   {
     title: "Mobile Apps Development", 
     description:
@@ -144,9 +139,27 @@ const CaseStudiesItems = [
     imageSrc: './other/CSImage.png'
   },
   {
+    title: "Big Data Development",
+    description:
+      "Leveraging advanced analytics and machine learning to transform massive datasets into actionable insights. Our big data solutions help businesses make data-driven decisions and uncover hidden opportunities.",
+    imageSrc: './other/CSImage.png'
+  },
+  {
     title: "Software Development",
     description:
       "Delivering custom software solutions that solve complex business challenges. Our expertise spans enterprise applications, cloud services, and specialized tools built with modern technologies.",
+    imageSrc: './other/CSImage.png'
+  },
+  {
+    title: "UI/UX Development",
+    description:
+        "Creating intuitive and user-centric digital experiences through thoughtful interface design and interaction flows. We focus on user research, wireframing, and prototyping to deliver seamless and engaging user experiences.",
+    imageSrc: './other/CSImage.png'
+  },
+  {
+    title: "Logo/Website Design",
+    description:
+      "Crafting distinctive brand identities and visually stunning websites that leave lasting impressions. Our design team combines creativity with strategic thinking to create memorable logos and compelling website designs that elevate your brand.",
     imageSrc: './other/CSImage.png'
   },
 ];

@@ -75,7 +75,7 @@ const HeroSection = () => {
       </div>
       </section>
       <div ref={ref} className="z-4 relative w-2/3 flex flex-col items-center justify-center my-24 md:my-40 mx-auto">
-          <motion.img className="size-1/2 mb-6" src="./other/illustration.svg"
+          <motion.img className="size-1/2 mb-6" src="./other/illustration.png"
           initial={{ opacity: 0, y: 20, scale: 0.95 }}
           animate={isInView ? { opacity: 1, y: 0, scale: 1 } : {}}
           transition={{ duration: 1, ease: "easeOut" }}
