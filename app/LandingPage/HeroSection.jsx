@@ -45,7 +45,7 @@ const HeroSection = () => {
             EQUANTRA
           </h1>
           <p className="text-sm lg:text-2xl md:text-2xl text-gray-300">
-            Lorem ipsum dolor sit ametLorem ipsum dolor sit amet
+            Crafting the Future, One Solution at a Time.
           </p>
           <button 
           onClick={() => handleScroll("contact")}
@@ -83,7 +83,7 @@ const HeroSection = () => {
 
           ></motion.img>
           <p className="text-md sm:text-lg md:text-2xl text-gray-300">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          Equantra is a premier technology services company dedicated to delivering innovative digital solutions that drive business growth and transformation. We combine technical expertise with creative problem-solving to deliver solutions that exceed client expectations.
           </p>
       </div>
     </React.Fragment>

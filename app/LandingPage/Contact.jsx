@@ -7,8 +7,8 @@ const Contact = () => {
   return(
     <React.Fragment>
   <section id="contact" className="bg-white z-10 relative">
-    <div className="relative inline-block flex items-center justify-center select-none">
-      <img src="./other/headingContainerLeft.svg" />
+    <div className="relative inline-block flex items-center justify-center select-none w-full">
+      <img className="w-full"   src="./other/headingContainerLeft.svg" />
       <div className="w-full h-full top-0 left-0 absolute flex justify-start items-center ml-16 sm:ml-24 md:ml-32 lg:ml-52">
         <h2 className="text-white text-xl md:text-3xl">Contact us</h2>
       </div>

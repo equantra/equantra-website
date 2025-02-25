@@ -31,7 +31,7 @@ const Footer = () => {
               </div>
             </div>
           </div>
-          <p className="text-white text-lg font-light mt-6">Copyright content text lorem ipsum</p>
+          <p className="text-white text-lg font-light mt-6">Copyright © {new Date().getFullYear()} Equantra. All rights reserved.</p>
         </div>
       </footer>
       

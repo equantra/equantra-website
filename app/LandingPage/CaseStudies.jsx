@@ -28,8 +28,8 @@ const CaseStudies = () => {
 
   return (
     <div id="case-studies">
-      <div className="relative flex items-center justify-center">
-        <img className="invert" src="./other/headingContainer.svg" />
+      <div className="relative flex items-center justify-center w-full">
+        <img className="invert w-full" src="./other/headingContainer.svg" />
         <div className="absolute top-0 left-0 w-full h-full flex justify-center items-center">
           <h2 className="text-black text-xl  md:text-3xl">Case Studies</h2>
         </div>
@@ -114,45 +114,39 @@ const CaseStudies = () => {
 
 const CaseStudiesItems = [
   {
-    title: "Mobile Development",
+    title: "Big Data Development",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "Leveraging advanced analytics and machine learning to transform massive datasets into actionable insights. Our big data solutions help businesses make data-driven decisions and uncover hidden opportunities.",
     imageSrc: './other/CSImage.png'
   },
   {
-    title: "Mobile Development",
+    title: "Mobile Apps Development", 
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "Creating intuitive and performant mobile applications that deliver exceptional user experiences. We specialize in native and cross-platform development using cutting-edge technologies.",
     imageSrc: './other/CSImage.png'
   },
   {
-    title: "Mobile Development",
+    title: "Blockchain Development",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    imageSrc: './other/CSImage.png'
-  },
-  {
-    title: "some Development",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "Building secure and scalable blockchain solutions that revolutionize business processes. From smart contracts to decentralized applications, we help organizations embrace blockchain innovation.",
     imageSrc: './other/CSImage.png'
   },
   {
     title: "Web Development",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "Developing modern, responsive web applications that engage users and drive results. Our web solutions combine beautiful design with robust functionality to create compelling online experiences.",
     imageSrc: './other/CSImage.png'
   },
   {
     title: "Game Development",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "Creating immersive gaming experiences across multiple platforms. We blend creative storytelling with technical excellence to develop engaging games that captivate and entertain.",
     imageSrc: './other/CSImage.png'
   },
   {
     title: "Software Development",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "Delivering custom software solutions that solve complex business challenges. Our expertise spans enterprise applications, cloud services, and specialized tools built with modern technologies.",
     imageSrc: './other/CSImage.png'
   },
 ];

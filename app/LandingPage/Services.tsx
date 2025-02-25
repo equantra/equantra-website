@@ -22,8 +22,8 @@ const ServicesSection: React.FC = () => {
   
   return (
     <section id="services" className=" bg-white relative space-y-10 pb-20">
-      <div className="relative inline-block flex items-center justify-center">
-      <img src="./other/headingContainer.svg" />
+      <div className="relative inline-block flex items-center justify-center w-full">
+      <img className="w-full" src="./other/headingContainer.svg" />
         <div className="w-full h-full top-0 left-0 absolute flex justify-center items-center">
           <h2 className="text-white text-xl  md:text-3xl">Services</h2>
         </div>
@@ -71,25 +71,25 @@ const services: Service[] = [
   {
     title: "Mobile Development",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "We build fast, responsive mobile apps using React Native and Flutter. Our services include custom app development, cross-platform solutions, UI/UX design, app maintenance, and performance optimization.",
     icon: TabletSmartphone
   },
   {
     title: "Web Development",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "We create powerful, scalable, and user-friendly web applications that help businesses establish a strong online presence. Our services include custom web apps, e-commerce solutions, progressive web apps, content management systems, and API development.",
     icon: Computer
   },
   {
-    title: "Game Development",
+    title: "Blockchain Development",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "We're at the forefront of blockchain technology, helping businesses leverage its potential for enhanced security, transparency, and efficiency. Our services include smart contracts, DApp development, tokenization solutions, and private blockchain networks.",
     icon: Gamepad2
   },
   {
-    title: "Software Development",
+    title: "Desktop Development",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "Our desktop application development services deliver powerful, responsive, and user-friendly software solutions that enhance productivity and streamline operations, including cross-platform applications, enterprise solutions, and database applications.",
     icon: LayoutTemplate
   },
 ];
