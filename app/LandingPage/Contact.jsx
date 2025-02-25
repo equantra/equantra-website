@@ -4,18 +4,18 @@ const Contact = () => {
 
   return(
     <React.Fragment>
-  <section className="bg-white z-10 relative">
-  <div className="relative inline-block flex items-center justify-center select-none">
-          <img src="./other/headingContainerLeft.svg" />
-          <div className="w-full h-full top-0 left-0 absolute flex justify-start items-center ml-20 sm:ml-32 md:ml-48 md:ml-64">
-            <h2 className="text-white text-3xl">Contact us</h2>
-          </div>
-        </div>
+  <section id="contact" className="bg-white z-10 relative">
+    <div className="relative inline-block flex items-center justify-center select-none">
+      <img src="./other/headingContainerLeft.svg" />
+      <div className="w-full h-full top-0 left-0 absolute flex justify-start items-center ml-16 sm:ml-24 md:ml-32 lg:ml-52">
+        <h2 className="text-white text-xl md:text-3xl">Contact us</h2>
+      </div>
+    </div>
   <div className="w-full relative flex  justify-center items-center my-20">
     <div className="flex w-full md:w-4/5 xs:items-center flex-col md:flex-row justify-center">
-      <div className="w-full md:w-1/2 bg-black text-white p-10 flex justify-center items-center rounded-t-lg md:rounded-l-lg">
+      <div className="w-full md:w-1/2 bg-white md:bg-black text-black md:text-white p-10 flex justify-center items-center md:rounded-l-lg">
 
-        <h2 className="text-center text-3xl">
+        <h2 className="text-center text-xl  md:text-3xl">
           Got ideas? <br />
           <br></br>
           We’ve got the skills. <br />
@@ -24,7 +24,7 @@ const Contact = () => {
         </h2>
       </div>
 
-      <div className="w-full md:w-1/2 bg-white p-10 drop-shadow-xl rounded-r-lg flex flex-col justify-center items-center">
+      <div className="w-full md:w-1/2 bg-white p-10 drop-shadow-xl  md:rounded-r-lg flex flex-col justify-center items-center">
         <h3 className="text-black text-xl font-bold">Get in touch</h3>
         <div className="space-y-8 w-full px-8">
         <input type="text" placeholder="Your name" className="w-full p-2 mt-2 border-b border-gray-500 outline-none focus:border-black transition" />

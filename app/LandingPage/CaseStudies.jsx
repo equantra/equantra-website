@@ -7,15 +7,19 @@ import "swiper/css/navigation";
 import { Navigation } from "swiper/modules";
 import { CircleChevronLeft, CircleChevronRight } from "lucide-react";
 
+import { motion, useInView } from "framer-motion";
+
 
 const CaseStudies = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, {once:true, margin: "-10px"})
   const [activeIndex, setActiveIndex] = useState(2);
   const swiperRef = useRef(null);
 
   console.log("Swiper ref is: ", swiperRef);
 
   return (
-    <div>
+    <div id="case-studies">
       <div className="relative flex items-center justify-center">
         <img className="invert" src="./other/headingContainer.svg" />
         <div className="absolute top-0 left-0 w-full h-full flex justify-center items-center">
@@ -23,10 +27,15 @@ const CaseStudies = () => {
         </div>
       </div>
 
-      <div className="relative w-full flex justify-center my-10 h-full min-h-500px md:min-h-[500px]">
+      <motion.div 
+      ref={ref}
+      initial={{ opacity: 0, y: 40 }}
+      animate={isInView ? { opacity: 1, y: 0 } : {}}
+      transition={{ duration: 0.8 }}
+      className="relative w-full flex justify-center my-10 h-full min-h-540px md:min-h-[580px]">
         <Swiper
           modules={[Navigation]}
-          slidesPerView="5"
+          slidesPerView={3}
           spaceBetween={5}
           navigation
           centeredSlides={true}
@@ -34,7 +43,12 @@ const CaseStudies = () => {
           watchSlidesProgress={true}
           centerInsufficientSlides={true}
           initialSlide={Math.floor(CaseStudies.length / 2)}
-
+          breakpoints={{
+            240: {slidesPerView: 2},
+            640: { slidesPerView: 3 }, // From sm (640px) onwards, show 3 slides
+            768: { slidesPerView: 4 }, // From md (768px) onwards, show 4 slides
+            1024: { slidesPerView: 5 }, // From lg (1024px) onwards, show 5 slides
+          }}
           onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
           onSwiper={(swiper) => (swiperRef.current = swiper)}
         >
@@ -78,13 +92,13 @@ const CaseStudies = () => {
             );
           })}
         </Swiper>
-        <div className="z-10 absolute bottom-0  md:bottom-2 left-[44%] flex items-center justify-center">
+        <div className="z-10 absolute bottom-0  md:bottom-20 left-[44%] flex items-center justify-center">
           <div className="flex space-x-8 text-white">
             <CircleChevronLeft onClick={() => swiperRef.current?.slidePrev()} className="cursor-pointer w-10 h-10 md:w-16 md:h-16" />
             <CircleChevronRight onClick={() => swiperRef.current?.slideNext()} className="cursor-pointer w-10 h-10 md:w-16 md:h-16" />
           </div>
         </div>
-      </div>
+      </motion.div>
     
     </div>
   );

@@ -1,18 +1,23 @@
-import React from "react"
+"use client"
+import React, {useRef} from "react"
 import {CircleUser} from "lucide-react";
 
+import { motion, useInView } from "framer-motion";
+
 const Clients = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, {once:true, margin: "-10px"})
   return(
    <React.Fragment>
       <section className="overflow-hidden">
       <div className="relative flex items-center justify-center select-none">
           <img className="invert" src="./other/headingContainerLeft.svg" />
-          <div className="w-full h-full top-0 left-0 absolute flex justify-start items-center ml-20 sm:ml-32 md:ml-48 md:ml-64">
-            <h2 className="text-black text-3xl">Clients</h2>
+          <div className="w-full h-full top-0 left-0 absolute flex justify-start items-center ml-20 sm:ml-32 md:ml-36 lg:ml-64">
+            <h2 className="text-black text-xl md:text-3xl">Clients</h2>
           </div>
         </div>
 
-        <div className="relative w-full flex justify-center items-center space-x-20 pt-5">
+        <div ref={ref} className="relative w-full flex justify-center items-center space-x-20 pt-5">
           <div className="w-2/3 flex flex-col md:flex-row justify-between items-center">
           <div className="w-[32rem] h-[42rem] relative overflow-hidden">
             <svg className="absolute inset-0 w-full h-full -translate-y-54" viewBox="0 0 224 288">
@@ -34,13 +39,17 @@ const Clients = () => {
           </div>
 
 
-          <div className="grid grid-cols-4 text-white gap-10 mb-36 md: mb-0">
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.8 }}
+            className="grid grid-cols-4 text-white gap-10 mb-36 md: mb-0">
               {Array.from({length: 8}).map((item, index) => (
                 <div key={index}>
                   <CircleUser size={64} />
                 </div>
               ))}
-          </div>
+          </motion.div>
 
           </div>
 

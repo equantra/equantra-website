@@ -1,10 +1,15 @@
-import React from "react";
+"use client"
+
+import React, {useRef} from "react";
 import { TabletSmartphone, Computer, Gamepad2, LayoutTemplate } from 'lucide-react'
-import Image from "next/image";
+
+import { motion, useInView } from "framer-motion";
 
 const ServicesSection: React.FC = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, {once:true, margin: "-20px"})
   return (
-    <section className=" bg-white relative space-y-10 pb-20">
+    <section id="services" className=" bg-white relative space-y-10 pb-20">
       <div className="relative inline-block flex items-center justify-center">
       <img src="./other/headingContainer.svg" />
         <div className="w-full h-full top-0 left-0 absolute flex justify-center items-center">
@@ -13,10 +18,13 @@ const ServicesSection: React.FC = () => {
       </div>
       <div className="container mx-auto w-full flex justify-center">
         
-        <div className="w-full m-20">
+        <div ref={ref} className="w-full m-20">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 sm:grid-cols-2 gap-8">
           {services.map((service, index) => (
-            <div
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.8 }}
               key={index}
               className="p-8 drop-shadow-xl hover:drop-shadow-hover_xl cursor-pointer rounded-xl bg-white"
             >
@@ -27,7 +35,7 @@ const ServicesSection: React.FC = () => {
                   <h3 className="text-xl font-bold text-black mb-4">{service.title}</h3>
                 </div>
               <p className="text-gray-900">{service.description}</p>
-            </div>
+            </motion.div>
           ))}
         </div>
 
