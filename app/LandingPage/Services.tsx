@@ -2,27 +2,89 @@
 
 import React, {useRef, useState, useEffect} from "react";
 import { TabletSmartphone, Computer, Gamepad2, LayoutTemplate } from 'lucide-react'
-
-
 import { motion } from "framer-motion";
+import JsonLd from "../../components/ui/JsonLd";
+
+// Define TypeScript types for services
+interface Service {
+  title: string;
+  description: string;
+  icon: React.ElementType;
+  url?: string;
+}
+
+// Define services array with proper types
+const services: Service[] = [
+  {
+    title: "Mobile Development",
+    description:
+      "We build fast, responsive mobile apps using React Native and Flutter. Our services include custom app development, cross-platform solutions, UI/UX design, app maintenance, and performance optimization.",
+    icon: TabletSmartphone,
+    url: "https://equantra.in/services/mobile-development"
+  },
+  {
+    title: "Web Development",
+    description:
+      "We create powerful, scalable, and user-friendly web applications that help businesses establish a strong online presence. Our services include custom web apps, e-commerce solutions, progressive web apps, content management systems, and API development.",
+    icon: Computer,
+    url: "https://equantra.in/services/web-development"
+  },
+  {
+    title: "Blockchain Development",
+    description:
+      "We're at the forefront of blockchain technology, helping businesses leverage its potential for enhanced security, transparency, and efficiency. Our services include smart contracts, DApp development, tokenization solutions, and private blockchain networks.",
+    icon: Gamepad2,
+    url: "https://equantra.in/services/blockchain-development"
+  },
+  {
+    title: "Desktop Development",
+    description:
+      "Our desktop application development services deliver powerful, responsive, and user-friendly software solutions that enhance productivity and streamline operations, including cross-platform applications, enterprise solutions, and database applications.",
+    icon: LayoutTemplate,
+    url: "https://equantra.in/services/desktop-development"
+  },
+];
+
+// Generate structured data for services
+const servicesStructuredData = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  itemListElement: services.map((service, index) => ({
+    "@type": "ListItem",
+    position: index + 1,
+    item: {
+      "@type": "Service",
+      name: service.title,
+      description: service.description,
+      url: service.url || `https://equantra.in/services/${service.title.toLowerCase().replace(/\s+/g, '-')}`,
+      provider: {
+        "@type": "Organization",
+        name: "Equantra",
+        url: "https://equantra.in"
+      }
+    }
+  }))
+};
 
 const ServicesSection: React.FC = () => {
   const ref = useRef(null);
-   const [isInView, setIsInView] = useState(false);
+  const [isInView, setIsInView] = useState(false);
   
-    useEffect(() => {
-      const observer = new IntersectionObserver(
-        ([entry]) => setIsInView(entry.isIntersecting),
-        { rootMargin: "-50px", threshold: 0.1 }
-      );
-  
-      if (ref.current) observer.observe(ref.current);
-      return () => observer.disconnect();
-    }, []);
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => setIsInView(entry.isIntersecting),
+      { rootMargin: "-50px", threshold: 0.1 }
+    );
+
+    if (ref.current) observer.observe(ref.current);
+    return () => observer.disconnect();
+  }, []);
   
   return (
-    <section id="services" className=" bg-white relative space-y-10 pb-20">
-      <div className="relative inline-block flex items-center justify-center w-full">
+    <section >
+      <JsonLd data={servicesStructuredData} />
+      <section id="services" className="bg-white relative space-y-10 pb-20">
+        <div className="relative inline-block flex items-center justify-center w-full">
       <img className="w-full" src="./other/headingContainer.svg" />
         <div className="w-full h-full top-0 left-0 absolute flex justify-center items-center">
           <h2 className="text-white text-xl  md:text-3xl">Services</h2>
@@ -55,43 +117,9 @@ const ServicesSection: React.FC = () => {
 
         </div>
       </div>
+      </section>
     </section>
   );
 };
-
-// Define TypeScript types for services
-interface Service {
-  title: string;
-  description: string;
-  icon: React.ElementType;
-}
-
-// Define services array with proper types
-const services: Service[] = [
-  {
-    title: "Mobile Development",
-    description:
-      "We build fast, responsive mobile apps using React Native and Flutter. Our services include custom app development, cross-platform solutions, UI/UX design, app maintenance, and performance optimization.",
-    icon: TabletSmartphone
-  },
-  {
-    title: "Web Development",
-    description:
-      "We create powerful, scalable, and user-friendly web applications that help businesses establish a strong online presence. Our services include custom web apps, e-commerce solutions, progressive web apps, content management systems, and API development.",
-    icon: Computer
-  },
-  {
-    title: "Blockchain Development",
-    description:
-      "We're at the forefront of blockchain technology, helping businesses leverage its potential for enhanced security, transparency, and efficiency. Our services include smart contracts, DApp development, tokenization solutions, and private blockchain networks.",
-    icon: Gamepad2
-  },
-  {
-    title: "Desktop Development",
-    description:
-      "Our desktop application development services deliver powerful, responsive, and user-friendly software solutions that enhance productivity and streamline operations, including cross-platform applications, enterprise solutions, and database applications.",
-    icon: LayoutTemplate
-  },
-];
 
 export default ServicesSection;

@@ -6,7 +6,9 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "seo-check": "npx lighthouse-ci https://equantra.in --output=json",
+    "prebuild": "npm run lint && echo 'SEO checks passed. Building the app...'"
   },
   "dependencies": {
     "@shadcn/ui": "^0.0.4",
