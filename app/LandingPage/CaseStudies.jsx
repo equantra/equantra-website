@@ -100,7 +100,7 @@ const CaseStudies = () => {
             );
           })}
         </Swiper>
-        <div className="z-10 absolute bottom-0  md:bottom-20 left-[44%] flex items-center justify-center">
+        <div className="z-10 absolute bottom-0  md:bottom-20 left-[36%] md:left-[44%] flex items-center justify-center">
           <div className="flex space-x-8 text-white">
             <CircleChevronLeft onClick={() => swiperRef.current?.slidePrev()} className="cursor-pointer w-10 h-10 md:w-16 md:h-16" />
             <CircleChevronRight onClick={() => swiperRef.current?.slideNext()} className="cursor-pointer w-10 h-10 md:w-16 md:h-16" />

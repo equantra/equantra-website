@@ -30,7 +30,7 @@ const ServicesSection: React.FC = () => {
       </div>
       <div className="container mx-auto w-full flex justify-center">
         
-        <div ref={ref} className="w-full m-20">
+        <div ref={ref} className="w-full m-4 md:m-20">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 sm:grid-cols-2 gap-8">
           {services.map((service, index) => (
             <motion.div
