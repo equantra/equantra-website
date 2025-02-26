@@ -1,7 +1,7 @@
 "use client"
 
 import React, {useRef, useState, useEffect} from "react";
-import { TabletSmartphone, Computer, Gamepad2, LayoutTemplate } from 'lucide-react'
+import { TabletSmartphone, Computer, Gamepad2, LayoutTemplate, Palette } from 'lucide-react'
 import { motion } from "framer-motion";
 import JsonLd from "../../components/ui/JsonLd";
 
@@ -18,14 +18,14 @@ const services: Service[] = [
   {
     title: "Mobile Development",
     description:
-      "We build fast, responsive mobile apps using React Native and Flutter. Our services include custom app development, cross-platform solutions, UI/UX design, app maintenance, and performance optimization.",
+      "As an innovative mobile development company in India, we build fast, responsive mobile apps using cutting-edge technologies like React Native and Flutter. Our services include custom app development, cross-platform solutions, UI/UX design, app maintenance, and performance optimization.",
     icon: TabletSmartphone,
     url: "https://equantra.in/services/mobile-development"
   },
   {
     title: "Web Development",
     description:
-      "We create powerful, scalable, and user-friendly web applications that help businesses establish a strong online presence. Our services include custom web apps, e-commerce solutions, progressive web apps, content management systems, and API development.",
+      "Equantra is an emerging web development company in India creating powerful, scalable, and user-friendly web applications with innovative approaches. Our services include custom web apps, e-commerce solutions, progressive web apps, content management systems, and API development.",
     icon: Computer,
     url: "https://equantra.in/services/web-development"
   },
@@ -37,11 +37,11 @@ const services: Service[] = [
     url: "https://equantra.in/services/blockchain-development"
   },
   {
-    title: "Desktop Development",
+    title: "UI/UX Design",
     description:
-      "Our desktop application development services deliver powerful, responsive, and user-friendly software solutions that enhance productivity and streamline operations, including cross-platform applications, enterprise solutions, and database applications.",
+      "Equantra offers innovative UI/UX design services in India, delivering intuitive, beautiful, and functional designs using the latest design methodologies. Our services include user research, wireframing, prototyping, visual design, and usability testing.",
     icon: LayoutTemplate,
-    url: "https://equantra.in/services/desktop-development"
+    url: "https://equantra.in/services/ui-ux-design"
   },
 ];
 
@@ -60,7 +60,11 @@ const servicesStructuredData = {
       provider: {
         "@type": "Organization",
         name: "Equantra",
-        url: "https://equantra.in"
+        url: "https://equantra.in",
+        areaServed: {
+          "@type": "Country",
+          name: "India"
+        }
       }
     }
   }))
@@ -98,9 +102,9 @@ const ServicesSection: React.FC = () => {
             <motion.div
               initial={{ opacity: 0, y: 40 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 0.7, delay: index * 0.1 }}
               key={index}
-              className="p-8 drop-shadow-xl hover:drop-shadow-hover_xl cursor-pointer rounded-xl bg-white"
+              className="p-6 drop-shadow-xl hover:drop-shadow-hover_xl cursor-pointer rounded-xl bg-white"
             >
                 <div className="flex space-x-4 items-center">
                   <div className="mb-6 h-12 w-12 bg-black flex justify-center items-center rounded-md">
