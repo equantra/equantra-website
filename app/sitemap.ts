@@ -14,14 +14,21 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/services/logo-design',
     '/case-studies',
     '/blog',
+    '/blog/posts/react-native-vs-flutter',
     '/contact',
   ].map(route => ({
     url: `${baseUrl}${route}`,
     lastModified: new Date(),
-    changeFrequency: route === '' ? 'daily' : 'weekly' as 'daily' | 'weekly',
+    changeFrequency: route === '' ? 'daily' : 
+                    route.includes('/blog/') ? 'weekly' :
+                    route === '/blog' ? 'weekly' :
+                    'weekly' as 'daily' | 'weekly',
     priority: route === '' ? 1 : 
              route.startsWith('/services/') ? 0.9 : 
-             route === '/services' ? 0.9 : 0.8,
+             route === '/services' ? 0.9 :
+             route === '/blog' ? 0.9 :
+             route.includes('/blog/posts/') ? 0.8 :
+             0.8,
   }))
   
   return routes

@@ -127,7 +127,7 @@ Our commitment extends beyond launch:
 
 Ready to transform your ideas into digital reality? Contact Equantra today to discuss your project requirements and discover how our services can help your business thrive in the digital landscape.
 
-- **Email**: info@equantra.com
+- **Email**: info@equantra.in
 - **Phone**: +1 (555) 123-4567
-- **Website**: www.equantra.com
+- **Website**: www.equantra.in
 - **Address**: 123 Tech Plaza, Innovation District, San Francisco, CA 94105

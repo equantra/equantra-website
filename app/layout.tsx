@@ -33,8 +33,8 @@ const organizationData = {
   contactPoint: {
     "@type": "ContactPoint",
     telephone: "+1-123-456-7890",
-    contactType: "customer service",
-    email: "contact@equantra.com"
+    contactType: "Founder",
+    email: "rahul@equantra.in"
   }
 };
 
@@ -83,8 +83,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Equantra - Leading Technology Services Company in India",
-    description: "Equantra is a premier technology company in India offering web development, mobile app development, game development, UI/UX design, and logo design services to businesses across India and globally.",
+    title: "Equantra - Innovative Technology Services Company in India",
+    description: "Equantra is an emerging technology company in India offering cutting-edge web development, mobile app development, game development, UI/UX design, and logo design services with innovative solutions.",
     images: ["/logo-full.svg"],
     creator: "@equantra",
     site: "@equantra",
