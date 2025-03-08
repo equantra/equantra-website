@@ -9,10 +9,10 @@ export const metadata: Metadata = {
   title: "Blog | Equantra - Technology Insights and Innovations",
   description: "Explore the latest technology trends, development insights, and innovative solutions from Equantra's expert team. Stay updated with our blog on web, mobile, and game development.",
   keywords: [
-    "technology blog India", 
-    "mobile development blog", 
-    "web development insights", 
-    "React Native vs Flutter", 
+    "technology blog India",
+    "mobile development blog",
+    "web development insights",
+    "React Native vs Flutter",
     "development trends",
     "technology insights",
     "app development blog"
@@ -25,7 +25,7 @@ const blogPageStructuredData = {
   "@type": "Blog",
   "name": "Equantra Technology Blog",
   "description": "Insights and articles about web development, mobile app development, game development, and UI/UX design from Equantra's expert team.",
-  "url": "https://equantra.in/blog",
+  "url": "https://equantra.in/blogs",
   "publisher": {
     "@type": "Organization",
     "name": "Equantra",
@@ -76,10 +76,10 @@ export default function BlogPage() {
   return (
     <div className="flex flex-col min-h-screen bg-black text-white">
       <PageSeo structuredData={blogPageStructuredData} />
-      
+
       {/* Navigation */}
       <Navbar />
-      
+
       <main className="flex-grow pt-24">
         <div className="container mx-auto px-4 py-12">
           <div className="relative inline-block flex items-center justify-center w-full mb-12">
@@ -88,18 +88,18 @@ export default function BlogPage() {
               <h1 className="text-white text-3xl md:text-4xl font-bold">Equantra Blog</h1>
             </div>
           </div>
-          
+
           <p className="text-xl text-center text-gray-300 mb-16 max-w-3xl mx-auto">
             Insights and articles about web development, mobile app development, game development, and UI/UX design from our expert team.
           </p>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
             {blogPosts.map((post) => (
-              <Link href={`/blog/posts/${post.id}`} key={post.id}>
+              <Link href={`/blogs/${post.id}`} key={post.id}>
                 <div className="bg-gray-900 rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:shadow-xl hover:-translate-y-2 border border-gray-800">
                   <div className="h-48 bg-gray-800 relative">
-                    <img 
-                      src={post.imageUrl} 
+                    <img
+                      src={post.imageUrl}
                       alt={post.title}
                       className="w-full h-full object-cover opacity-90"
                     />
@@ -121,7 +121,7 @@ export default function BlogPage() {
           </div>
         </div>
       </main>
-      
+
       <Footer />
     </div>
   );

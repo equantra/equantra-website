@@ -1,18 +1,18 @@
 import React from 'react';
 import { Metadata } from 'next';
-import Navbar from '../../../Navbar';
-import Footer from '../../../LandingPage/Footer';
-import PageSeo from '../../../../components/ui/PageSeo';
+import Navbar from '../../Navbar';
+import Footer from '../../LandingPage/Footer';
+import PageSeo from '../../../components/ui/PageSeo';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: "When to Use React Native or Flutter for Mobile App Development | Equantra",
   description: "A comprehensive comparison of React Native and Flutter frameworks to help you choose the right technology for your mobile app development project based on performance, UI, development speed, and more.",
   keywords: [
-    "React Native vs Flutter", 
-    "mobile app development frameworks", 
-    "cross-platform development", 
-    "React Native India", 
+    "React Native vs Flutter",
+    "mobile app development frameworks",
+    "cross-platform development",
+    "React Native India",
     "Flutter development India",
     "mobile app performance",
     "UI development frameworks"
@@ -42,7 +42,7 @@ const blogPostStructuredData = {
   "dateModified": "2024-02-26",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://equantra.in/blog/posts/react-native-vs-flutter"
+    "@id": "https://equantra.in/blogs/posts/react-native-vs-flutter"
   }
 };
 
@@ -50,34 +50,34 @@ export default function ReactNativeVsFlutterPost() {
   return (
     <div className="flex flex-col min-h-screen bg-black text-white">
       <PageSeo structuredData={blogPostStructuredData} />
-      
+
       {/* Navigation */}
       <Navbar />
-      
+
       <main className="flex-grow pt-24">
         <article className="container mx-auto px-4 py-12 max-w-4xl">
           <div className="mb-8">
-            <Link href="/blog" className="text-white hover:text-gray-300 flex items-center">
+            <Link href="/blogs" className="text-white hover:text-gray-300 flex items-center">
               <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
               </svg>
               Back to Blog
             </Link>
           </div>
-          
+
           <div className="mb-12">
             <p className="text-gray-400 mb-2">February 26, 2024 • Mobile Development</p>
             <h1 className="text-4xl font-bold mb-8 text-white">When to Use React Native or Flutter for Mobile App Development</h1>
-            
+
             <div className="h-80 bg-gray-800 rounded-lg overflow-hidden mb-10">
-              <img 
-                src="/other/react-native-vs-flutter.jpg" 
-                alt="React Native vs Flutter comparison" 
+              <img
+                src="/other/react-native-vs-flutter.jpg"
+                alt="React Native vs Flutter comparison"
                 className="w-full h-full object-cover opacity-90"
               />
             </div>
           </div>
-          
+
           <div className="prose prose-lg prose-invert max-w-none">
             <h2 className="text-2xl font-bold text-white mt-8 mb-4">Introduction</h2>
             <p className="text-gray-300 mb-4">
@@ -86,7 +86,7 @@ export default function ReactNativeVsFlutterPost() {
             <p className="text-gray-300 mb-6">
               At Equantra, we've worked extensively with both frameworks and have developed a deep understanding of their strengths and limitations. In this article, we'll compare React Native and Flutter across several key dimensions to help you make an informed decision for your next mobile app project.
             </p>
-            
+
             <h2 className="text-2xl font-bold text-white mt-8 mb-4">React Native: Overview</h2>
             <p className="text-gray-300 mb-4">
               Developed by Facebook (now Meta), React Native is a JavaScript framework that lets you build mobile apps using React's component-based architecture. It uses a bridge to communicate with native modules, allowing JavaScript code to control native UI components.
@@ -101,7 +101,7 @@ export default function ReactNativeVsFlutterPost() {
               <li className="mb-1">Large ecosystem with npm packages</li>
               <li className="mb-1">Strong community support</li>
             </ul>
-            
+
             <h2 className="text-2xl font-bold text-white mt-8 mb-4">Flutter: Overview</h2>
             <p className="text-gray-300 mb-4">
               Created by Google, Flutter is a UI toolkit that uses the Dart programming language. Unlike React Native, Flutter doesn't rely on native components but instead uses its own rendering engine to draw UI elements.
@@ -116,7 +116,7 @@ export default function ReactNativeVsFlutterPost() {
               <li className="mb-1">Comprehensive built-in component library</li>
               <li className="mb-1">Growing community and ecosystem</li>
             </ul>
-            
+
             <h2 className="text-2xl font-bold text-white mt-8 mb-4">Performance Comparison</h2>
             <p className="text-gray-300 mb-4">
               <strong>React Native:</strong> While React Native performs well for most applications, its bridge architecture can introduce performance bottlenecks for highly complex, animation-heavy apps. The JavaScript bridge can sometimes cause jank in animations or during complex interactions.
@@ -131,7 +131,7 @@ export default function ReactNativeVsFlutterPost() {
               <li className="mb-1">Choose React Native for: Content-focused apps, business applications, or apps where extreme performance isn't critical</li>
               <li className="mb-1">Choose Flutter for: Games, animation-heavy interfaces, or apps requiring consistent 60fps performance</li>
             </ul>
-            
+
             <h2 className="text-2xl font-bold text-white mt-8 mb-4">Development Experience</h2>
             <p className="text-gray-300 mb-4">
               <strong>React Native:</strong> If your team already knows JavaScript and React, the learning curve is minimal. The hot reload feature allows for quick iteration, and the vast npm ecosystem provides solutions for most common problems.
@@ -146,7 +146,7 @@ export default function ReactNativeVsFlutterPost() {
               <li className="mb-1">Choose React Native if: Your team is already proficient in JavaScript/React, or you want to share code with a web application</li>
               <li className="mb-1">Choose Flutter if: You're starting fresh and value a more consistent, integrated development experience</li>
             </ul>
-            
+
             <h2 className="text-2xl font-bold text-white mt-8 mb-4">UI Components and Customization</h2>
             <p className="text-gray-300 mb-4">
               <strong>React Native:</strong> Uses native UI components, which means your app will automatically adopt the look and feel of each platform. This is great for apps that should feel native, but can make it challenging to create custom designs that look identical across platforms.
@@ -161,7 +161,7 @@ export default function ReactNativeVsFlutterPost() {
               <li className="mb-1">Choose React Native for: Apps that should follow platform-specific design guidelines</li>
               <li className="mb-1">Choose Flutter for: Apps with custom designs that should look identical across platforms</li>
             </ul>
-            
+
             <h2 className="text-2xl font-bold text-white mt-8 mb-4">Community and Ecosystem</h2>
             <p className="text-gray-300 mb-4">
               <strong>React Native:</strong> Has a mature ecosystem with a vast number of libraries and packages. Being older, it has more third-party solutions and a larger community of developers.
@@ -176,7 +176,7 @@ export default function ReactNativeVsFlutterPost() {
               <li className="mb-1">Choose React Native if: You need specific third-party integrations or libraries that might not be available in Flutter yet</li>
               <li className="mb-1">Choose Flutter if: You prefer relying on official, well-maintained widgets and libraries</li>
             </ul>
-            
+
             <h2 className="text-2xl font-bold text-white mt-8 mb-4">Long-term Maintenance</h2>
             <p className="text-gray-300 mb-4">
               <strong>React Native:</strong> Updates can sometimes break existing code, and the reliance on many third-party packages can lead to maintenance challenges as dependencies become outdated.
@@ -191,7 +191,7 @@ export default function ReactNativeVsFlutterPost() {
               <li className="mb-1">Choose React Native if: You have experience managing JavaScript dependencies and are comfortable with the npm ecosystem</li>
               <li className="mb-1">Choose Flutter if: You value stability and want to minimize dependency management</li>
             </ul>
-            
+
             <h2 className="text-2xl font-bold text-white mt-8 mb-4">Our Recommendation</h2>
             <p className="text-gray-300 mb-4">
               At Equantra, we use both frameworks depending on project requirements. Here's our general recommendation:
@@ -216,7 +216,7 @@ export default function ReactNativeVsFlutterPost() {
               <li className="mb-1">You value stability and want to minimize dependency management</li>
               <li className="mb-1">You're starting fresh without legacy JavaScript code</li>
             </ul>
-            
+
             <h2 className="text-2xl font-bold text-white mt-8 mb-4">Conclusion</h2>
             <p className="text-gray-300 mb-4">
               Both React Native and Flutter are excellent frameworks with their own strengths and trade-offs. The "right" choice depends on your specific project requirements, team expertise, and long-term goals.
@@ -230,7 +230,7 @@ export default function ReactNativeVsFlutterPost() {
           </div>
         </article>
       </main>
-      
+
       <Footer />
     </div>
   );
