@@ -82,7 +82,7 @@ export default function BlogPage() {
 
       <main className="flex-grow pt-24">
         <div className="container mx-auto px-4 py-12">
-          <div className="relative inline-block flex items-center justify-center w-full mb-12">
+          <div className="relative flex items-center justify-center w-full mb-12">
             <img className="w-full" src="/other/headingContainer.svg" />
             <div className="w-full h-full top-0 left-0 absolute flex justify-center items-center">
               <h1 className="text-white text-3xl md:text-4xl font-bold">Equantra Blog</h1>
