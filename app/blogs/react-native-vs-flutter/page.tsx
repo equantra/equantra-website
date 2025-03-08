@@ -2,6 +2,7 @@ import React from 'react';
 import { Metadata } from 'next';
 import Navbar from '../../Navbar';
 import Footer from '../../LandingPage/Footer';
+import Contact from '../../LandingPage/Contact';
 import PageSeo from '../../../components/ui/PageSeo';
 import Link from 'next/link';
 
@@ -231,6 +232,7 @@ export default function ReactNativeVsFlutterPost() {
         </article>
       </main>
 
+      <Contact />
       <Footer />
     </div>
   );

@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { Metadata } from 'next';
 import Navbar from '../Navbar';
 import Footer from '../LandingPage/Footer';
+import Contact from '../LandingPage/Contact';
 import PageSeo from '../../components/ui/PageSeo';
 
 export const metadata: Metadata = {
@@ -122,6 +123,7 @@ export default function BlogPage() {
         </div>
       </main>
 
+      <Contact />
       <Footer />
     </div>
   );

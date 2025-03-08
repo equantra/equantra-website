@@ -6,7 +6,7 @@ const Blog = () => {
     <React.Fragment>
       <section className='z-10 bg-white w-full pb-10 flex flex-col'>
         <div className="relative flex items-center justify-center select-none w-full">
-          <img className="w-full" src="./other/headingContainerLeft.svg" />
+          <img className="w-full" src="/other/headingContainerLeft.svg" />
           <div className="w-full h-full top-0 left-0 absolute flex justify-start items-center ml-20 sm:ml-32 md:ml-36 lg:ml-64">
             <h2 className="text-white text-xl md:text-3xl">Blog</h2>
           </div>
@@ -44,21 +44,21 @@ const blogs = [
     title: "When to Use React Native or Flutter for Mobile App Development",
     description:
       "A comprehensive comparison of React Native and Flutter frameworks to help you choose the right technology for your mobile app development project.",
-    imageSource: "./other/blogSampleImg.png",
+    imageSource: "/other/blogSampleImg.png",
     url: "/blogs/react-native-vs-flutter"
   },
   {
     title: "The Future of Mobile App Development",
     description:
       "Explore emerging trends in mobile development, from cross-platform frameworks to AI integration. Learn how these innovations are shaping the next generation of mobile applications.",
-    imageSource: "./other/blogSampleImg.png",
+    imageSource: "/other/blogSampleImg.png",
     url: "/blogs"
   },
   {
     title: "Blockchain Technology in Enterprise",
     description:
       "Discover how businesses are leveraging blockchain beyond cryptocurrencies. From supply chain management to secure data sharing, blockchain is transforming enterprise operations.",
-    imageSource: "./other/blogSampleImg.png",
+    imageSource: "/other/blogSampleImg.png",
     url: "/blogs"
   },
 ]
