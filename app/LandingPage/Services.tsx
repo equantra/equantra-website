@@ -1,6 +1,6 @@
 "use client"
 
-import React, {useRef, useState, useEffect} from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { TabletSmartphone, Computer, Gamepad2, LayoutTemplate, Palette } from 'lucide-react'
 import { motion } from "framer-motion";
 import JsonLd from "../../components/ui/JsonLd";
@@ -43,6 +43,12 @@ const services: Service[] = [
     icon: LayoutTemplate,
     url: "https://equantra.in/services/ui-ux-design"
   },
+  {
+    title: "Desktop Development",
+    description:
+      "Equantra offers desktop development services in India, creating powerful, scalable, and user-friendly desktop applications with innovative approaches. Our services include custom desktop apps, e-commerce solutions, progressive web apps, content management systems, and API development.",
+    icon: Computer,
+  },
 ];
 
 // Generate structured data for services
@@ -73,7 +79,7 @@ const servicesStructuredData = {
 const ServicesSection: React.FC = () => {
   const ref = useRef(null);
   const [isInView, setIsInView] = useState(false);
-  
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => setIsInView(entry.isIntersecting),
@@ -83,44 +89,44 @@ const ServicesSection: React.FC = () => {
     if (ref.current) observer.observe(ref.current);
     return () => observer.disconnect();
   }, []);
-  
+
   return (
     <section >
       <JsonLd data={servicesStructuredData} />
       <section id="services" className="bg-white relative space-y-10 pb-20">
-        <div className="relative inline-block flex items-center justify-center w-full">
-      <img className="w-full" src="./other/headingContainer.svg" />
-        <div className="w-full h-full top-0 left-0 absolute flex justify-center items-center">
-          <h2 className="text-white text-xl  md:text-3xl">Services</h2>
+        <div className="relative flex items-center justify-center w-full">
+          <img className="w-full" src="./other/headingContainer.svg" />
+          <div className="w-full h-full top-0 left-0 absolute flex justify-center items-center">
+            <h2 className="text-white text-xl  md:text-3xl">Services</h2>
+          </div>
         </div>
-      </div>
-      <div className="container mx-auto w-full flex justify-center">
-        
-        <div ref={ref} className="w-full m-4 md:m-20">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 sm:grid-cols-2 gap-8">
-          {services.map((service, index) => (
-            <motion.div
-              initial={{ opacity: 0, y: 40 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.7, delay: index * 0.1 }}
-              key={index}
-              className="p-6 drop-shadow-xl hover:drop-shadow-hover_xl cursor-pointer rounded-xl bg-white"
-            >
-                <div className="flex space-x-4 items-center">
-                  <div className="mb-6 h-12 w-12 bg-black flex justify-center items-center rounded-md">
-                    <service.icon className="h-8 w-8 text-white"/>
+        <div className="container mx-auto w-full flex justify-center">
+
+          <div ref={ref} className="w-full m-4 md:m-20">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 sm:grid-cols-2 gap-8">
+              {services.map((service, index) => (
+                <motion.div
+                  initial={{ opacity: 0, y: 40 }}
+                  animate={isInView ? { opacity: 1, y: 0 } : {}}
+                  transition={{ duration: 0.7, delay: index * 0.1 }}
+                  key={index}
+                  className="p-6 drop-shadow-xl hover:drop-shadow-hover_xl cursor-pointer rounded-xl bg-white"
+                >
+                  <div className="flex space-x-4 items-center">
+                    <div className="mb-6 h-12 w-12 bg-black flex justify-center items-center rounded-md">
+                      <service.icon className="h-8 w-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-bold text-black mb-4">{service.title}</h3>
                   </div>
-                  <h3 className="text-xl font-bold text-black mb-4">{service.title}</h3>
-                </div>
-              <p className="text-gray-900">{service.description}</p>
-            </motion.div>
-          ))}
-        </div>
+                  <p className="text-gray-900">{service.description}</p>
+                </motion.div>
+              ))}
+            </div>
 
-        {/* Carousel Dots */}
+            {/* Carousel Dots */}
 
+          </div>
         </div>
-      </div>
       </section>
     </section>
   );

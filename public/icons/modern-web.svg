@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Circle -->
+  <circle cx="100" cy="100" r="90" fill="#8B5CF6" />
+  
+  <!-- Desktop Screen -->
+  <rect x="40" y="50" width="120" height="70" rx="5" fill="#F9FAFB" stroke="#5B21B6" stroke-width="3"/>
+  <rect x="45" y="55" width="110" height="55" rx="2" fill="#5B21B6"/>
+  <rect x="85" y="120" width="30" height="10" rx="2" fill="#F9FAFB" stroke="#5B21B6" stroke-width="2"/>
+  
+  <!-- Tablet -->
+  <rect x="50" y="135" width="50" height="35" rx="3" fill="#F9FAFB" stroke="#5B21B6" stroke-width="2"/>
+  <rect x="53" y="138" width="44" height="27" rx="1" fill="#5B21B6"/>
+  
+  <!-- Mobile -->
+  <rect x="110" y="135" width="25" height="40" rx="3" fill="#F9FAFB" stroke="#5B21B6" stroke-width="2"/>
+  <rect x="112" y="140" width="21" height="28" rx="1" fill="#5B21B6"/>
+  <circle cx="122.5" cy="172" r="2" fill="#F9FAFB"/>
+  
+  <!-- Component Blocks -->
+  <rect x="55" y="65" width="25" height="15" rx="2" fill="#10B981" opacity="0.8"/>
+  <rect x="85" y="65" width="30" height="15" rx="2" fill="#F59E0B" opacity="0.8"/>
+  <rect x="55" y="85" width="60" height="15" rx="2" fill="#EF4444" opacity="0.8"/>
+  <rect x="120" y="65" width="25" height="35" rx="2" fill="#3B82F6" opacity="0.8"/>
+  
+  <!-- Code Brackets -->
+  <text x="60" y="77" font-family="monospace" font-size="10" font-weight="bold" fill="#F9FAFB">{ }</text>
+  <text x="95" y="77" font-family="monospace" font-size="10" font-weight="bold" fill="#F9FAFB">[ ]</text>
+  <text x="75" y="97" font-family="monospace" font-size="10" font-weight="bold" fill="#F9FAFB">&lt;/&gt;</text>
+  <text x="130" y="85" font-family="monospace" font-size="10" font-weight="bold" fill="#F9FAFB">( )</text>
+</svg> 

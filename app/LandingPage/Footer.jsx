@@ -16,10 +16,16 @@ const Footer = () => {
                 <Link href="/portfolio" className="font-light md:text-lg hover:text-gray-300">Portfolio</Link>
               </div>
               <div className="flex flex-col justify-center items-center">
+                <h2 className="md:text-2xl mb-4">Services</h2>
+                <Link href="/development/mobile" className="font-light md:text-lg hover:text-gray-300">Mobile</Link>
+                <Link href="/development/web" className="font-light md:text-lg hover:text-gray-300">Website</Link>
+                <Link href="/development/blockchain" className="font-light md:text-lg hover:text-gray-300">Blockchain</Link>
+                <Link href="/development/desktop" className="font-light md:text-lg hover:text-gray-300">Desktop</Link>
+              </div>
+              <div className="flex flex-col justify-center items-center">
                 <h2 className="md:text-2xl mb-4">Company</h2>
                 <Link href="/about" className="font-light md:text-lg hover:text-gray-300">About Us</Link>
                 <Link href="/team" className="font-light md:text-lg hover:text-gray-300">Team</Link>
-                <Link href="/careers" className="font-light md:text-lg hover:text-gray-300">Careers</Link>
                 <Link href="/contact" className="font-light md:text-lg hover:text-gray-300">Contact</Link>
               </div>
             </div>

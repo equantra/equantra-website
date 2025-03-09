@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Circle -->
+  <circle cx="100" cy="100" r="90" fill="#3B82F6" />
+  
+  <!-- API Connection Nodes -->
+  <circle cx="60" cy="60" r="15" fill="#F9FAFB" stroke="#1E40AF" stroke-width="3"/>
+  <circle cx="140" cy="60" r="15" fill="#F9FAFB" stroke="#1E40AF" stroke-width="3"/>
+  <circle cx="60" cy="140" r="15" fill="#F9FAFB" stroke="#1E40AF" stroke-width="3"/>
+  <circle cx="140" cy="140" r="15" fill="#F9FAFB" stroke="#1E40AF" stroke-width="3"/>
+  
+  <!-- Connection Lines -->
+  <path d="M60 75 L60 125 M75 60 L125 60 M140 75 L140 125 M75 140 L125 140" 
+        stroke="#F9FAFB" stroke-width="3" stroke-dasharray="5,5"/>
+  
+  <!-- Central API Hub -->
+  <rect x="85" y="85" width="30" height="30" rx="5" fill="#10B981" stroke="#065F46" stroke-width="3"/>
+  
+  <!-- Data Flow Arrows -->
+  <path d="M70 70 L85 85" stroke="#F9FAFB" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M130 70 L115 85" stroke="#F9FAFB" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M70 130 L85 115" stroke="#F9FAFB" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M130 130 L115 115" stroke="#F9FAFB" stroke-width="2" marker-end="url(#arrow)"/>
+  
+  <!-- Arrow Marker Definition -->
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5"
+            markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#F9FAFB"/>
+    </marker>
+  </defs>
+  
+  <!-- Code Brackets -->
+  <text x="93" y="105" font-family="monospace" font-size="16" font-weight="bold" fill="#F9FAFB">{ }</text>
+</svg> 
