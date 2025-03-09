@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import { Metadata } from 'next';
 import Navbar from '../Navbar';
 import Footer from '../LandingPage/Footer';
@@ -61,39 +62,54 @@ const services = [
 export default function ServicesPage() {
   return (
     <div className="flex flex-col min-h-screen bg-black text-white">
-      <PageSeo structuredData={servicesStructuredData} />
+      <PageSeo
+        title="Our Services | Equantra"
+        description="Comprehensive technology services including web, mobile, blockchain, and software development"
+        structuredData={servicesStructuredData}
+      />
       <Navbar />
 
       <main className="flex-grow pt-24">
         <div className="container mx-auto px-4 py-12">
           <div className="relative flex items-center justify-center w-full mb-12">
-            <img className="w-full" src="/other/headingContainer.svg" />
+            <Image
+              className="w-full"
+              src="/other/headingContainer.svg"
+              alt="Services Header"
+              width={1200}
+              height={200}
+            />
             <div className="w-full h-full top-0 left-0 absolute flex justify-center items-center">
               <h1 className="text-white text-3xl md:text-4xl font-bold">Our Services</h1>
             </div>
           </div>
 
-          <p className="text-xl text-center text-gray-300 mb-16 max-w-3xl mx-auto">
-            We offer comprehensive technology solutions to help businesses thrive in the digital age.
-          </p>
+          <div className="max-w-4xl mx-auto text-center mb-16">
+            <p className="text-xl text-gray-300">
+              We offer a comprehensive range of technology services to help businesses thrive in the digital age.
+            </p>
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-20">
             {services.map((service, index) => (
-              <a href={service.link} key={index} className="group">
-                <div className="bg-gray-900 rounded-lg p-8 transition-transform duration-300 hover:-translate-y-2 border border-gray-800">
-                  <div className="flex items-start space-x-4">
-                    <div className="flex-shrink-0">
-                      <img src={service.icon} alt={service.title} className="w-12 h-12" />
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-bold mb-3 text-white group-hover:text-blue-400 transition-colors">
-                        {service.title}
-                      </h3>
-                      <p className="text-gray-300">{service.description}</p>
-                    </div>
+              <div key={index} className="bg-gray-900 rounded-lg p-8 border border-gray-800 hover:border-blue-500 transition-all duration-300">
+                <div className="flex items-start space-x-4">
+                  <div className="flex-shrink-0">
+                    <Image
+                      src={service.icon}
+                      alt={service.title}
+                      width={48}
+                      height={48}
+                      className="w-12 h-12"
+                    />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold mb-2">{service.title}</h3>
+                    <p className="text-gray-300 mb-4">{service.description}</p>
+                    <a href={service.link} className="text-blue-400 hover:text-blue-300">Learn more →</a>
                   </div>
                 </div>
-              </a>
+              </div>
             ))}
           </div>
 

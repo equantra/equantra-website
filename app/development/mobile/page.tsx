@@ -65,7 +65,11 @@ const technologies = [
 export default function MobilePage() {
   return (
     <div className="flex flex-col min-h-screen bg-black text-white">
-      <PageSeo structuredData={mobilePageStructuredData} />
+      <PageSeo
+        title="Mobile App Development | Equantra"
+        description="Custom mobile application development for iOS and Android. Build high-performance, user-friendly mobile apps with our expert team."
+        structuredData={mobilePageStructuredData}
+      />
       <Navbar />
 
       <main className="flex-grow pt-24">

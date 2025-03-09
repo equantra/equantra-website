@@ -1,5 +1,6 @@
 import React from 'react';
 import { Metadata } from 'next';
+import Image from 'next/image';
 import Navbar from '../../Navbar';
 import Footer from '../../LandingPage/Footer';
 import Contact from '../../LandingPage/Contact';
@@ -65,13 +66,23 @@ const technologies = [
 export default function BlockchainPage() {
   return (
     <div className="flex flex-col min-h-screen bg-black text-white">
-      <PageSeo structuredData={blockchainPageStructuredData} />
+      <PageSeo
+        title="Blockchain Development | Equantra"
+        description="Build secure and scalable blockchain solutions with Equantra. We specialize in smart contracts, DApps, and Web3 integration."
+        structuredData={blockchainPageStructuredData}
+      />
       <Navbar />
 
       <main className="flex-grow pt-24">
         <div className="container mx-auto px-4 py-12">
           <div className="relative flex items-center justify-center w-full mb-12">
-            <img className="w-full" src="/other/headingContainer.svg" />
+            <Image
+              className="w-full"
+              src="/other/headingContainer.svg"
+              alt="Blockchain Development Header"
+              width={1200}
+              height={200}
+            />
             <div className="w-full h-full top-0 left-0 absolute flex justify-center items-center">
               <h1 className="text-white text-3xl md:text-4xl font-bold">Blockchain Development</h1>
             </div>
@@ -89,7 +100,13 @@ export default function BlockchainPage() {
               <div key={index} className="bg-gray-900 rounded-lg p-8 border border-gray-800">
                 <div className="flex items-start space-x-4">
                   <div className="flex-shrink-0">
-                    <img src={feature.icon} alt={feature.title} className="w-12 h-12" />
+                    <Image
+                      src={feature.icon}
+                      alt={feature.title}
+                      width={48}
+                      height={48}
+                      className="w-12 h-12"
+                    />
                   </div>
                   <div>
                     <h3 className="text-xl font-bold mb-2">{feature.title}</h3>
@@ -127,11 +144,17 @@ export default function BlockchainPage() {
           </div>
 
           <div className="mb-20">
-            <h2 className="text-2xl font-bold mb-8 text-center">Technologies We Use</h2>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            <h2 className="text-2xl font-bold text-center mb-12">Technologies We Use</h2>
+            <div className="flex flex-wrap justify-center gap-8">
               {technologies.map((tech, index) => (
                 <div key={index} className="flex flex-col items-center">
-                  <img src={tech.icon} alt={tech.name} className="w-16 h-16 mb-2" />
+                  <Image
+                    src={tech.icon}
+                    alt={tech.name}
+                    width={64}
+                    height={64}
+                    className="w-16 h-16 mb-2"
+                  />
                   <span className="text-gray-300">{tech.name}</span>
                 </div>
               ))}

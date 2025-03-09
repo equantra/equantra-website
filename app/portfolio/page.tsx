@@ -85,7 +85,11 @@ const projects = [
 export default function PortfolioPage() {
   return (
     <div className="flex flex-col min-h-screen bg-black text-white">
-      <PageSeo structuredData={portfolioStructuredData} />
+      <PageSeo
+        title="Portfolio | Equantra"
+        description="Explore our portfolio of successful projects across web development, mobile apps, blockchain solutions, and UI/UX design."
+        structuredData={portfolioStructuredData}
+      />
       <Navbar />
 
       <main className="flex-grow pt-24">

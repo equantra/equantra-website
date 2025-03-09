@@ -95,7 +95,11 @@ const technologies = [
 export default function WebPage() {
   return (
     <div className="flex flex-col min-h-screen bg-black text-white">
-      <PageSeo structuredData={webPageStructuredData} />
+      <PageSeo
+        title="Web Development Services | Equantra"
+        description="Professional web development services specializing in high-performance realtime applications, modern web apps, e-commerce solutions, and scalable API development."
+        structuredData={webPageStructuredData}
+      />
       <Navbar />
 
       <main className="flex-grow pt-24">

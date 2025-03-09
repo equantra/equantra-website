@@ -76,7 +76,11 @@ const blogPosts = [
 export default function BlogPage() {
   return (
     <div className="flex flex-col min-h-screen bg-black text-white">
-      <PageSeo structuredData={blogPageStructuredData} />
+      <PageSeo
+        title="Blog | Equantra"
+        description="Explore our latest articles, insights, and tutorials on web development, mobile apps, blockchain, and more."
+        structuredData={blogPageStructuredData}
+      />
 
       {/* Navigation */}
       <Navbar />

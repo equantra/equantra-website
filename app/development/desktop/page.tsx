@@ -65,7 +65,11 @@ const technologies = [
 export default function SoftwarePage() {
   return (
     <div className="flex flex-col min-h-screen bg-black text-white">
-      <PageSeo structuredData={softwarePageStructuredData} />
+      <PageSeo
+        title="Desktop Application Development | Equantra"
+        description="Custom desktop application development services for Windows, macOS, and Linux platforms. Build powerful, efficient, and user-friendly desktop software."
+        structuredData={softwarePageStructuredData}
+      />
       <Navbar />
 
       <main className="flex-grow pt-24">
