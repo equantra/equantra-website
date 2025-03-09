@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Circle -->
+  <circle cx="100" cy="100" r="90" fill="#EC4899" />
+  
+  <!-- Shopping Cart -->
+  <path d="M50 60 H150 L135 110 H65 Z" fill="#F9FAFB" stroke="#BE185D" stroke-width="4"/>
+  <circle cx="75" cy="130" r="10" fill="#F9FAFB" stroke="#BE185D" stroke-width="3"/>
+  <circle cx="125" cy="130" r="10" fill="#F9FAFB" stroke="#BE185D" stroke-width="3"/>
+  
+  <!-- Price Tag -->
+  <path d="M120 50 L150 80 L120 110 L90 80 Z" fill="#FBBF24" stroke="#D97706" stroke-width="2"/>
+  <circle cx="110" cy="70" r="5" fill="#F9FAFB"/>
+  <text x="115" y="85" font-family="Arial" font-size="16" font-weight="bold" fill="#BE185D">$</text>
+  
+  <!-- Payment Card -->
+  <rect x="60" y="90" width="40" height="25" rx="3" fill="#F9FAFB" stroke="#BE185D" stroke-width="2"/>
+  <rect x="65" y="100" width="30" height="5" rx="1" fill="#BE185D"/>
+</svg> 

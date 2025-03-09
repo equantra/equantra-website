@@ -15,6 +15,16 @@ const organizationData = {
   name: "Equantra",
   url: "https://equantra.in",
   logo: "https://equantra.in/logo.svg",
+  description: "An emerging technology services company in India offering innovative web development, mobile development, game development, UI/UX design, and logo design services with cutting-edge solutions.",
+  address: {
+    "@type": "Etah Uttar Pradesh",
+    addressCountry: "India",
+    addressRegion: "India"
+  },
+  areaServed: {
+    "@type": "Country",
+    name: "India"
+  },
   sameAs: [
     "https://twitter.com/equantra",
     "https://linkedin.com/company/equantra",
@@ -23,20 +33,35 @@ const organizationData = {
   contactPoint: {
     "@type": "ContactPoint",
     telephone: "+1-123-456-7890",
-    contactType: "customer service",
-    email: "contact@equantra.com"
+    contactType: "Founder",
+    email: "rahul@equantra.in"
   }
 };
 
 export const metadata: Metadata = {
-  title: "Equantra - Innovative Professional Services & Business Solutions",
-  description: "Equantra delivers cutting-edge professional services, strategic consulting, and technology solutions to help businesses scale, innovate, and succeed in today's competitive market.",
+  title: "Equantra - Innovative Technology Services Company in India",
+  description: "Equantra is an emerging technology company in India offering cutting-edge web development, mobile app development, game development, UI/UX design, and logo design services with innovative solutions.",
   icons: {
     icon: "/logo.svg",
     apple: "/logo.svg",
   },
   metadataBase: new URL("https://equantra.in"),
-  keywords: ["professional services", "business consulting", "technology solutions", "strategic growth", "innovation", "business transformation"],
+  keywords: [
+    "web development company in India", 
+    "mobile development company in India", 
+    "game development company in India", 
+    "UI/UX design company in India", 
+    "logo design company in India",
+    "innovative technology services India",
+    "cutting-edge solutions",
+    "emerging tech company India",
+    "professional services",
+    "business consulting",
+    "technology solutions",
+    "strategic growth",
+    "innovation",
+    "business transformation"
+  ],
   authors: [{ name: "Equantra" }],
   creator: "Equantra",
   publisher: "Equantra",
@@ -44,22 +69,22 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://equantra.in",
-    title: "Equantra - Transforming Businesses Through Innovation",
-    description: "Equantra delivers cutting-edge professional services, strategic consulting, and technology solutions to help businesses scale, innovate, and succeed in today's competitive market.",
+    title: "Equantra - Innovative Technology Services Company in India",
+    description: "Equantra is an emerging technology company in India offering cutting-edge web development, mobile app development, game development, UI/UX design, and logo design services with innovative solutions.",
     siteName: "Equantra",
     images: [
       {
         url: "/logo-full.svg",
         width: 1200,
         height: 630,
-        alt: "Equantra Logo",
+        alt: "Equantra - Technology Services Company in India",
       }
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Equantra - Transforming Businesses Through Innovation",
-    description: "Equantra delivers cutting-edge professional services, strategic consulting, and technology solutions to help businesses scale, innovate, and succeed in today's competitive market.",
+    title: "Equantra - Innovative Technology Services Company in India",
+    description: "Equantra is an emerging technology company in India offering cutting-edge web development, mobile app development, game development, UI/UX design, and logo design services with innovative solutions.",
     images: ["/logo-full.svg"],
     creator: "@equantra",
     site: "@equantra",

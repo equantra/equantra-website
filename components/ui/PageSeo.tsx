@@ -10,7 +10,7 @@ interface PageSeoProps {
     description?: string;
     images?: Array<{ url: string; alt: string; width?: number; height?: number }>;
   };
-  structuredData?: any;
+  structuredData?: Record<string, unknown>;
 }
 
 export function generateMetadata({
@@ -31,8 +31,6 @@ export function generateMetadata({
   };
 }
 
-export default function PageSeo({ structuredData }: { structuredData?: any }) {
-  if (!structuredData) return null;
-  
-  return <JsonLd data={structuredData} />;
+export default function PageSeo({ structuredData }: PageSeoProps) {
+  return structuredData ? <JsonLd data={structuredData} /> : null;
 } 
