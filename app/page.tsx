@@ -1,5 +1,4 @@
 import ServicesSection from "./LandingPage/Services";
-import ParticlesComponent from "./LandingPage/ParticlesComponent";
 import Navbar from "./Navbar";
 import HeroSection from "./LandingPage/HeroSection";
 import CaseStudies from "./LandingPage/CaseStudies";
@@ -9,6 +8,7 @@ import Contact from "./LandingPage/Contact";
 import Footer from "./LandingPage/Footer";
 import PageSeo from "../components/ui/PageSeo";
 import { Metadata } from "next";
+import ParticlesWrapper from "./components/ParticlesWrapper";
 
 export const metadata: Metadata = {
   title: "Equantra - Innovative Technology Services Company in India",
@@ -64,7 +64,7 @@ export default function Home() {
       />
 
       <div className="z-0">
-        <ParticlesComponent />
+        <ParticlesWrapper />
       </div>
 
       {/* Navigation */}

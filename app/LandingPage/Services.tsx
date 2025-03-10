@@ -1,9 +1,10 @@
 "use client"
 
-import React, { useRef, useState, useEffect } from "react";
+import React, { useRef, useState, useEffect, memo } from "react";
 import { TabletSmartphone, Computer, Gamepad2, LayoutTemplate } from 'lucide-react'
 import { motion } from "framer-motion";
 import JsonLd from "../../components/ui/JsonLd";
+import Image from "next/image";
 
 // Define TypeScript types for services
 interface Service {
@@ -103,9 +104,16 @@ const ServicesSection: React.FC = () => {
       <JsonLd data={servicesStructuredData} />
       <section id="services" className="bg-white relative space-y-10 pb-20">
         <div className="relative flex items-center justify-center w-full">
-          <img className="w-full" src="./other/headingContainer.svg" />
+          <Image 
+            className="w-full" 
+            src="/other/headingContainer.svg" 
+            alt="Services section header" 
+            width={1200}
+            height={200}
+            priority
+          />
           <div className="w-full h-full top-0 left-0 absolute flex justify-center items-center">
-            <h2 className="text-white text-xl  md:text-3xl">Services</h2>
+            <h2 className="text-white text-xl md:text-3xl">Services</h2>
           </div>
         </div>
         <div className="container mx-auto w-full flex justify-center">
@@ -140,4 +148,5 @@ const ServicesSection: React.FC = () => {
   );
 };
 
-export default ServicesSection;
+// Export memoized component to prevent unnecessary re-renders
+export default memo(ServicesSection);

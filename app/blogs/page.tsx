@@ -5,6 +5,7 @@ import Navbar from '../Navbar';
 import Footer from '../LandingPage/Footer';
 import Contact from '../LandingPage/Contact';
 import PageSeo from '../../components/ui/PageSeo';
+import Image from 'next/image';
 
 export const metadata: Metadata = {
   title: "Blog | Equantra - Technology Insights and Innovations",
@@ -88,7 +89,14 @@ export default function BlogPage() {
       <main className="flex-grow pt-24">
         <div className="container mx-auto px-4 py-12">
           <div className="relative flex items-center justify-center w-full mb-12">
-            <img className="w-full" src="/other/headingContainer.svg" />
+            <Image
+              className="w-full"
+              src="/other/headingContainer.svg"
+              alt="Blog header"
+              width={1200}
+              height={200}
+              priority
+            />
             <div className="w-full h-full top-0 left-0 absolute flex justify-center items-center">
               <h1 className="text-white text-3xl md:text-4xl font-bold">Equantra Blog</h1>
             </div>
@@ -103,10 +111,12 @@ export default function BlogPage() {
               <Link href={`/blogs/${post.id}`} key={post.id}>
                 <div className="bg-gray-900 rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:shadow-xl hover:-translate-y-2 border border-gray-800">
                   <div className="h-48 bg-gray-800 relative">
-                    <img
+                    <Image
                       src={post.imageUrl}
                       alt={post.title}
-                      className="w-full h-full object-cover opacity-90"
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" 
+                      className="object-cover opacity-90"
                     />
                     <div className="absolute top-4 right-4 bg-black text-white text-xs font-bold px-3 py-1 rounded-full">
                       {post.category}

@@ -1,40 +1,30 @@
 "use client";
 
-import React, { useCallback } from "react";
+import React, { useCallback, memo } from "react";
 import { loadSlim } from "tsparticles-slim";
-import { Engine } from "tsparticles-engine"; // Keep Engine from tsparticles-engine
+import { Engine } from "tsparticles-engine";
 import Particles from "react-particles";
 
 const ParticlesComponent = () => {
   const particlesInit = useCallback(async (engine: Engine) => {
-    console.log(engine);
     await loadSlim(engine);
-  }, []);
-
-  const particlesLoaded = useCallback(async (container?: unknown) => {
-    if (container) {
-      console.log(container);
-    }
   }, []);
 
   return (
     <Particles
-        z-index="0"
         id="tsparticles"
         init={particlesInit}
-        loaded={particlesLoaded}
         options={{
             background: {
                 color: {
                     value: "#000000",
                 },
             },
-            fpsLimit: 60,
+            fpsLimit: 30,
             interactivity: {
                 events: {
                     onClick: {
-                        enable: true,
-                        mode: "push",
+                        enable: false,
                     },
                     onHover: {
                         enable: true,
@@ -43,12 +33,9 @@ const ParticlesComponent = () => {
                     resize: true,
                 },
                 modes: {
-                    push: {
-                        quantity: 4,
-                    },
                     repulse: {
                         distance: 50,
-                        duration: 1,
+                        duration: 0.4,
                     },
                 },
             },
@@ -58,9 +45,9 @@ const ParticlesComponent = () => {
                 },
                 links: {
                     color: "#ffffff",
-                    distance: 100,
+                    distance: 120,
                     enable: true,
-                    opacity: 0.3,
+                    opacity: 0.2,
                     width: 1,
                 },
                 move: {
@@ -70,15 +57,15 @@ const ParticlesComponent = () => {
                         default: "bounce",
                     },
                     random: false,
-                    speed: 1,
+                    speed: 0.5,
                     straight: false,
                 },
                 number: {
                     density: {
                         enable: true,
-                        area: 400,
+                        area: 800,
                     },
-                    value: 120,
+                    value: 60,
                 },
                 opacity: {
                     value: 0.2,
@@ -90,10 +77,10 @@ const ParticlesComponent = () => {
                     value: { min: 1, max: 2 },
                 },
             },
-            detectRetina: true,
+            detectRetina: false,
         }}
     />
 );
 };
 
-export default ParticlesComponent;
+export default memo(ParticlesComponent);

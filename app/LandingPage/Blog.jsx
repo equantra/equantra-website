@@ -1,12 +1,20 @@
 import React from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 
 const Blog = () => {
   return (
     <React.Fragment>
       <section className='z-10 bg-white w-full pb-10 flex flex-col'>
         <div className="relative flex items-center justify-center select-none w-full">
-          <img className="w-full" src="/other/headingContainerLeft.svg" />
+          <Image 
+            className="w-full" 
+            src="/other/headingContainerLeft.svg" 
+            alt="Blog header"
+            width={1200}
+            height={200}
+            priority={false}
+          />
           <div className="w-full h-full top-0 left-0 absolute flex justify-start items-center ml-20 sm:ml-32 md:ml-36 lg:ml-64">
             <h2 className="text-white text-xl md:text-3xl">Blog</h2>
           </div>
@@ -18,7 +26,15 @@ const Blog = () => {
               {blogs.map((blog, index) => (
                 <Link href={blog.url} key={index}>
                   <div className='flex flex-col space-y-2 items-start cursor-pointer hover:opacity-90 transition-opacity'>
-                    <img src={blog.imageSource} alt={blog.title} className="w-full" />
+                    <div className="relative w-full h-48">
+                      <Image 
+                        src={blog.imageSource} 
+                        alt={blog.title} 
+                        fill
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                        className="object-cover"
+                      />
+                    </div>
                     <h2 className='text-xl font-semibold'>{blog.title}</h2>
                     <p className='text-left'>{blog.description}</p>
                     <span className="text-black font-medium">Read more →</span>

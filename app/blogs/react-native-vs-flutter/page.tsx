@@ -5,6 +5,7 @@ import Footer from '../../LandingPage/Footer';
 import Contact from '../../LandingPage/Contact';
 import PageSeo from '../../../components/ui/PageSeo';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export const metadata: Metadata = {
   title: "When to Use React Native or Flutter for Mobile App Development | Equantra",
@@ -74,11 +75,13 @@ export default function ReactNativeVsFlutterPost() {
             <p className="text-gray-400 mb-2">February 26, 2024 • Mobile Development</p>
             <h1 className="text-4xl font-bold mb-8 text-white">When to Use React Native or Flutter for Mobile App Development</h1>
 
-            <div className="h-80 bg-gray-800 rounded-lg overflow-hidden mb-10">
-              <img
+            <div className="h-80 bg-gray-800 rounded-lg overflow-hidden mb-10 relative">
+              <Image
                 src="/other/react-native-vs-flutter.jpg"
                 alt="React Native vs Flutter comparison"
-                className="w-full h-full object-cover opacity-90"
+                fill
+                sizes="(max-width: 1024px) 100vw, 1024px"
+                className="object-cover opacity-90"
               />
             </div>
           </div>

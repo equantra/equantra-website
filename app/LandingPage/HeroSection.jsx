@@ -1,19 +1,17 @@
 "use client"
 
-import React, { useRef, useState, useEffect } from "react"
-
+import React, { useState, useEffect } from "react"
 import { Montserrat } from "next/font/google";
+import { motion } from "framer-motion";
 
-
-import { motion, useInView } from "framer-motion";
-
+// Optimize font loading by adding display: swap for better performance
 const montserrat = Montserrat({
   subsets: ["latin"],
   weight: ["400"],
+  display: "swap",
 });
 
 const HeroSection = () => {
-  const ref = useRef(null);
   const [isInView, setIsInView] = useState(false);
 
   useEffect(() => {
@@ -34,14 +32,15 @@ const HeroSection = () => {
       section.scrollIntoView({ behavior: "smooth" });
     }
   };
+
   return (
     <React.Fragment>
       <section id="home" className="z-4 h-[30rem] md:h-[36rem] relative flex flex-col items-center justify-center px-4 md:px-6">
         {/* Content */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 40 }}
+          transition={{ duration: 0.5 }}
           className="relative z-12 text-center flex flex-col items-center space-y-4 md:space-y-10 max-w-xl mx-auto">
           <h1 className={`${montserrat.className} z-20 text-4xl lg:text-9xl md:text-6xl sm:text-5xl font-bold text-white tracking-tight text-center`}>
             EQUANTRA
@@ -76,7 +75,7 @@ const HeroSection = () => {
           <img className="absolute right-0 top-0 scale-x-[-1] h-[80px] md:h-[140px]" src="./other/SkewRect.svg"></img>
         </div>
       </section>
-      <div ref={ref} className="z-4 relative w-2/3 flex flex-col items-center justify-center my-24 md:my-40 mx-auto">
+      <div className="z-4 relative w-2/3 flex flex-col items-center justify-center my-24 md:my-40 mx-auto">
         <motion.img className="size-1/2 mb-6" src="./other/illustration.png"
           initial={{ opacity: 0, y: 20, scale: 0.95 }}
           animate={isInView ? { opacity: 1, y: 0, scale: 1 } : {}}
@@ -89,8 +88,7 @@ const HeroSection = () => {
         </p>
       </div>
     </React.Fragment>
-  )
-}
+  );
+};
 
-
-export default HeroSection;
+export default React.memo(HeroSection);
