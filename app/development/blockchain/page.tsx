@@ -143,9 +143,9 @@ export default function BlockchainPage() {
             </div>
           </div>
 
-          <div className="mb-20">
+          <div className="bg-gray-900 rounded-lg p-8 mb-20">
             <h2 className="text-2xl font-bold text-center mb-12">Technologies We Use</h2>
-            <div className="flex flex-wrap justify-center gap-8">
+            <div className="gap-8 grid grid-cols-4">
               {technologies.map((tech, index) => (
                 <div key={index} className="flex flex-col items-center">
                   <Image
