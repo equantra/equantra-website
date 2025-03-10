@@ -17,13 +17,15 @@ const HeroSection = () => {
   const [isInView, setIsInView] = useState(false);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => setIsInView(entry.isIntersecting),
-      { rootMargin: "-50px", threshold: 0.1 } // Adjust threshold as needed
-    );
+    // Set isInView to true immediately instead of using an observer
+    // const observer = new IntersectionObserver(
+    //   ([entry]) => setIsInView(entry.isIntersecting),
+    //   { rootMargin: "50px 0px -50px 0px", threshold: [0, 0.1, 0.5, 1] } // Adjusted for top-to-bottom detection
+    // );
+    setIsInView(true);
 
-    if (ref.current) observer.observe(ref.current);
-    return () => observer.disconnect();
+    // if (ref.current) observer.observe(ref.current);
+    // return () => observer.disconnect();
   }, []);
 
   const handleScroll = (id) => {
