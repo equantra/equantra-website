@@ -45,7 +45,7 @@ const HeroSection = () => {
             EQUANTRA
           </h1>
           <p className="text-sm lg:text-2xl md:text-2xl text-gray-300">
-            Crafting the Future, One Solution at a Time.
+            Develops scalable websites and mobile apps for ambitious businesses across India and overseas.
           </p>
           <button 
           onClick={() => handleScroll("contact")}
@@ -58,32 +58,33 @@ const HeroSection = () => {
         </motion.div>
        
         <div className="z-8 absolute top-0 w-full">
-        <img className="absolute left-0 top-0 h-[400px]  md:h-[600px]" src="./other/HeroSide-filled.svg"></img>
-        <img className="absolute right-0 top-0 scale-x-[-1] h-[400px] md:h-[600px]" src="./other/HeroSide-filled.svg"></img>
+        <img className="absolute left-0 top-0 h-[400px]  md:h-[600px]" src="./other/HeroSide-filled.svg" alt="Decorative geometric shape - left side" loading="lazy"></img>
+        <img className="absolute right-0 top-0 scale-x-[-1] h-[400px] md:h-[600px]" src="./other/HeroSide-filled.svg" alt="Decorative geometric shape - right side" loading="lazy"></img>
       </div>
       <div className="z-8 absolute top-10 w-2/3">
-        <img className="absolute left-0 top-0 h-[80px] md:h-[140px]" src="./other/SkewRect.svg"></img>
-        <img className="absolute right-0 top-0 scale-x-[-1] h-[80px] md:h-[140px]" src="./other/SkewRect.svg"></img>
+        <img className="absolute left-0 top-0 h-[80px] md:h-[140px]" src="./other/SkewRect.svg" alt="Decorative skewed rectangle - top left" loading="lazy"></img>
+        <img className="absolute right-0 top-0 scale-x-[-1] h-[80px] md:h-[140px]" src="./other/SkewRect.svg" alt="Decorative skewed rectangle - top right" loading="lazy"></img>
       </div>
       <div className="z-8 absolute top-42 w-3/4">
-        <img className="absolute left-0 top-0 h-[80px] md:h-[140px]" src="./other/SkewRect.svg"></img>
-        <img className="absolute right-0 top-0 scale-x-[-1] h-[80px] md:h-[140px]" src="./other/SkewRect.svg"></img>
+        <img className="absolute left-0 top-0 h-[80px] md:h-[140px]" src="./other/SkewRect.svg" alt="Decorative skewed rectangle - middle left" loading="lazy"></img>
+        <img className="absolute right-0 top-0 scale-x-[-1] h-[80px] md:h-[140px]" src="./other/SkewRect.svg" alt="Decorative skewed rectangle - middle right" loading="lazy"></img>
       </div>
       <div className="z-8 absolute bottom-40 w-1/2">
-        <img className="absolute left-0 top-0 h-[80px] md:h-[140px]" src="./other/SkewRect.svg"></img>
-        <img className="absolute right-0 top-0 scale-x-[-1] h-[80px] md:h-[140px]" src="./other/SkewRect.svg"></img>
+        <img className="absolute left-0 top-0 h-[80px] md:h-[140px]" src="./other/SkewRect.svg" alt="Decorative skewed rectangle - bottom left" loading="lazy"></img>
+        <img className="absolute right-0 top-0 scale-x-[-1] h-[80px] md:h-[140px]" src="./other/SkewRect.svg" alt="Decorative skewed rectangle - bottom right" loading="lazy"></img>
       </div>
       </section>
       <div ref={ref} className="z-4 relative w-2/3 flex flex-col items-center justify-center my-24 md:my-40 mx-auto">
           <motion.img className="size-1/2 mb-6" src="./other/illustration.png"
+          alt="Equantra emerging web development agency illustration - innovative technology solutions"
           initial={{ opacity: 0, y: 20, scale: 0.95 }}
           animate={isInView ? { opacity: 1, y: 0, scale: 1 } : {}}
           transition={{ duration: 1, ease: "easeOut" }}
           whileHover={{ x: [0, -10, 10, 0], y: [0, -10, 10, 0] }}
-
+          loading="lazy"
           ></motion.img>
           <p className="text-md sm:text-lg md:text-2xl text-gray-300">
-          Equantra is a premier technology services company dedicated to delivering innovative digital solutions that drive business growth and transformation. We combine technical expertise with creative problem-solving to deliver solutions that exceed client expectations.
+          Equantra is India's emerging web development agency dedicated to delivering innovative mobile apps, web applications, and digital solutions that drive business growth across India and overseas. As one of the best web development agencies, we combine technical expertise with creative problem-solving to deliver scalable solutions that exceed client expectations.
           </p>
       </div>
     </React.Fragment>

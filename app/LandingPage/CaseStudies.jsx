@@ -121,12 +121,6 @@ const CaseStudiesItems = [
     imageSrc: './other/CSImage.png'
   },
   {
-    title: "Blockchain Development",
-    description:
-      "Building secure and scalable blockchain solutions that revolutionize business processes. From smart contracts to decentralized applications, we help organizations embrace blockchain innovation.",
-    imageSrc: './other/CSImage.png'
-  },
-  {
     title: "Web Development",
     description:
       "Developing modern, responsive web applications that engage users and drive results. Our web solutions combine beautiful design with robust functionality to create compelling online experiences.",
