@@ -9,11 +9,11 @@ const josefinSans = Josefin_Sans({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://equantra.in'),
-  title: "Scalable Website Solutions & Custom Software Development | Equantra",
+  title: "Best Web Development Agency in India | Equantra - Mobile & Web Solutions",
   description: "Equantra is an emerging web development agency in India, specializing in mobile app development, web applications, and digital solutions. Expert developers delivering innovative technology services across India and overseas.",
   keywords: [
     "best web development agency",
-    "best web development agency in India", 
+    "best web development agency in India",
     "best mobile development agency in India and overseas",
     "web development services",
     "mobile app development",
@@ -90,20 +90,23 @@ export default function RootLayout({
     "url": "https://equantra.in",
     "logo": "https://equantra.in/logo-full.svg",
     "description": "Emerging web development agency in India specializing in mobile app development, web applications, and custom software development.",
-    "foundingDate": "2020",
+    "foundingDate": "2024",
+    "email": "rahul@equantra.in",
     "address": {
       "@type": "PostalAddress",
+      "addressLocality": "Delhi NCR",
       "addressCountry": "IN",
       "addressRegion": "India"
     },
     "contactPoint": {
       "@type": "ContactPoint",
+      "telephone": "+917906551854",
       "contactType": "customer service",
-      "availableLanguage": ["English", "Hindi"]
+      "availableLanguage": ["English", "Hindi"],
+      "email": "rahul@equantra.in"
     },
     "sameAs": [
-      "https://linkedin.com/company/equantra",
-      "https://twitter.com/equantra"
+      "https://www.linkedin.com/company/equantra/"
     ],
     "makesOffer": [
       {
@@ -141,9 +144,11 @@ export default function RootLayout({
     "image": "https://equantra.in/logo-full.svg",
     "description": "Emerging web development agency in India offering mobile app development, web applications, and digital transformation services.",
     "url": "https://equantra.in",
-    "telephone": "+91-XXXXXXXXXX",
+    "telephone": "+917906551854",
+    "email": "rahul@equantra.in",
     "address": {
       "@type": "PostalAddress",
+      "addressLocality": "Delhi NCR",
       "addressCountry": "IN",
       "addressRegion": "India"
     },
@@ -156,7 +161,7 @@ export default function RootLayout({
       "@type": "OpeningHoursSpecification",
       "dayOfWeek": [
         "Monday",
-        "Tuesday", 
+        "Tuesday",
         "Wednesday",
         "Thursday",
         "Friday"

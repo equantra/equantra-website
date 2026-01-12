@@ -55,7 +55,7 @@ const jsonLd = {
       name: 'India'
     },
     {
-      '@type': 'Country', 
+      '@type': 'Country',
       name: 'United States'
     },
     {
@@ -118,7 +118,6 @@ const hiringModels = [
       'Long-term commitment',
       'Cost-effective for large projects'
     ],
-    pricing: 'Starting from $2,500/month per developer',
     idealFor: 'Large projects, ongoing development, product companies'
   },
   {
@@ -132,7 +131,6 @@ const hiringModels = [
       'Quality assurance included',
       'Post-launch support'
     ],
-    pricing: 'Starting from $15,000 per project',
     idealFor: 'Specific features, MVP development, one-time projects'
   },
   {
@@ -146,7 +144,6 @@ const hiringModels = [
       'Direct communication',
       'Scalable engagement'
     ],
-    pricing: 'Starting from $25/hour',
     idealFor: 'Augmenting existing teams, specific expertise, short-term needs'
   }
 ];
@@ -185,7 +182,7 @@ const developerSkills = [
     icon: '🎨'
   },
   {
-    category: 'Backend Technologies', 
+    category: 'Backend Technologies',
     skills: ['Node.js', 'Python', 'Java', 'PHP', 'Go', '.NET'],
     icon: '⚙️'
   },
@@ -245,7 +242,7 @@ export default function HireDevelopersPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      
+
       <div className="min-h-screen bg-white">
         {/* Hero Section */}
         <div className="bg-black text-white py-20">
@@ -256,7 +253,7 @@ export default function HireDevelopersPage() {
                 <span>/</span>
                 <span className="text-white">Hire Developers</span>
               </nav>
-              
+
               <div className="grid lg:grid-cols-2 gap-12 items-center">
                 <div>
                   <div className="flex items-center space-x-4 mb-6">
@@ -265,32 +262,32 @@ export default function HireDevelopersPage() {
                     </span>
                     <span className="text-gray-300">🇮🇳 Based in India</span>
                   </div>
-                  
+
                   <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-6">
                     Hire Scalable Web Application Developers Near You
                   </h1>
-                  
+
                   <p className="text-xl text-gray-300 leading-relaxed mb-8">
-                    Looking for expert developers to build high-performance, future-ready web applications? 
-                    Our emerging [[memory:6389543]] team of scalable web app developers is ready to transform your ideas into reality.
+                    Looking for expert developers to build high-performance, future-ready web applications?
+                    Our web development team of scalable web app developers is ready to transform your ideas into reality.
                   </p>
 
                   <div className="flex flex-col sm:flex-row gap-4">
-                    <Link 
-                      href="#contact" 
+                    <Link
+                      href="#contact"
                       className="bg-black text-white border border-white font-semibold py-4 px-8 rounded-lg hover:bg-white hover:text-black transition-colors duration-200 text-center"
                     >
                       Schedule a Call
                     </Link>
-                    <Link 
-                      href="#hiring-models" 
+                    <Link
+                      href="#hiring-models"
                       className="bg-white text-black border border-white font-semibold py-4 px-8 rounded-lg hover:bg-black hover:text-white transition-colors duration-200 text-center"
                     >
                       View Hiring Options
                     </Link>
                   </div>
                 </div>
-                
+
                 <div className="relative">
                   <Image
                     src="/other/illustration.png"
@@ -314,7 +311,7 @@ export default function HireDevelopersPage() {
                   Why You Need Local Web App Developers
                 </h2>
                 <p className="text-xl text-gray-600 leading-relaxed max-w-4xl mx-auto">
-                  Working with developers who understand your market, timezone, and business needs 
+                  Working with developers who understand your market, timezone, and business needs
                   makes all the difference in project success.
                 </p>
               </div>
@@ -344,7 +341,7 @@ export default function HireDevelopersPage() {
                   Our Scalable Web App Solutions
                 </h2>
                 <p className="text-xl text-gray-600 leading-relaxed max-w-4xl mx-auto">
-                  We specialize in building web applications that grow with your business, 
+                  We specialize in building web applications that grow with your business,
                   from startup MVPs to enterprise-scale solutions.
                 </p>
               </div>
@@ -377,7 +374,7 @@ export default function HireDevelopersPage() {
                   Flexible Hiring Models
                 </h2>
                 <p className="text-xl text-gray-600 leading-relaxed max-w-4xl mx-auto">
-                  Choose the engagement model that best fits your project requirements, 
+                  Choose the engagement model that best fits your project requirements,
                   timeline, and budget constraints.
                 </p>
               </div>
@@ -388,7 +385,7 @@ export default function HireDevelopersPage() {
                     <div className="text-5xl mb-6 text-center">{model.icon}</div>
                     <h3 className="text-2xl font-bold mb-4 text-gray-900 text-center">{model.title}</h3>
                     <p className="text-gray-600 mb-6 text-center">{model.description}</p>
-                    
+
                     <div className="space-y-3 mb-6">
                       {model.features.map((feature, idx) => (
                         <div key={idx} className="flex items-center">
@@ -400,14 +397,14 @@ export default function HireDevelopersPage() {
 
                     <div className="border-t pt-6">
                       <div className="text-center mb-4">
-                        <div className="text-2xl font-bold text-indigo-600 mb-2">{model.pricing}</div>
+                        <div className="text-2xl font-bold text-indigo-600 mb-2">Contact Us for Pricing</div>
                         <div className="text-sm text-gray-500">Ideal for: {model.idealFor}</div>
                       </div>
-                      <Link 
+                      <Link
                         href="#contact"
                         className="block w-full bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200 text-center"
                       >
-                        Get Started
+                        Get Custom Quote
                       </Link>
                     </div>
                   </div>
@@ -426,7 +423,7 @@ export default function HireDevelopersPage() {
                   Contact Developers Near You
                 </h2>
                 <p className="text-xl text-gray-600 leading-relaxed max-w-4xl mx-auto">
-                  Our development teams are strategically located across major Indian tech hubs, 
+                  Our development teams are strategically located across major Indian tech hubs,
                   ensuring proximity to talent and infrastructure.
                 </p>
               </div>
@@ -448,7 +445,7 @@ export default function HireDevelopersPage() {
               <div className="bg-gray-100 rounded-xl p-8 text-center">
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Development Centers</h3>
                 <p className="text-gray-600 mb-6">
-                  With development centers across India, we're always close to you. 
+                  With development centers across India, we're always close to you.
                   Our main offices are located in the heart of major tech hubs.
                 </p>
                 <div className="bg-white rounded-lg p-6 shadow-inner">
@@ -471,7 +468,7 @@ export default function HireDevelopersPage() {
                   Client Success Stories
                 </h2>
                 <p className="text-xl text-gray-600 leading-relaxed max-w-4xl mx-auto">
-                  See how our scalable web application developers have helped businesses 
+                  See how our scalable web application developers have helped businesses
                   achieve remarkable results.
                 </p>
               </div>
@@ -483,7 +480,7 @@ export default function HireDevelopersPage() {
                       <h3 className="text-xl font-semibold text-gray-900 mb-2">{success.client}</h3>
                       <div className="text-indigo-600 font-medium">{success.project}</div>
                     </div>
-                    
+
                     <div className="mb-6">
                       <div className="text-gray-700 font-medium mb-2">Results Achieved:</div>
                       <p className="text-gray-600">{success.result}</p>
@@ -525,7 +522,7 @@ export default function HireDevelopersPage() {
                 Ready to Hire Your Scalable Web App Development Team?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Join 100+ satisfied clients who chose our scalable web application developers. 
+                Join 100+ satisfied clients who chose our scalable web application developers.
                 Let's discuss your project requirements and find the perfect team for you.
               </p>
 
@@ -545,14 +542,14 @@ export default function HireDevelopersPage() {
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link 
-                  href="#contact" 
+                <Link
+                  href="#contact"
                   className="bg-black text-white border border-white font-semibold py-4 px-8 rounded-lg hover:bg-white hover:text-black transition-colors duration-200"
                 >
                   Schedule Free Consultation
                 </Link>
-                <Link 
-                  href="/blog/qualities-scalable-web-app-developers-near-you" 
+                <Link
+                  href="/blog/qualities-scalable-web-app-developers-near-you"
                   className="bg-white text-black border border-white font-semibold py-4 px-8 rounded-lg hover:bg-black hover:text-white transition-colors duration-200"
                 >
                   Read Our Guide
@@ -571,7 +568,7 @@ export default function HireDevelopersPage() {
                   Let's Discuss Your Project
                 </h2>
                 <p className="text-xl text-gray-600">
-                  Ready to hire scalable web application developers? Fill out the form below 
+                  Ready to hire scalable web application developers? Fill out the form below
                   and we'll get back to you within 24 hours.
                 </p>
               </div>
@@ -581,8 +578,8 @@ export default function HireDevelopersPage() {
                   <div className="grid md:grid-cols-2 gap-6">
                     <div>
                       <label className="block text-sm font-medium text-gray-700 mb-2">Full Name *</label>
-                      <input 
-                        type="text" 
+                      <input
+                        type="text"
                         required
                         className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
                         placeholder="Enter your full name"
@@ -590,20 +587,20 @@ export default function HireDevelopersPage() {
                     </div>
                     <div>
                       <label className="block text-sm font-medium text-gray-700 mb-2">Email Address *</label>
-                      <input 
-                        type="email" 
+                      <input
+                        type="email"
                         required
                         className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
                         placeholder="Enter your email"
                       />
                     </div>
                   </div>
-                  
+
                   <div className="grid md:grid-cols-2 gap-6">
                     <div>
                       <label className="block text-sm font-medium text-gray-700 mb-2">Company</label>
-                      <input 
-                        type="text" 
+                      <input
+                        type="text"
                         className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
                         placeholder="Your company name"
                       />
@@ -646,7 +643,7 @@ export default function HireDevelopersPage() {
 
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">Project Requirements</label>
-                    <textarea 
+                    <textarea
                       rows={4}
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
                       placeholder="Describe your web application project, required technologies, and any specific requirements..."
@@ -654,7 +651,7 @@ export default function HireDevelopersPage() {
                   </div>
 
                   <div className="text-center">
-                    <button 
+                    <button
                       type="submit"
                       className="bg-black text-white border border-white font-semibold py-4 px-12 rounded-lg hover:bg-white hover:text-black transition-colors duration-200"
                     >

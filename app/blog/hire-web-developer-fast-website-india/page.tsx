@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
+import BlogCTA from '../_components/BlogCTA';
 
 export const metadata: Metadata = {
   title: 'Top 5 Benefits of Hiring Web Developers in India for Fast Websites | Equantra',
@@ -132,9 +133,9 @@ export default function BlogPost() {
                   guide will show you exactly why Indian developers should be your first choice.
                 </p>
 
-                <div className="bg-gray-80050 border-l-4 border-white p-6 my-8">
+                <div className="bg-blue-900 border-l-4 border-blue-600 p-6 my-8">
                   <h3 className="text-lg font-semibold text-white mb-2">Quick Stats</h3>
-                  <ul className="text-gray-300 space-y-1">
+                  <ul className="text-blue-100 space-y-1">
                     <li>• India has over 4.3 million software developers</li>
                     <li>• 60% cost savings compared to US developers</li>
                     <li>• 12-hour time zone advantage for continuous development</li>
@@ -183,16 +184,16 @@ export default function BlogPost() {
                 <div className="grid md:grid-cols-2 gap-6 my-8">
                   <div className="bg-green-50 p-6 rounded-lg">
                     <h4 className="font-semibold text-green-900 mb-3">Cost Comparison</h4>
-                    <ul className="text-green-800 space-y-2">
+                    <ul className="text-green-900 space-y-2">
                       <li>• US Developer: $80-150/hour</li>
                       <li>• Indian Developer: $25-50/hour</li>
                       <li>• Savings: 60-70%</li>
                       <li>• Same quality standards</li>
                     </ul>
                   </div>
-                  <div className="bg-gray-80050 p-6 rounded-lg">
+                  <div className="bg-gray-800 p-6 rounded-lg">
                     <h4 className="font-semibold text-white mb-3">What You Get</h4>
-                    <ul className="text-gray-300 space-y-2">
+                    <ul className="text-gray-200 space-y-2">
                       <li>• Dedicated development teams</li>
                       <li>• Rigorous testing processes</li>
                       <li>• Regular code reviews</li>
@@ -214,7 +215,7 @@ export default function BlogPost() {
 
                 <div className="bg-yellow-50 border border-yellow-200 p-6 rounded-lg my-8">
                   <h4 className="font-semibold text-yellow-900 mb-3">24/7 Development Cycle</h4>
-                  <div className="grid md:grid-cols-2 gap-4 text-yellow-800">
+                  <div className="grid md:grid-cols-2 gap-4 text-yellow-900">
                     <div>
                       <strong>Your Day (US):</strong>
                       <ul className="mt-2 space-y-1">
@@ -253,28 +254,28 @@ export default function BlogPost() {
 
                 <div className="space-y-4 my-6">
                   <div className="flex items-start space-x-3">
-                    <div className="w-6 h-6 bg-gray-800600 rounded-full flex items-center justify-center text-white text-sm font-bold mt-1">1</div>
+                    <div className="w-6 h-6 bg-gray-800 rounded-full flex items-center justify-center text-white text-sm font-bold mt-1">1</div>
                     <div>
                       <h4 className="font-semibold text-gray-900">Image Optimization</h4>
                       <p className="text-gray-700">WebP format, lazy loading, and responsive images for faster load times</p>
                     </div>
                   </div>
                   <div className="flex items-start space-x-3">
-                    <div className="w-6 h-6 bg-gray-800600 rounded-full flex items-center justify-center text-white text-sm font-bold mt-1">2</div>
+                    <div className="w-6 h-6 bg-gray-800 rounded-full flex items-center justify-center text-white text-sm font-bold mt-1">2</div>
                     <div>
                       <h4 className="font-semibold text-gray-900">Code Splitting</h4>
                       <p className="text-gray-700">Loading only necessary code for each page to reduce bundle size</p>
                     </div>
                   </div>
                   <div className="flex items-start space-x-3">
-                    <div className="w-6 h-6 bg-gray-800600 rounded-full flex items-center justify-center text-white text-sm font-bold mt-1">3</div>
+                    <div className="w-6 h-6 bg-gray-800 rounded-full flex items-center justify-center text-white text-sm font-bold mt-1">3</div>
                     <div>
                       <h4 className="font-semibold text-gray-900">CDN Integration</h4>
                       <p className="text-gray-700">Global content delivery for faster access worldwide</p>
                     </div>
                   </div>
                   <div className="flex items-start space-x-3">
-                    <div className="w-6 h-6 bg-gray-800600 rounded-full flex items-center justify-center text-white text-sm font-bold mt-1">4</div>
+                    <div className="w-6 h-6 bg-gray-800 rounded-full flex items-center justify-center text-white text-sm font-bold mt-1">4</div>
                     <div>
                       <h4 className="font-semibold text-gray-900">Caching Strategies</h4>
                       <p className="text-gray-700">Browser, server, and database caching for optimal performance</p>
@@ -295,15 +296,15 @@ export default function BlogPost() {
 
                 <div className="grid md:grid-cols-3 gap-4 my-8">
                   <div className="text-center p-4 bg-gray-50 rounded-lg">
-                    <div className="text-2xl font-bold text-white mb-2">95%</div>
+                    <div className="text-2xl font-bold text-gray-900 mb-2">95%</div>
                     <div className="text-gray-700">English Proficiency</div>
                   </div>
                   <div className="text-center p-4 bg-gray-50 rounded-lg">
-                    <div className="text-2xl font-bold text-white mb-2">24/7</div>
+                    <div className="text-2xl font-bold text-gray-900 mb-2">24/7</div>
                     <div className="text-gray-700">Communication Support</div>
                   </div>
                   <div className="text-center p-4 bg-gray-50 rounded-lg">
-                    <div className="text-2xl font-bold text-white mb-2">Agile</div>
+                    <div className="text-2xl font-bold text-gray-900 mb-2">Agile</div>
                     <div className="text-gray-700">Development Process</div>
                   </div>
                 </div>
@@ -347,28 +348,10 @@ export default function BlogPost() {
                 </p>
 
                 {/* CTA Section */}
-                <div className="bg-black text-white p-8 rounded-lg my-12 text-center">
-                  <h3 className="text-2xl font-bold mb-4">
-                    Ready to Hire Expert Web Developers for Your Fast Website?
-                  </h3>
-                  <p className="text-gray-400 mb-6">
-                    Get a free consultation and discover how our Indian development team can transform your website's performance.
-                  </p>
-                  <div className="space-y-4 sm:space-y-0 sm:space-x-4 sm:flex sm:justify-center">
-                    <Link
-                      href="/contact"
-                      className="inline-block bg-black text-white border border-white font-semibold py-3 px-8 rounded-lg hover:bg-white hover:text-black transition-colors duration-200"
-                    >
-                      Get Free Consultation
-                    </Link>
-                    <Link
-                      href="/services"
-                      className="inline-block bg-white text-black border border-white font-semibold py-3 px-8 rounded-lg hover:bg-black hover:text-white transition-colors duration-200"
-                    >
-                      View Our Services
-                    </Link>
-                  </div>
-                </div>
+                <BlogCTA
+                  title="Ready to Hire Expert Web Developers for Your Fast Website?"
+                  description="Get a free consultation and discover how our Indian development team can transform your website's performance."
+                />
 
                 {/* Related Articles */}
                 <div className="border-t border-gray-200 pt-12 mt-12">

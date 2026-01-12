@@ -167,7 +167,7 @@ export default function EndToEndWebAppDevelopment() {
                   
                   <p className="text-xl text-gray-300 leading-relaxed mb-8">
                     From concept to deployment, we deliver complete web application solutions that scale with your business. 
-                    Our emerging [[memory:6389543]] team follows a proven 6-step process to ensure your success.
+                    Our web development team follows a proven 6-step process to ensure your success.
                   </p>
 
                   <div className="flex flex-col sm:flex-row gap-4">

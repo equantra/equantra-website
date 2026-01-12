@@ -104,7 +104,7 @@ export default function ServicesPage() {
             
             <p className="text-xl text-gray-300 leading-relaxed mb-8 max-w-4xl mx-auto">
               From startups to enterprises, we deliver scalable, fast, and secure digital solutions. 
-              Our emerging [[memory:6389543]] team specializes in modern web and mobile technologies.
+              Our web development team specializes in modern web and mobile technologies.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

@@ -85,14 +85,14 @@ const Navbar = ({ overlay = false }: { overlay?: boolean }) => {
                 <li><span onClick={() => handleScroll("home")} className="block text-white px-8 py-2 hover:bg-gray-700 cursor-pointer">Home</span></li>
                 <li><span onClick={() => handleScroll("services")} className="block text-white px-8 py-2 hover:bg-gray-700 cursor-pointer">Services</span></li>
                 <li><span onClick={() => handleScroll("case-studies")} className="block text-white px-8 py-2 hover:bg-gray-700 cursor-pointer">Case Studies</span></li>
-                <li><span className="block text-white px-8 py-2 hover:bg-gray-700 cursor-pointer">Team</span></li>
+                <li><Link href="/about" className="block text-white px-8 py-2 hover:bg-gray-700">About</Link></li>
               </>
             ) : (
               <>
                 <li><Link href="/" className="block text-white px-8 py-2 hover:bg-gray-700">Home</Link></li>
                 <li><Link href="/#services" className="block text-white px-8 py-2 hover:bg-gray-700">Services</Link></li>
                 <li><Link href="/#case-studies" className="block text-white px-8 py-2 hover:bg-gray-700">Case Studies</Link></li>
-                <li><span className="block text-white px-8 py-2 hover:bg-gray-700 cursor-pointer">Team</span></li>
+                <li><Link href="/about" className="block text-white px-8 py-2 hover:bg-gray-700">About</Link></li>
               </>
             )}
             <li><Link href="/blog" className="block text-white px-8 py-2 hover:bg-gray-700">Blog</Link></li>

@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
+import BlogCTA from '../_components/BlogCTA';
 
 export const metadata: Metadata = {
   title: 'How to Build a Scalable Mobile Application from Day One | Equantra',
@@ -88,11 +89,11 @@ export default function BlogPost() {
 
               <p>
                 In this comprehensive guide, we'll explore the essential strategies, architectural
-                decisions, and best practices that our emerging [[memory:6389543]] development team
+                decisions, and best practices that our web development development team
                 has learned from building 50+ scalable mobile applications.
               </p>
 
-              <div className="bg-gray-80050 border-l-4 border-purple-500 p-6 my-8">
+              <div className="bg-gray-800 border-l-4 border-purple-500 p-6 my-8">
                 <h3 className="text-lg font-semibold text-white900 mb-2">What You'll Learn</h3>
                 <ul className="text-white800 space-y-1">
                   <li>• Architectural patterns for scalable mobile apps</li>
@@ -114,7 +115,7 @@ export default function BlogPost() {
               </p>
 
               <div className="grid md:grid-cols-2 gap-6 my-8">
-                <div className="bg-gray-80050 p-6 rounded-lg">
+                <div className="bg-gray-800 p-6 rounded-lg text-gray-100">
                   <h4 className="font-semibold text-white900 mb-3">User Scalability</h4>
                   <p className="text-white800 text-sm">
                     Handling growing number of concurrent users without performance degradation
@@ -188,21 +189,21 @@ export default function BlogPost() {
 
               <div className="space-y-4 my-6">
                 <div className="flex items-start space-x-3">
-                  <div className="w-6 h-6 bg-gray-800600 rounded-full flex items-center justify-center text-white text-sm font-bold mt-1">1</div>
+                  <div className="w-6 h-6 bg-gray-800 rounded-full flex items-center justify-center text-white text-sm font-bold mt-1">1</div>
                   <div>
                     <h4 className="font-semibold text-gray-900">RESTful API Design</h4>
                     <p className="text-gray-700">Follow REST principles for predictable, cacheable APIs</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-3">
-                  <div className="w-6 h-6 bg-gray-800600 rounded-full flex items-center justify-center text-white text-sm font-bold mt-1">2</div>
+                  <div className="w-6 h-6 bg-gray-800 rounded-full flex items-center justify-center text-white text-sm font-bold mt-1">2</div>
                   <div>
                     <h4 className="font-semibold text-gray-900">GraphQL for Complex Queries</h4>
                     <p className="text-gray-700">Use GraphQL for flexible data fetching and reduced over-fetching</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-3">
-                  <div className="w-6 h-6 bg-gray-800600 rounded-full flex items-center justify-center text-white text-sm font-bold mt-1">3</div>
+                  <div className="w-6 h-6 bg-gray-800 rounded-full flex items-center justify-center text-white text-sm font-bold mt-1">3</div>
                   <div>
                     <h4 className="font-semibold text-gray-900">Versioning Strategy</h4>
                     <p className="text-gray-700">Implement API versioning to support backward compatibility</p>
@@ -406,7 +407,7 @@ export default function BlogPost() {
                 Set up your cloud infrastructure to automatically scale based on demand:
               </p>
 
-              <div className="bg-gray-80050 border border-blue-200 p-6 rounded-lg my-8">
+              <div className="bg-gray-800 border border-blue-200 p-6 rounded-lg my-8">
                 <h4 className="font-semibold text-white900 mb-3">AWS Auto-Scaling Example</h4>
                 <div className="space-y-3 text-white800 text-sm">
                   <div><strong>Metric:</strong> CPU utilization &gt; 70% for 5 minutes</div>
@@ -451,7 +452,7 @@ export default function BlogPost() {
                     <li>• CPU/Memory usage</li>
                   </ul>
                 </div>
-                <div className="text-center p-6 bg-gray-80050 rounded-lg">
+                <div className="text-center p-6 bg-gray-800 rounded-lg">
                   <div className="text-2xl mb-3">👥</div>
                   <h4 className="font-semibold text-white900 mb-2">User Metrics</h4>
                   <ul className="text-white800 text-sm space-y-1">
@@ -461,7 +462,7 @@ export default function BlogPost() {
                     <li>• Feature usage</li>
                   </ul>
                 </div>
-                <div className="text-center p-6 bg-gray-80050 rounded-lg">
+                <div className="text-center p-6 bg-gray-800 rounded-lg">
                   <div className="text-2xl mb-3">💰</div>
                   <h4 className="font-semibold text-white900 mb-2">Business Metrics</h4>
                   <ul className="text-white800 text-sm space-y-1">
@@ -541,42 +542,42 @@ export default function BlogPost() {
 
               <div className="space-y-6 my-8">
                 <div className="flex items-start space-x-4">
-                  <div className="w-8 h-8 bg-gray-800600 rounded-full flex items-center justify-center text-white font-bold text-sm">1</div>
+                  <div className="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center text-white font-bold text-sm">1</div>
                   <div>
                     <h4 className="font-semibold text-gray-900 mb-2">Define Your Scalability Requirements</h4>
                     <p className="text-gray-700 text-sm">Estimate user growth, data volume, and geographic expansion plans</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">
-                  <div className="w-8 h-8 bg-gray-800600 rounded-full flex items-center justify-center text-white font-bold text-sm">2</div>
+                  <div className="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center text-white font-bold text-sm">2</div>
                   <div>
                     <h4 className="font-semibold text-gray-900 mb-2">Choose Your Technology Stack</h4>
                     <p className="text-gray-700 text-sm">Select technologies based on your team expertise and scalability needs</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">
-                  <div className="w-8 h-8 bg-gray-800600 rounded-full flex items-center justify-center text-white font-bold text-sm">3</div>
+                  <div className="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center text-white font-bold text-sm">3</div>
                   <div>
                     <h4 className="font-semibold text-gray-900 mb-2">Design Your Architecture</h4>
                     <p className="text-gray-700 text-sm">Plan microservices, database schema, and API structure</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">
-                  <div className="w-8 h-8 bg-gray-800600 rounded-full flex items-center justify-center text-white font-bold text-sm">4</div>
+                  <div className="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center text-white font-bold text-sm">4</div>
                   <div>
                     <h4 className="font-semibold text-gray-900 mb-2">Implement Core Features</h4>
                     <p className="text-gray-700 text-sm">Build MVP with scalability patterns in place</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">
-                  <div className="w-8 h-8 bg-gray-800600 rounded-full flex items-center justify-center text-white font-bold text-sm">5</div>
+                  <div className="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center text-white font-bold text-sm">5</div>
                   <div>
                     <h4 className="font-semibold text-gray-900 mb-2">Set Up Monitoring</h4>
                     <p className="text-gray-700 text-sm">Implement comprehensive monitoring and alerting</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">
-                  <div className="w-8 h-8 bg-gray-800600 rounded-full flex items-center justify-center text-white font-bold text-sm">6</div>
+                  <div className="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center text-white font-bold text-sm">6</div>
                   <div>
                     <h4 className="font-semibold text-gray-900 mb-2">Test and Optimize</h4>
                     <p className="text-gray-700 text-sm">Conduct load testing and performance optimization</p>
@@ -602,29 +603,14 @@ export default function BlogPost() {
                 seamlessly, and provide a consistently excellent user experience at any scale.
               </p>
 
-              {/* CTA Section */}
-              <div className="bg-gradient-to-r from-purple-900 to-blue-900 text-white p-8 rounded-lg my-12 text-center">
-                <h3 className="text-2xl font-bold mb-4">
-                  Ready to Build Your Scalable Mobile App?
-                </h3>
-                <p className="text-white100 mb-6">
-                  Let our expert team help you build a mobile application that scales with your business.
-                </p>
-                <div className="space-y-4 sm:space-y-0 sm:space-x-4 sm:flex sm:justify-center">
-                  <Link
-                    href="/services/scalable-mobile-app-development"
-                    className="inline-block bg-gray-800600 hover:bg-gray-800700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200"
-                  >
-                    View Our Services
-                  </Link>
-                  <Link
-                    href="/#contact"
-                    className="inline-block border border-purple-300 hover:border-white text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200"
-                  >
-                    Get Free Consultation
-                  </Link>
-                </div>
-              </div>
+              <BlogCTA
+                title="Ready to Build Your Scalable Mobile App?"
+                description="Let our expert team help you build a mobile application that scales with your business."
+                primaryButtonText="Get Free Consultation"
+                primaryButtonHref="/#contact"
+                secondaryButtonText="View Our Services"
+                secondaryButtonHref="/services/scalable-mobile-app-development"
+              />
 
               {/* Related Articles */}
               <div className="border-t border-gray-200 pt-12 mt-12">

@@ -75,32 +75,14 @@ const blogPosts: BlogPost[] = [
     category: 'Hiring Guide',
     imageUrl: '/other/blogSampleImg.png',
     featured: true
-  },
-  {
-    slug: 'future-mobile-app-development-trends',
-    title: 'The Future of Mobile App Development: Trends to Watch',
-    description: 'Explore emerging trends in mobile development, from cross-platform frameworks to AI integration shaping the next generation of mobile applications.',
-    publishDate: '2023-12-28',
-    readTime: '9 min read',
-    category: 'Technology Trends',
-    imageUrl: '/other/blogSampleImg.png'
-  },
-  {
-    slug: 'blockchain-technology-enterprise-solutions',
-    title: 'Blockchain Technology in Enterprise: Beyond Cryptocurrencies',
-    description: 'Discover how businesses leverage blockchain for supply chain management, secure data sharing, and transforming enterprise operations.',
-    publishDate: '2023-12-20',
-    readTime: '8 min read',
-    category: 'Blockchain',
-    imageUrl: '/other/blogSampleImg.png'
   }
 ];
 
-const categories = ['All', 'Web Development', 'Mobile Development', 'Startup Solutions', 'Hiring Guide', 'Technology Trends', 'Blockchain'];
+const categories = ['All', 'Web Development', 'Mobile Development', 'Startup Solutions', 'Hiring Guide'];
 
 export default function BlogPage() {
   const featuredPosts = blogPosts.filter(post => post.featured);
-  const recentPosts = blogPosts.slice(0, 6);
+  const recentPosts = blogPosts; // Show all posts since we only have 4
 
   return (
     <div className="min-h-screen bg-white">
@@ -112,7 +94,7 @@ export default function BlogPage() {
               Expert Insights on Web & Mobile Development
             </h1>
             <p className="text-xl text-gray-300 leading-relaxed">
-              Stay updated with the latest trends, best practices, and expert tips from our emerging [[memory:6389543]] development team
+              Stay updated with the latest trends, best practices, and expert tips from our web development team
             </p>
           </div>
         </div>
@@ -127,8 +109,8 @@ export default function BlogPage() {
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {featuredPosts.map((post) => (
-                <Link 
-                  key={post.slug} 
+                <Link
+                  key={post.slug}
                   href={`/blog/${post.slug}`}
                   className="group block bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden"
                 >
@@ -201,8 +183,8 @@ export default function BlogPage() {
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {recentPosts.map((post) => (
-                <Link 
-                  key={post.slug} 
+                <Link
+                  key={post.slug}
                   href={`/blog/${post.slug}`}
                   className="group block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden border border-gray-200"
                 >

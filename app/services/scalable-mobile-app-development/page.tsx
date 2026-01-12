@@ -210,7 +210,7 @@ export default function ScalableMobileAppDevelopment() {
                   
                   <p className="text-xl text-gray-300 leading-relaxed mb-8">
                     We build mobile applications that grow with your business. From startup MVPs to enterprise-scale 
-                    solutions, our emerging [[memory:6389543]] team creates apps that handle millions of users seamlessly.
+                    solutions, our web development team creates apps that handle millions of users seamlessly.
                   </p>
 
                   <div className="flex flex-col sm:flex-row gap-4">
