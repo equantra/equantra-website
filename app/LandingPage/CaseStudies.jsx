@@ -87,7 +87,7 @@ const CaseStudies = () => {
             return (
               <SwiperSlide key={index} className="overflow-visible min-w-[100px] md:min-w-[200px] cursor-pointer select-none">
                 <div
-                  className="relative bg-black text-white p-4 rounded-2xl transition-transform duration-300 hover:p-2"
+                  className="relative bg-gradient-to-br from-gray-900 to-black text-white p-4 rounded-2xl transition-transform duration-300 hover:p-2 border border-blue-900/20"
                   style={{ transform: `skewY(${skewY}deg) translateY(${translateY}px)` }} 
                 >
                   <img src={item.imageSrc} className="w-full h-full object-cover grayscale hover:grayscale-0" alt="" />
@@ -102,8 +102,12 @@ const CaseStudies = () => {
         </Swiper>
         <div className="z-10 absolute bottom-0  md:bottom-20 left-[36%] md:left-[44%] flex items-center justify-center">
           <div className="flex space-x-8 text-white">
-            <CircleChevronLeft onClick={() => swiperRef.current?.slidePrev()} className="cursor-pointer w-10 h-10 md:w-16 md:h-16" />
-            <CircleChevronRight onClick={() => swiperRef.current?.slideNext()} className="cursor-pointer w-10 h-10 md:w-16 md:h-16" />
+            <div className="p-2 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 transition-all duration-300">
+              <CircleChevronLeft onClick={() => swiperRef.current?.slidePrev()} className="cursor-pointer w-6 h-6 md:w-12 md:h-12" />
+            </div>
+            <div className="p-2 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 transition-all duration-300">
+              <CircleChevronRight onClick={() => swiperRef.current?.slideNext()} className="cursor-pointer w-6 h-6 md:w-12 md:h-12" />
+            </div>
           </div>
         </div>
       </motion.div>

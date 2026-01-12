@@ -50,7 +50,7 @@ const HeroSection = () => {
           <button 
           onClick={() => handleScroll("contact")}
           className="relative mt-8 px-8 py-3 text-sm md:text-lg lg:text-xl rounded-full bg-white text-black font-medium overflow-hidden transition-all duration-300
-          before:absolute before:inset-0 before:w-0 before:bg-[#4C02E0] before:transition-all before:duration-500 
+          before:absolute before:inset-0 before:w-0 before:bg-gradient-to-r before:from-blue-600 before:to-purple-600 before:transition-all before:duration-500 
           hover:before:w-full hover:text-white"
           >
             <span className="relative z-10">Get in touch →</span>

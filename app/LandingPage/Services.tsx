@@ -38,10 +38,10 @@ const ServicesSection: React.FC = () => {
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.8 }}
               key={index}
-              className="p-6 lg:p-8 drop-shadow-xl hover:drop-shadow-hover_xl cursor-pointer rounded-xl bg-white transition-all duration-300 hover:scale-105 h-full flex flex-col"
+              className="p-6 lg:p-8 drop-shadow-xl hover:drop-shadow-hover_xl cursor-pointer rounded-xl bg-gradient-to-br from-white to-blue-50 hover:from-blue-50 hover:to-purple-50 transition-all duration-300 hover:scale-105 h-full flex flex-col border border-blue-100"
             >
                 <div className="flex flex-col items-start mb-4">
-                  <div className="mb-4 h-14 w-14 bg-black flex justify-center items-center rounded-lg">
+                  <div className="mb-4 h-14 w-14 bg-gradient-to-r from-blue-600 to-purple-600 flex justify-center items-center rounded-lg">
                     <service.icon className="h-8 w-8 text-white"/>
                   </div>
                   <h3 className="text-xl lg:text-2xl font-bold text-black">{service.title}</h3>

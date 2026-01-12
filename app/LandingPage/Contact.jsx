@@ -15,7 +15,7 @@ const Contact = () => {
     </div>
   <div className="w-full relative flex  justify-center items-center my-20">
     <div className="flex w-full md:w-4/5 xs:items-center flex-col md:flex-row justify-center">
-      <div className="w-full md:w-1/2 bg-white md:bg-black text-black md:text-white p-10 flex justify-center items-center md:rounded-l-lg">
+      <div className="w-full md:w-1/2 bg-white md:bg-gradient-to-r md:from-blue-600 md:to-purple-600 text-black md:text-white p-10 flex justify-center items-center md:rounded-l-lg">
 
         <h2 className="text-center text-xl  md:text-3xl">
           Got ideas? <br />
@@ -34,7 +34,7 @@ const Contact = () => {
             type="text" 
             name="name"
             placeholder="Your name" 
-            className="w-full p-2 mt-2 border-b border-gray-500 outline-none focus:border-black transition" 
+            className="w-full p-2 mt-2 border-b border-gray-500 outline-none focus:border-blue-600 transition" 
             required
           />
           <input 
@@ -42,7 +42,7 @@ const Contact = () => {
             type="email" 
             name="email"
             placeholder="Your email ID" 
-            className="w-full p-2 mt-2 border-b border-gray-500 outline-none focus:border-black transition"
+            className="w-full p-2 mt-2 border-b border-gray-500 outline-none focus:border-blue-600 transition"
             required 
           />
           <div className="flex space-x-2">
@@ -51,7 +51,7 @@ const Contact = () => {
               type="text" 
               name="countryCode"
               placeholder="+91" 
-              className="w-1/6 p-2 border-b border-gray-500 outline-none focus:border-black transition text-center"
+              className="w-1/6 p-2 border-b border-gray-500 outline-none focus:border-blue-600 transition text-center"
               required 
             />
             <input 
@@ -59,7 +59,7 @@ const Contact = () => {
               type="tel" 
               name="phone"
               placeholder="Phone no" 
-              className="w-5/6 p-2 border-b border-gray-500 outline-none focus:border-black transition"
+              className="w-5/6 p-2 border-b border-gray-500 outline-none focus:border-blue-600 transition"
               required 
             />
           </div>
@@ -68,7 +68,7 @@ const Contact = () => {
             suppressHydrationWarning
             name="message"
             placeholder="How can we help?"
-            className="w-full p-2 mt-2 border border-gray-500 focus:border-gray-800 transition rounded-lg"
+            className="w-full p-2 mt-2 border border-gray-500 focus:border-blue-600 transition rounded-lg"
             required
           ></textarea>
 
@@ -76,7 +76,7 @@ const Contact = () => {
             <button 
               type="submit"
               suppressHydrationWarning 
-              className="w-full bg-[#4C02E0] text-white px-8 py-2 rounded-full"
+              className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-2 rounded-full transition-all duration-300"
             >
               <span>Submit</span>
             </button>

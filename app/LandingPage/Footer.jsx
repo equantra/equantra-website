@@ -1,12 +1,19 @@
 import React from "react";
+import Image from "next/image";
 
 const Footer = () => {
-  return(
+  return (
     <React.Fragment>
       <footer className="bg-black z-10">
         <div className="px-4 md:px-10 lg:px-40 py-20 pb-10">
           <div className="flex flex-col md:flex-row justify-between pb-10 border-b border-white items-center">
-            <img src="logo-full.svg" className="h-14 md:h-20 lg:h-24 mb-10 md:mb-0"/>
+            <Image
+              src="/logo-full.svg"
+              alt="Equantra Logo"
+              width={100}
+              height={100}
+              className="h-14 md:h-20 lg:h-24 mb-10 md:mb-0 w-auto"
+            />
             <div className="flex gap-5 md:gap-20 text-white">
               <div className="flex flex-col justify-center items-center">
                 <h2 className="md:text-2xl mb-4">Work</h2>
@@ -34,7 +41,7 @@ const Footer = () => {
           <p className="text-white text-lg font-light mt-6">Copyright © {new Date().getFullYear()} Equantra. All rights reserved.</p>
         </div>
       </footer>
-      
+
     </React.Fragment>
   )
 }
