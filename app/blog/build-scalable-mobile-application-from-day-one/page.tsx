@@ -70,7 +70,7 @@ export default function BlogPost() {
             {/* Featured Image */}
             <div className="mb-12">
               <Image
-                src="/other/illustration.svg"
+                src="/blogs/build-scalable-mobile-application-from-day-one/header.webp"
                 alt="Building Scalable Mobile Applications"
                 width={800}
                 height={400}

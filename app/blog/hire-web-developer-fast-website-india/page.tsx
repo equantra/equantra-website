@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     url: 'https://equantra.in/blog/hire-web-developer-fast-website-india',
     images: [
       {
-        url: '/other/blogSampleImg.png',
+        url: '/blogs/hire-web-developer-fast-website-india/header.webp',
         width: 1200,
         height: 630,
         alt: 'Hiring Web Developers in India for Fast Websites',
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     ],
   },
   alternates: {
-    canonical: 'https://equantra.in/blog/hire-web-developer-fast-website-india',
+    canonical: 'https://equantra.in/blogs/hire-web-developer-fast-website-india',
   },
 };
 
@@ -40,7 +40,7 @@ const jsonLd = {
   '@type': 'Article',
   headline: 'Top 5 Benefits of Hiring Web Developers in India for Fast Websites',
   description: 'Discover why Indian web developers are perfect for building lightning-fast websites. Learn about cost benefits, expertise, time zones, and proven strategies.',
-  image: 'https://equantra.in/other/blogSampleImg.png',
+  image: 'https://equantra.in/blogs/hire-web-developer-fast-website-india/header.webp',
   datePublished: '2024-01-15',
   dateModified: '2024-01-15',
   author: {
@@ -111,7 +111,7 @@ export default function BlogPost() {
               {/* Featured Image */}
               <div className="mb-12">
                 <Image
-                  src="/other/blogSampleImg.png"
+                  src="/blogs/hire-web-developer-fast-website-india/header.webp"
                   alt="Web developers in India working on fast websites"
                   width={800}
                   height={400}

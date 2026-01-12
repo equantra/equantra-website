@@ -70,7 +70,7 @@ export default function BlogPost() {
             {/* Featured Image */}
             <div className="mb-12">
               <Image
-                src="/other/illustration.svg"
+                src="/blogs/qualities-scalable-web-app-developers-near-you/header.webp"
                 alt="Qualities of Scalable Web App Developers"
                 width={800}
                 height={400}
