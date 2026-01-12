@@ -1,0 +1,26 @@
+{
+  "name": "Equantra - Emerging Web Development Agency in India",
+  "short_name": "Equantra",
+  "description": "Emerging web development agency specializing in mobile app development, web applications, and digital solutions across India and overseas.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#000000",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/logo-full.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ],
+  "categories": ["business", "productivity", "technology"],
+  "lang": "en-US"
+}

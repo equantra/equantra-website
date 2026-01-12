@@ -1,7 +1,7 @@
 "use client"
 
 import React, {useRef, useState, useEffect} from "react";
-import { TabletSmartphone, Computer, Gamepad2, LayoutTemplate } from 'lucide-react'
+import { TabletSmartphone, Computer, LayoutTemplate } from 'lucide-react'
 
 
 import { motion } from "framer-motion";
@@ -23,30 +23,30 @@ const ServicesSection: React.FC = () => {
   return (
     <section id="services" className=" bg-white relative space-y-10 pb-20">
       <div className="relative inline-block flex items-center justify-center w-full">
-      <img className="w-full" src="./other/headingContainer.svg" />
+      <img className="w-full" src="./other/headingContainer.svg" alt="Services section heading container - emerging web development agency" loading="lazy" />
         <div className="w-full h-full top-0 left-0 absolute flex justify-center items-center">
-          <h2 className="text-white text-xl  md:text-3xl">Services</h2>
+          <h2 className="text-white text-xl  md:text-3xl">Our Services</h2>
         </div>
       </div>
       <div className="container mx-auto w-full flex justify-center">
         
         <div ref={ref} className="w-full m-4 md:m-20">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 sm:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 max-w-6xl mx-auto">
           {services.map((service, index) => (
             <motion.div
               initial={{ opacity: 0, y: 40 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.8 }}
               key={index}
-              className="p-8 drop-shadow-xl hover:drop-shadow-hover_xl cursor-pointer rounded-xl bg-white"
+              className="p-6 lg:p-8 drop-shadow-xl hover:drop-shadow-hover_xl cursor-pointer rounded-xl bg-gradient-to-br from-white to-blue-50 hover:from-blue-50 hover:to-purple-50 transition-all duration-300 hover:scale-105 h-full flex flex-col border border-blue-100"
             >
-                <div className="flex space-x-4 items-center">
-                  <div className="mb-6 h-12 w-12 bg-black flex justify-center items-center rounded-md">
+                <div className="flex flex-col items-start mb-4">
+                  <div className="mb-4 h-14 w-14 bg-gradient-to-r from-blue-600 to-purple-600 flex justify-center items-center rounded-lg">
                     <service.icon className="h-8 w-8 text-white"/>
                   </div>
-                  <h3 className="text-xl font-bold text-black mb-4">{service.title}</h3>
+                  <h3 className="text-xl lg:text-2xl font-bold text-black">{service.title}</h3>
                 </div>
-              <p className="text-gray-900">{service.description}</p>
+              <p className="text-gray-700 leading-relaxed flex-grow">{service.description}</p>
             </motion.div>
           ))}
         </div>
@@ -69,27 +69,21 @@ interface Service {
 // Define services array with proper types
 const services: Service[] = [
   {
-    title: "Mobile Development",
+    title: "Mobile App Development",
     description:
-      "We build fast, responsive mobile apps using React Native and Flutter. Our services include custom app development, cross-platform solutions, UI/UX design, app maintenance, and performance optimization.",
+      "As an emerging mobile development agency in India and overseas, we build fast, responsive mobile apps using React Native and Flutter. Our expert mobile app development services include custom app development, cross-platform solutions, UI/UX design, app maintenance, and performance optimization.",
     icon: TabletSmartphone
   },
   {
     title: "Web Development",
     description:
-      "We create powerful, scalable, and user-friendly web applications that help businesses establish a strong online presence. Our services include custom web apps, e-commerce solutions, progressive web apps, content management systems, and API development.",
+      "As an emerging web development agency in India, we create powerful, scalable, and user-friendly web applications that help businesses establish a strong online presence. Our comprehensive web development services include custom web apps, e-commerce solutions, progressive web apps, content management systems, and API development.",
     icon: Computer
   },
   {
-    title: "Blockchain Development",
+    title: "Desktop Application Development",
     description:
-      "We're at the forefront of blockchain technology, helping businesses leverage its potential for enhanced security, transparency, and efficiency. Our services include smart contracts, DApp development, tokenization solutions, and private blockchain networks.",
-    icon: Gamepad2
-  },
-  {
-    title: "Desktop Development",
-    description:
-      "Our desktop application development services deliver powerful, responsive, and user-friendly software solutions that enhance productivity and streamline operations, including cross-platform applications, enterprise solutions, and database applications.",
+      "Our expert desktop application development services deliver powerful, responsive, and user-friendly software solutions that enhance productivity and streamline operations across India and overseas. We specialize in cross-platform applications, enterprise solutions, and database applications.",
     icon: LayoutTemplate
   },
 ];

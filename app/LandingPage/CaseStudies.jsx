@@ -12,7 +12,7 @@ import { motion } from "framer-motion";
 
 const CaseStudies = () => {
   const ref = useRef(null);
- const [isInView, setIsInView] = useState(false);
+  const [isInView, setIsInView] = useState(false);
   const [activeIndex, setActiveIndex] = useState(2);
   const swiperRef = useRef(null);
 
@@ -35,12 +35,12 @@ const CaseStudies = () => {
         </div>
       </div>
 
-      <motion.div 
-      ref={ref}
-      initial={{ opacity: 0, y: 40 }}
-      animate={isInView ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 0.8 }}
-      className="relative w-full flex justify-center my-10 h-full min-h-540px md:min-h-[580px]">
+      <motion.div
+        ref={ref}
+        initial={{ opacity: 0, y: 40 }}
+        animate={isInView ? { opacity: 1, y: 0 } : {}}
+        transition={{ duration: 0.8 }}
+        className="relative w-full flex justify-center my-10 h-full min-h-540px md:min-h-[580px]">
         <Swiper
           modules={[Navigation]}
           slidesPerView={3}
@@ -52,7 +52,7 @@ const CaseStudies = () => {
           centerInsufficientSlides={true}
           initialSlide={Math.floor(CaseStudies.length / 2)}
           breakpoints={{
-            240: {slidesPerView: 2},
+            240: { slidesPerView: 2 },
             640: { slidesPerView: 3 }, // From sm (640px) onwards, show 3 slides
             768: { slidesPerView: 4 }, // From md (768px) onwards, show 4 slides
             1024: { slidesPerView: 5 }, // From lg (1024px) onwards, show 5 slides
@@ -68,7 +68,7 @@ const CaseStudies = () => {
             let translateY = 0;
             if (position === -2) {
               skewY = -15;
-              translateY = 100; 
+              translateY = 100;
             }
             if (position === -1) {
               skewY = -10;
@@ -80,15 +80,15 @@ const CaseStudies = () => {
             }
             if (position === 2) {
               skewY = 15;
-              translateY = 100;  
+              translateY = 100;
             }
-           
+
 
             return (
               <SwiperSlide key={index} className="overflow-visible min-w-[100px] md:min-w-[200px] cursor-pointer select-none">
                 <div
-                  className="relative bg-black text-white p-4 rounded-2xl transition-transform duration-300 hover:p-2"
-                  style={{ transform: `skewY(${skewY}deg) translateY(${translateY}px)` }} 
+                  className="relative bg-gradient-to-br from-gray-900 to-black text-white p-4 rounded-2xl transition-transform duration-300 hover:p-2 border border-blue-900/20"
+                  style={{ transform: `skewY(${skewY}deg) translateY(${translateY}px)` }}
                 >
                   <img src={item.imageSrc} className="w-full h-full object-cover grayscale hover:grayscale-0" alt="" />
                   <div className="absolute bottom-0 left-0 w-full bg-black bg-opacity-50 text-white p-8 hover:p-4">
@@ -102,65 +102,76 @@ const CaseStudies = () => {
         </Swiper>
         <div className="z-10 absolute bottom-0  md:bottom-20 left-[36%] md:left-[44%] flex items-center justify-center">
           <div className="flex space-x-8 text-white">
-            <CircleChevronLeft onClick={() => swiperRef.current?.slidePrev()} className="cursor-pointer w-10 h-10 md:w-16 md:h-16" />
-            <CircleChevronRight onClick={() => swiperRef.current?.slideNext()} className="cursor-pointer w-10 h-10 md:w-16 md:h-16" />
+            <div className="p-2 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 transition-all duration-300">
+              <CircleChevronLeft onClick={() => swiperRef.current?.slidePrev()} className="cursor-pointer w-6 h-6 md:w-12 md:h-12" />
+            </div>
+            <div className="p-2 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 transition-all duration-300">
+              <CircleChevronRight onClick={() => swiperRef.current?.slideNext()} className="cursor-pointer w-6 h-6 md:w-12 md:h-12" />
+            </div>
           </div>
         </div>
       </motion.div>
-    
+
     </div>
   );
 };
 
 const CaseStudiesItems = [
-  
   {
-    title: "Mobile Apps Development", 
+    title: "Real Estate Investment Platform",
     description:
-      "Creating intuitive and performant mobile applications that deliver exceptional user experiences. We specialize in native and cross-platform development using cutting-edge technologies.",
-    imageSrc: './other/CSImage.png'
+      "Developed a comprehensive mobile application for real estate fund management, enabling investors to track portfolios, view property analytics, and manage investments seamlessly. Built with React Native for cross-platform compatibility and robust backend infrastructure.",
+    imageSrc: './other/CSImage.png',
+    technologies: "React Native, Node.js, PostgreSQL, AWS",
+    impact: "Streamlined fund operations for 500+ investors"
   },
   {
-    title: "Blockchain Development",
+    title: "Healthcare Management System",
     description:
-      "Building secure and scalable blockchain solutions that revolutionize business processes. From smart contracts to decentralized applications, we help organizations embrace blockchain innovation.",
-    imageSrc: './other/CSImage.png'
+      "Created an end-to-end healthcare mobile application and backend system for patient management, appointment scheduling, and medical records. Ensured HIPAA-compliant data handling with secure authentication and encrypted communications.",
+    imageSrc: './other/CSImage.png',
+    technologies: "React Native, Python, PostgreSQL, AWS",
+    impact: "Serving 1000+ patients with 99.9% uptime"
   },
   {
-    title: "Web Development",
+    title: "E-commerce Platform",
     description:
-      "Developing modern, responsive web applications that engage users and drive results. Our web solutions combine beautiful design with robust functionality to create compelling online experiences.",
-    imageSrc: './other/CSImage.png'
+      "Built a scalable e-commerce platform with real-time inventory management, payment gateway integration, and analytics dashboard. Optimized for high traffic with Redis caching and CDN implementation for faster load times.",
+    imageSrc: './other/CSImage.png',
+    technologies: "Next.js, Node.js, MongoDB, Stripe",
+    impact: "Processing $50K+ monthly transactions"
   },
   {
-    title: "Game Development",
+    title: "FinTech Mobile Application",
     description:
-      "Creating immersive gaming experiences across multiple platforms. We blend creative storytelling with technical excellence to develop engaging games that captivate and entertain.",
-    imageSrc: './other/CSImage.png'
+      "Developed a secure mobile banking application with features including fund transfers, bill payments, and investment tracking. Implemented multi-factor authentication and end-to-end encryption for maximum security.",
+    imageSrc: './other/CSImage.png',
+    technologies: "Flutter, Java, PostgreSQL, Azure",
+    impact: "Trusted by 2000+ users for daily transactions"
   },
   {
-    title: "Big Data Development",
+    title: "Learning Management System",
     description:
-      "Leveraging advanced analytics and machine learning to transform massive datasets into actionable insights. Our big data solutions help businesses make data-driven decisions and uncover hidden opportunities.",
-    imageSrc: './other/CSImage.png'
+      "Built a comprehensive LMS platform for online education with video streaming, interactive quizzes, progress tracking, and certificate generation. Integrated with payment systems for course purchases and subscriptions.",
+    imageSrc: './other/CSImage.png',
+    technologies: "React, Django, MongoDB, AWS S3",
+    impact: "Empowering 5000+ students worldwide"
   },
   {
-    title: "Software Development",
+    title: "Logistics & Fleet Management",
     description:
-      "Delivering custom software solutions that solve complex business challenges. Our expertise spans enterprise applications, cloud services, and specialized tools built with modern technologies.",
-    imageSrc: './other/CSImage.png'
+      "Created a real-time fleet tracking and logistics management system with GPS integration, route optimization, and delivery scheduling. Mobile apps for drivers and dispatchers ensure seamless operations.",
+    imageSrc: './other/CSImage.png',
+    technologies: "React Native, Node.js, Redis, Google Maps API",
+    impact: "Managing 100+ vehicles daily"
   },
   {
-    title: "UI/UX Development",
+    title: "Social Networking Platform",
     description:
-        "Creating intuitive and user-centric digital experiences through thoughtful interface design and interaction flows. We focus on user research, wireframing, and prototyping to deliver seamless and engaging user experiences.",
-    imageSrc: './other/CSImage.png'
-  },
-  {
-    title: "Logo/Website Design",
-    description:
-      "Crafting distinctive brand identities and visually stunning websites that leave lasting impressions. Our design team combines creativity with strategic thinking to create memorable logos and compelling website designs that elevate your brand.",
-    imageSrc: './other/CSImage.png'
+      "Developed a niche social networking platform with user profiles, real-time messaging, content feeds, and community features. Implemented sophisticated recommendation algorithms for content discovery.",
+    imageSrc: './other/CSImage.png',
+    technologies: "Vue.js, Node.js, MongoDB, Socket.io",
+    impact: "Growing community of 10K+ active users"
   },
 ];
 
