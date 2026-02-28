@@ -1,96 +1,130 @@
-"use client"
+"use client";
 
-import React, {useRef, useState, useEffect} from "react";
-import { TabletSmartphone, Computer, Gamepad2, LayoutTemplate } from 'lucide-react'
-
-
+import React, { useRef, useState, useEffect } from "react";
+import {
+  TabletSmartphone,
+  Monitor,
+  MonitorCog,
+  Brain,
+  Wrench,
+  Users,
+} from "lucide-react";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const ServicesSection: React.FC = () => {
   const ref = useRef(null);
-   const [isInView, setIsInView] = useState(false);
-  
-    useEffect(() => {
-      const observer = new IntersectionObserver(
-        ([entry]) => setIsInView(entry.isIntersecting),
-        { rootMargin: "-50px", threshold: 0.1 }
-      );
-  
-      if (ref.current) observer.observe(ref.current);
-      return () => observer.disconnect();
-    }, []);
-  
+  const [isInView, setIsInView] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => setIsInView(entry.isIntersecting),
+      { rootMargin: "-50px", threshold: 0.1 }
+    );
+    if (ref.current) observer.observe(ref.current);
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <section id="services" className=" bg-white relative space-y-10 pb-20">
-      <div className="relative inline-block flex items-center justify-center w-full">
-      <img className="w-full" src="./other/headingContainer.svg" />
-        <div className="w-full h-full top-0 left-0 absolute flex justify-center items-center">
-          <h2 className="text-white text-xl  md:text-3xl">Services</h2>
+    <section id="services" className="py-24 px-6">
+      <div className="max-w-7xl mx-auto">
+        <div className="text-center mb-16">
+          <p className="text-violet-400 text-sm font-semibold tracking-wider uppercase mb-3">
+            What We Do
+          </p>
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            End-to-End Software Solutions
+          </h2>
+          <p className="text-gray-300 max-w-2xl mx-auto">
+            From concept to deployment and beyond&mdash;we provide flexible,
+            high-quality development services tailored to your business.
+          </p>
         </div>
-      </div>
-      <div className="container mx-auto w-full flex justify-center">
-        
-        <div ref={ref} className="w-full m-4 md:m-20">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 sm:grid-cols-2 gap-8">
+
+        <div
+          ref={ref}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+        >
           {services.map((service, index) => (
             <motion.div
-              initial={{ opacity: 0, y: 40 }}
+              initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
               key={index}
-              className="p-8 drop-shadow-xl hover:drop-shadow-hover_xl cursor-pointer rounded-xl bg-white"
             >
-                <div className="flex space-x-4 items-center">
-                  <div className="mb-6 h-12 w-12 bg-black flex justify-center items-center rounded-md">
-                    <service.icon className="h-8 w-8 text-white"/>
+              <Link
+                href={`/services#${service.anchor}`}
+                className="group block p-8 rounded-2xl bg-slate-800/60 border border-white/10 hover:border-violet-500/30 hover:bg-slate-800 transition-all duration-300"
+              >
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="h-12 w-12 bg-violet-500/15 flex items-center justify-center rounded-xl group-hover:bg-violet-500/25 transition-colors">
+                    <service.icon className="h-6 w-6 text-violet-400" />
                   </div>
-                  <h3 className="text-xl font-bold text-black mb-4">{service.title}</h3>
+                  <h3 className="text-lg font-semibold text-white">
+                    {service.title}
+                  </h3>
                 </div>
-              <p className="text-gray-900">{service.description}</p>
+                <p className="text-gray-300 text-sm leading-relaxed">
+                  {service.description}
+                </p>
+              </Link>
             </motion.div>
           ))}
-        </div>
-
-        {/* Carousel Dots */}
-
         </div>
       </div>
     </section>
   );
 };
 
-// Define TypeScript types for services
 interface Service {
   title: string;
   description: string;
   icon: React.ElementType;
+  anchor: string;
 }
 
-// Define services array with proper types
 const services: Service[] = [
   {
-    title: "Mobile Development",
+    title: "Custom Software Development",
     description:
-      "We build fast, responsive mobile apps using React Native and Flutter. Our services include custom app development, cross-platform solutions, UI/UX design, app maintenance, and performance optimization.",
-    icon: TabletSmartphone
+      "Web applications, SaaS platforms, ERP/CMS systems, and API development built to your exact specifications with modern tech stacks.",
+    icon: Monitor,
+    anchor: "software-development",
   },
   {
-    title: "Web Development",
+    title: "Mobile App Development",
     description:
-      "We create powerful, scalable, and user-friendly web applications that help businesses establish a strong online presence. Our services include custom web apps, e-commerce solutions, progressive web apps, content management systems, and API development.",
-    icon: Computer
+      "High-performance iOS and Android apps using React Native, Flutter, and native technologies. Cross-platform solutions that scale.",
+    icon: TabletSmartphone,
+    anchor: "mobile-development",
   },
   {
-    title: "Blockchain Development",
+    title: "Desktop Application Development",
     description:
-      "We're at the forefront of blockchain technology, helping businesses leverage its potential for enhanced security, transparency, and efficiency. Our services include smart contracts, DApp development, tokenization solutions, and private blockchain networks.",
-    icon: Gamepad2
+      "Cross-platform desktop applications, enterprise solutions, and database-driven tools that enhance productivity and streamline operations.",
+    icon: MonitorCog,
+    anchor: "desktop-development",
   },
   {
-    title: "Desktop Development",
+    title: "IT Consulting & Fractional CTO",
     description:
-      "Our desktop application development services deliver powerful, responsive, and user-friendly software solutions that enhance productivity and streamline operations, including cross-platform applications, enterprise solutions, and database applications.",
-    icon: LayoutTemplate
+      "Technology strategy, architecture reviews, tech stack selection, and digital transformation roadmaps from experienced engineering consultants.",
+    icon: Users,
+    anchor: "consulting",
+  },
+  {
+    title: "Software Maintenance & Support",
+    description:
+      "Legacy application modernization, bug fixes, performance optimization, 24/7 monitoring, and SLA-based support for your existing systems.",
+    icon: Wrench,
+    anchor: "maintenance",
+  },
+  {
+    title: "AI & Automation Solutions",
+    description:
+      "AI integration, business process automation, workflow optimization, and intelligent data pipelines to streamline your operations.",
+    icon: Brain,
+    anchor: "ai-automation",
   },
 ];
 

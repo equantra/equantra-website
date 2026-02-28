@@ -1,39 +1,25 @@
-import ServicesSection from "./LandingPage/Services";
-import ParticlesComponent from "./LandingPage/ParticlesComponent";
 import Navbar from "./Navbar";
 import HeroSection from "./LandingPage/HeroSection";
-import CaseStudies from "./LandingPage/CaseStudies";
-import Blog from "./LandingPage/Blog";
-import Clients from "./LandingPage/Clients";
-import Contact from "./LandingPage/Contact";
+import ServicesSection from "./LandingPage/Services";
+import CategoryChooser from "./components/CategoryChooser";
+import PricingSection from "./components/PricingSection";
+import WhyChooseUs from "./components/WhyChooseUs";
+import Portfolio from "./LandingPage/CaseStudies";
+import TechStack from "./components/TechStack";
 import Footer from "./LandingPage/Footer";
 
 export default function Home() {
   return (
-    <div className="flex flex-col min-h-screen bg-black">
-      <div className="z-0">
-        <ParticlesComponent />
-      </div>
-
-      {/* Navigation */}
+    <div className="flex flex-col min-h-screen">
       <Navbar />
-
-      {/* Hero Section */}
       <HeroSection />
-
-      {/* Services Section */}
       <ServicesSection />
-
-      <CaseStudies />
-
-      <Blog />
-
-      <Clients /> 
-
-      <Contact />
-
-      <Footer /> 
+      <CategoryChooser />
+      <PricingSection />
+      <WhyChooseUs />
+      <Portfolio />
+      <TechStack />
+      <Footer />
     </div>
   );
 }
-
