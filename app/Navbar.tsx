@@ -9,6 +9,7 @@ import { usePathname } from "next/navigation";
 const navLinks = [
   { label: "Home", href: "/" },
   { label: "Services", href: "/services" },
+  { label: "Blog", href: "/blog" },
   { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },
 ];
@@ -54,7 +55,7 @@ const Navbar = () => {
               key={link.href}
               href={link.href}
               className={`text-sm font-medium transition-colors duration-200 ${
-                pathname === link.href
+                pathname === link.href || (link.href !== "/" && pathname.startsWith(link.href))
                   ? "text-white"
                   : "text-gray-300 hover:text-white"
               }`}
@@ -87,7 +88,7 @@ const Navbar = () => {
                 key={link.href}
                 href={link.href}
                 className={`py-3 px-4 rounded-lg text-sm font-medium transition-colors ${
-                  pathname === link.href
+                  pathname === link.href || (link.href !== "/" && pathname.startsWith(link.href))
                     ? "text-white bg-white/10"
                     : "text-gray-300 hover:text-white hover:bg-white/5"
                 }`}

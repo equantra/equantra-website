@@ -50,7 +50,7 @@ const TechStack: React.FC = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 max-w-6xl mx-auto mb-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 max-w-6xl mx-auto mb-6">
           {categories.map((cat) => (
             <div key={cat.label} className="space-y-3">
               <h3 className="text-xs font-semibold tracking-wider uppercase text-violet-400 mb-2">
@@ -68,6 +68,11 @@ const TechStack: React.FC = () => {
               </div>
             </div>
           ))}
+        </div>
+        <div className="flex justify-center mb-16">
+          <span className="px-5 py-2.5 rounded-full bg-violet-600/10 border border-violet-500/20 text-violet-400 text-sm font-medium">
+            And many more...
+          </span>
         </div>
 
         <div className="relative bg-gradient-to-r from-violet-600/10 via-slate-800 to-violet-600/10 border border-white/10 rounded-2xl p-12 text-center">
