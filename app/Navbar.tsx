@@ -1,83 +1,110 @@
 "use client";
 
-import { Menu } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+
+const navLinks = [
+  { label: "Home", href: "/" },
+  { label: "Services", href: "/services" },
+  { label: "Blog", href: "/blog" },
+  { label: "About", href: "/about" },
+  { label: "Contact", href: "/contact" },
+];
 
 const Navbar = () => {
-  const [isHovering, setHovering] = useState(false);
-  const [scrolling, setScrolling] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setScrolling(true);
-      } else {
-        setScrolling(false);
-      }
-    };
-
+    const handleScroll = () => setScrolled(window.scrollY > 20);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const handleScroll = (id: string) => {
-    const section = document.getElementById(id);
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
-      setMenuOpen(false); // Close menu after clicking a link
-    }
-  };
-  
+  useEffect(() => {
+    setMenuOpen(false);
+  }, [pathname]);
 
   return (
     <nav
-      onMouseEnter={() => setHovering(true)}
-      onMouseLeave={() => setHovering(false)}
-      className={`z-40 sticky top-0 left-0 w-full px-4 md:px-6 py-4 transition-colors duration-300 ${
-        isHovering || scrolling ? "bg-white backdrop-filter backdrop-blur-md bg-opacity-10" : "bg-transparent"
+      className={`z-50 sticky top-0 w-full transition-all duration-300 ${
+        scrolled
+          ? "bg-gray-900/90 backdrop-blur-md border-b border-white/10 shadow-lg"
+          : "bg-transparent"
       }`}
     >
-      <div className="mx-auto flex justify-between items-center px-4 md:px-20">
-        <div className="flex items-center">
+      <div className="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
+        <Link href="/" className="flex items-center">
           <Image
             src="/logo-full.svg"
             alt="Equantra Logo"
-            width={150}
-            height={48}
-            className="h-12 w-auto"
+            width={140}
+            height={40}
+            className="h-10 w-auto"
             priority
           />
-        </div>
-        <div className="flex items-center gap-4">
-          <button onClick={() => handleScroll("contact")} 
-          className="invisible md:visible relative px-6 py-2 rounded-full bg-white text-black font-medium overflow-hidden transition-all duration-300 
-          before:absolute before:inset-0 before:w-0 before:bg-[#4C02E0] before:transition-all before:duration-500 
-          hover:before:w-full hover:text-white"
+        </Link>
+
+        <div className="hidden md:flex items-center gap-8">
+          {navLinks.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              className={`text-sm font-medium transition-colors duration-200 ${
+                pathname === link.href || (link.href !== "/" && pathname.startsWith(link.href))
+                  ? "text-white"
+                  : "text-gray-300 hover:text-white"
+              }`}
+            >
+              {link.label}
+            </Link>
+          ))}
+          <Link
+            href="/contact"
+            className="px-6 py-2.5 rounded-full bg-violet-600 text-white text-sm font-medium hover:bg-violet-500 transition-colors duration-200"
           >
-            <span className="relative z-10">Contact us</span>
-          </button>
-          <button onClick={() => setMenuOpen(!menuOpen)} className={`p-2 text-white `}>
-            <Menu className="h-8 w-8" />
-          </button>
+            Get Started
+          </Link>
         </div>
+
+        <button
+          onClick={() => setMenuOpen(!menuOpen)}
+          className="md:hidden p-2 text-white"
+          aria-label="Toggle menu"
+        >
+          {menuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+        </button>
       </div>
-      <div className={`z-40 absolute top-20 right-10 md:right-24 bg-gray-900 rounded-lg drop-shadow-lg stroke-white ${menuOpen ? "visible" : "invisible"}`}>
-        <div className="flex flex-col">
-        <ul className="flex flex-col items-center py-2">
-          <li><span onClick={() => handleScroll("home")} className="block text-white px-8 py-2 hover:bg-gray-700 cursor-pointer">Home</span></li>
-          <li><span onClick={() => handleScroll("services")} className="block text-white px-8 py-2 hover:bg-gray-700 cursor-pointer">Services</span></li>
-          <li><span onClick={() => handleScroll("case-studies")} className="block text-white px-8 py-2 hover:bg-gray-700 cursor-pointer">Case Studies</span></li>
-          <li><span className="block text-white px-8 py-2 hover:bg-gray-700 cursor-pointer">Team</span></li>
-          {menuOpen && (
-            <li className="md:hidden">
-              <span onClick={() => handleScroll("contact")} className="block text-white px-8 py-2 hover:bg-gray-700 cursor-pointer">Contact</span>
-            </li>
-          )}
-        </ul>
+
+      {menuOpen && (
+        <div className="md:hidden bg-gray-900/95 backdrop-blur-md border-t border-white/10">
+          <div className="flex flex-col px-6 py-4 space-y-1">
+            {navLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className={`py-3 px-4 rounded-lg text-sm font-medium transition-colors ${
+                  pathname === link.href || (link.href !== "/" && pathname.startsWith(link.href))
+                    ? "text-white bg-white/10"
+                    : "text-gray-300 hover:text-white hover:bg-white/5"
+                }`}
+              >
+                {link.label}
+              </Link>
+            ))}
+            <Link
+              href="/contact"
+              className="mt-2 px-6 py-3 rounded-full bg-violet-600 text-white text-sm font-medium text-center hover:bg-violet-500 transition-colors"
+            >
+              Get Started
+            </Link>
+          </div>
         </div>
-      </div>
+      )}
     </nav>
   );
 };
