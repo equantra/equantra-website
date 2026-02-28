@@ -55,13 +55,14 @@ const ContactContent: React.FC = () => {
               <h3 className="text-xl font-semibold text-white mb-6">
                 Request a Free Quote
               </h3>
-              <form className="space-y-5">
+              <form className="space-y-5" aria-label="Contact form">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                   <div>
-                    <label className="block text-gray-300 text-sm mb-2">
+                    <label htmlFor="contact-name" className="block text-gray-300 text-sm mb-2">
                       Full Name *
                     </label>
                     <input
+                      id="contact-name"
                       type="text"
                       name="name"
                       required
@@ -70,10 +71,11 @@ const ContactContent: React.FC = () => {
                     />
                   </div>
                   <div>
-                    <label className="block text-gray-300 text-sm mb-2">
+                    <label htmlFor="contact-email" className="block text-gray-300 text-sm mb-2">
                       Email *
                     </label>
                     <input
+                      id="contact-email"
                       type="email"
                       name="email"
                       required
@@ -85,10 +87,11 @@ const ContactContent: React.FC = () => {
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                   <div>
-                    <label className="block text-gray-300 text-sm mb-2">
+                    <label htmlFor="contact-company" className="block text-gray-300 text-sm mb-2">
                       Company
                     </label>
                     <input
+                      id="contact-company"
                       type="text"
                       name="company"
                       className="w-full px-4 py-3 rounded-xl bg-gray-900 border border-white/10 text-white placeholder-gray-500 outline-none focus:border-violet-500/50 transition-colors text-sm"
@@ -96,10 +99,11 @@ const ContactContent: React.FC = () => {
                     />
                   </div>
                   <div>
-                    <label className="block text-gray-300 text-sm mb-2">
+                    <label htmlFor="contact-phone" className="block text-gray-300 text-sm mb-2">
                       Phone
                     </label>
                     <input
+                      id="contact-phone"
                       type="tel"
                       name="phone"
                       className="w-full px-4 py-3 rounded-xl bg-gray-900 border border-white/10 text-white placeholder-gray-500 outline-none focus:border-violet-500/50 transition-colors text-sm"
@@ -109,10 +113,11 @@ const ContactContent: React.FC = () => {
                 </div>
 
                 <div>
-                  <label className="block text-gray-300 text-sm mb-2">
+                  <label htmlFor="contact-budget" className="block text-gray-300 text-sm mb-2">
                     Budget Range
                   </label>
                   <select
+                    id="contact-budget"
                     name="budget"
                     className="w-full px-4 py-3 rounded-xl bg-gray-900 border border-white/10 text-white outline-none focus:border-violet-500/50 transition-colors text-sm appearance-none"
                   >
@@ -126,10 +131,11 @@ const ContactContent: React.FC = () => {
                 </div>
 
                 <div>
-                  <label className="block text-gray-300 text-sm mb-2">
+                  <label htmlFor="contact-service" className="block text-gray-300 text-sm mb-2">
                     Service Interested In
                   </label>
                   <select
+                    id="contact-service"
                     name="service"
                     className="w-full px-4 py-3 rounded-xl bg-gray-900 border border-white/10 text-white outline-none focus:border-violet-500/50 transition-colors text-sm appearance-none"
                   >
@@ -145,10 +151,11 @@ const ContactContent: React.FC = () => {
                 </div>
 
                 <div>
-                  <label className="block text-gray-300 text-sm mb-2">
+                  <label htmlFor="contact-message" className="block text-gray-300 text-sm mb-2">
                     Tell Us About Your Project *
                   </label>
                   <textarea
+                    id="contact-message"
                     name="message"
                     required
                     rows={5}
@@ -176,7 +183,7 @@ const contactInfo = [
   {
     icon: Mail,
     title: "Email Us",
-    value: "hello@equantra.in",
+    value: "rahul@equantra.in",
   },
   {
     icon: MessageSquare,

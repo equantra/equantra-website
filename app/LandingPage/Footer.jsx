@@ -117,7 +117,7 @@ const Footer = () => {
             <h3 className="text-white font-semibold mb-4">Get in Touch</h3>
             <ul className="space-y-2">
               <li className="text-gray-300 text-sm">
-                hello@equantra.in
+                rahul@equantra.in
               </li>
               <li>
                 <Link

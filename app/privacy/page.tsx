@@ -4,8 +4,20 @@ import Footer from "../LandingPage/Footer";
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
-  description: "Equantra privacy policy — how we collect, use, and protect your data.",
+  description:
+    "Equantra privacy policy — how we collect, use, and protect your data.",
+  keywords: ["privacy policy", "data protection", "equantra privacy"],
   alternates: { canonical: "https://equantra.in/privacy" },
+  openGraph: {
+    title: "Privacy Policy | Equantra",
+    description: "How Equantra collects, uses, and protects your data.",
+    url: "https://equantra.in/privacy",
+  },
+  twitter: {
+    card: "summary",
+    title: "Privacy Policy | Equantra",
+    description: "How Equantra collects, uses, and protects your data.",
+  },
 };
 
 export default function PrivacyPage() {
@@ -60,8 +72,8 @@ export default function PrivacyPage() {
             <h2 className="text-2xl font-semibold text-white mt-10">6. Contact Us</h2>
             <p>
               If you have questions about this Privacy Policy, please contact us at{" "}
-              <a href="mailto:hello@equantra.in" className="text-violet-400 hover:text-violet-300">
-                hello@equantra.in
+              <a href="mailto:rahul@equantra.in" className="text-violet-400 hover:text-violet-300">
+                rahul@equantra.in
               </a>.
             </p>
           </div>

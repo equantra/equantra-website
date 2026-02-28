@@ -4,8 +4,22 @@ import Footer from "../LandingPage/Footer";
 
 export const metadata: Metadata = {
   title: "Terms of Service",
-  description: "Equantra terms of service — the terms governing use of our website and services.",
+  description:
+    "Equantra terms of service — the terms governing use of our website and services.",
+  keywords: ["terms of service", "service agreement", "equantra terms"],
   alternates: { canonical: "https://equantra.in/terms" },
+  openGraph: {
+    title: "Terms of Service | Equantra",
+    description:
+      "The terms governing use of the Equantra website and services.",
+    url: "https://equantra.in/terms",
+  },
+  twitter: {
+    card: "summary",
+    title: "Terms of Service | Equantra",
+    description:
+      "The terms governing use of the Equantra website and services.",
+  },
 };
 
 export default function TermsPage() {
@@ -67,8 +81,8 @@ export default function TermsPage() {
             <h2 className="text-2xl font-semibold text-white mt-10">7. Contact</h2>
             <p>
               For questions about these Terms, contact us at{" "}
-              <a href="mailto:hello@equantra.in" className="text-violet-400 hover:text-violet-300">
-                hello@equantra.in
+              <a href="mailto:rahul@equantra.in" className="text-violet-400 hover:text-violet-300">
+                rahul@equantra.in
               </a>.
             </p>
           </div>

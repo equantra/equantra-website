@@ -22,6 +22,14 @@ export const metadata: Metadata = {
     description:
       "We make software development easy and personal. Meet our team and learn how we deliver custom solutions.",
     url: "https://equantra.in/about",
+    images: [{ url: "/logo-full.svg", width: 1200, height: 630, alt: "About Equantra" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "About Equantra — Boutique Software Development Agency",
+    description:
+      "We make software development easy and personal. Meet our team and learn how we deliver custom solutions.",
+    images: ["/logo-full.svg"],
   },
 };
 
