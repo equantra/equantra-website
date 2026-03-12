@@ -3,6 +3,9 @@
 import React from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { Briefcase, Smile, Clock, Headphones } from "lucide-react";
+import AnimatedCounter from "../components/AnimatedCounter";
+import LaserFlow from "../components/LaserFlow";
 
 const HeroSection = () => {
   return (
@@ -10,8 +13,17 @@ const HeroSection = () => {
       id="home"
       className="relative min-h-[90vh] flex flex-col items-center justify-center px-6 overflow-hidden"
     >
-      <div className="absolute inset-0 bg-gradient-to-b from-gray-900 via-gray-900 to-slate-800" />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(139,92,246,0.08)_0%,transparent_70%)]" />
+      <div className="absolute inset-0 z-0 bg-gradient-to-b from-gray-900 via-gray-900 to-slate-800" />
+      <div className="absolute inset-0 z-0 bg-[radial-gradient(ellipse_at_center,rgba(139,92,246,0.08)_0%,transparent_70%)]" />
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 z-[1] h-[54%] opacity-70">
+        <LaserFlow
+          className="absolute inset-0 opacity-70"
+          style={{ width: "100%", height: "100%" }}
+          color="#8b5cf6"
+          horizontalBeamOffset={0}
+          verticalBeamOffset={0.0}
+        />
+      </div>
 
       <motion.div
         initial={{ opacity: 0, y: 30 }}
@@ -56,14 +68,24 @@ const HeroSection = () => {
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 1.2, delay: 0.5 }}
+        transition={{ duration: 1.2}}
         className="relative z-10 mt-20 grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-16 text-center"
       >
         {stats.map((stat, i) => (
           <div key={i}>
-            <p className="text-3xl md:text-4xl font-bold text-white">
-              {stat.value}
-            </p>
+            <div className="flex items-center justify-center gap-2">
+              <stat.icon className="h-6 w-6 text-violet-300" aria-hidden />
+              <div className="text-2xl md:text-3xl font-semibold text-white flex items-center gap-1">
+                {stat.intValue ? (
+                  <>
+                    <AnimatedCounter from={0} to={stat.intValue} />
+                    <span>{stat.symbol}</span>
+                  </>
+                ) : (
+                  stat.value
+                )}
+              </div>
+            </div>
             <p className="text-gray-400 text-sm mt-1">{stat.label}</p>
           </div>
         ))}
@@ -73,10 +95,10 @@ const HeroSection = () => {
 };
 
 const stats = [
-  { value: "50+", label: "Projects Delivered" },
-  { value: "98%", label: "Client Satisfaction" },
-  { value: "5+", label: "Years Experience" },
-  { value: "24/7", label: "Support Available" },
+  { intValue: 50, value: "50+", symbol: "+", label: "Projects Delivered", icon: Briefcase },
+  { intValue: 98, value: "98%", symbol: "%", label: "Client Satisfaction", icon: Smile },
+  { intValue: 5, value: "5+", symbol: "+", label: "Years Experience", icon: Clock },
+  { value: "24/7", label: "Support Available", icon: Headphones },
 ];
 
 export default HeroSection;
