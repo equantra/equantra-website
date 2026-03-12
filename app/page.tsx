@@ -8,6 +8,7 @@ import WhyChooseUs from "./components/WhyChooseUs";
 import Portfolio from "./LandingPage/CaseStudies";
 import TechStack from "./components/TechStack";
 import Footer from "./LandingPage/Footer";
+import GlowEffect from "./LandingPage/GlowEffect";
 
 export const metadata: Metadata = {
   title:
@@ -49,7 +50,8 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="relative w-full h-full flex flex-col min-h-screen">
+      <GlowEffect />
       <Navbar />
       <HeroSection />
       <ServicesSection />

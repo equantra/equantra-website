@@ -37,14 +37,14 @@ const Navbar = () => {
           : "bg-transparent"
       }`}
     >
-      <div className="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
+      <div className="max-w-7xl mx-auto flex justify-between items-center py-4">
         <Link href="/" className="flex items-center">
           <Image
             src="/logo-full.svg"
             alt="Equantra Logo"
             width={140}
             height={40}
-            className="h-10 w-auto"
+            className="h-12 w-auto"
             priority
           />
         </Link>
@@ -54,10 +54,10 @@ const Navbar = () => {
             <Link
               key={link.href}
               href={link.href}
-              className={`text-sm font-medium transition-colors duration-200 ${
+              className={`text-sm font-regular transition-colors duration-200 ${
                 pathname === link.href || (link.href !== "/" && pathname.startsWith(link.href))
                   ? "text-white"
-                  : "text-gray-300 hover:text-white"
+                  : "text-gray-200 hover:text-white"
               }`}
             >
               {link.label}

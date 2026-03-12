@@ -4,6 +4,7 @@ import React, { useRef, useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Search, Palette, Code2, Rocket, UserCircle2 } from "lucide-react";
 import Link from "next/link";
+import GlowEffect from "../LandingPage/GlowEffect";
 
 const processSteps = [
   {
@@ -95,8 +96,9 @@ const AboutContent: React.FC = () => {
 
   return (
     <>
-      <section className="pt-24 pb-16 px-6">
-        <div className="max-w-7xl mx-auto text-center">
+      <section className="pt-24 pb-16 px-6 relative overflow-visible isolate">
+        <GlowEffect className="z-0" insetClassName="-inset-64" size={820} top="50%" />
+        <div className="max-w-7xl mx-auto text-center relative z-10">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
             About Us
           </h1>

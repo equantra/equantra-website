@@ -54,7 +54,7 @@ const ServicesSection: React.FC = () => {
             >
               <Link
                 href={`/services#${service.anchor}`}
-                className="group block p-8 rounded-2xl bg-slate-800/60 border border-white/10 hover:border-violet-500/30 hover:bg-slate-800 transition-all duration-300"
+                className="group block p-8 rounded-2xl bg-slate-800/60 border border-white/10 hover:border-violet-500/50 hover:bg-slate-800 transition-all duration-300 hover:shadow-[0_0_0_1px_rgba(139,92,246,0.4),0_0_24px_rgba(139,92,246,0.12)]"
               >
                 <div className="flex items-center gap-4 mb-4">
                   <div className="h-12 w-12 bg-violet-500/15 flex items-center justify-center rounded-xl group-hover:bg-violet-500/25 transition-colors">

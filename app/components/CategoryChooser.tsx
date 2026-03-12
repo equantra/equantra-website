@@ -1,7 +1,7 @@
 "use client";
 
-import React, { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import React, { useState, useRef } from "react";
+import { motion, AnimatePresence, useInView } from "framer-motion";
 import { Rocket, TrendingUp, UserCheck, Wrench } from "lucide-react";
 import Link from "next/link";
 
@@ -64,26 +64,57 @@ const categories = [
   },
 ];
 
+const containerVariants = {
+  hidden: { opacity: 0, y: 40 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      staggerChildren: 0.1,
+      delayChildren: 0.15,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, x: -24 },
+  visible: { opacity: 1, x: 0 },
+};
+
 const CategoryChooser: React.FC = () => {
   const [active, setActive] = useState(0);
+  const sectionRef = useRef(null);
+  const isInView = useInView(sectionRef, { once: true, margin: "-80px 0px" });
 
   return (
-    <section className="py-24 px-6">
+    <section ref={sectionRef} className="py-24 px-6">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
+        <motion.div
+          className="text-center mb-16"
+          initial={{ opacity: 0, y: 24 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.5 }}
+        >
           <p className="text-violet-400 text-sm font-semibold tracking-wider uppercase mb-3">
             Choose Your Path
           </p>
           <h2 className="text-3xl md:text-4xl font-bold text-white">
             How Can We Help You?
           </h2>
-        </div>
+        </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <motion.div
+          className="grid grid-cols-1 lg:grid-cols-2 gap-8"
+          initial="hidden"
+          animate={isInView ? "visible" : "hidden"}
+          variants={containerVariants}
+        >
           <div className="flex flex-col gap-3">
             {categories.map((cat, i) => (
-              <button
+              <motion.button
                 key={cat.id}
+                variants={itemVariants}
+                transition={{ duration: 0.35, ease: "easeOut" }}
                 onClick={() => setActive(i)}
                 className={`flex items-center gap-4 p-5 rounded-xl text-left transition-all duration-300 ${
                   active === i
@@ -109,7 +140,7 @@ const CategoryChooser: React.FC = () => {
                 >
                   {cat.title}
                 </span>
-              </button>
+              </motion.button>
             ))}
           </div>
 
@@ -146,7 +177,7 @@ const CategoryChooser: React.FC = () => {
               </Link>
             </motion.div>
           </AnimatePresence>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
