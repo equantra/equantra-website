@@ -4,6 +4,7 @@ import { Calendar, Clock, ArrowRight } from "lucide-react";
 import Navbar from "../Navbar";
 import Footer from "../LandingPage/Footer";
 import { blogPosts } from "./posts";
+import GlowEffect from "../LandingPage/GlowEffect";
 
 export const metadata: Metadata = {
   title: "Blog — Software Development Insights & Guides",
@@ -40,8 +41,9 @@ export default function BlogPage() {
     <div className="flex flex-col min-h-screen">
       <Navbar />
 
-      <section className="pt-24 pb-12 px-6">
-        <div className="max-w-5xl mx-auto text-center">
+      <section className="pt-24 pb-12 px-6 relative overflow-visible">
+        <GlowEffect className="z-0" size={700} top="35%" />
+        <div className="max-w-5xl mx-auto text-center relative z-10">
           <p className="text-violet-400 text-sm font-semibold tracking-wider uppercase mb-3">
             Blog
           </p>

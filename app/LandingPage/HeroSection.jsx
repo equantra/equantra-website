@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import { Briefcase, Smile, Clock, Headphones } from "lucide-react";
 import AnimatedCounter from "../components/AnimatedCounter";
 import LaserFlow from "../components/LaserFlow";
+import GlowEffect from "./GlowEffect";
 
 const HeroSection = () => {
   return (
@@ -13,6 +14,13 @@ const HeroSection = () => {
       id="home"
       className="relative min-h-[90vh] flex flex-col items-center justify-center px-6 overflow-hidden"
     >
+      <GlowEffect
+        position="fixed"
+        insetClassName="inset-0"
+        className="z-[1]"
+        size={650}
+        top="18%"
+      />
       <div className="absolute inset-0 z-0 bg-gradient-to-b from-gray-900 via-gray-900 to-slate-800" />
       <div className="absolute inset-0 z-0 bg-[radial-gradient(ellipse_at_center,rgba(139,92,246,0.08)_0%,transparent_70%)]" />
       <div className="pointer-events-none absolute inset-x-0 bottom-0 z-[1] h-[54%] opacity-70">
