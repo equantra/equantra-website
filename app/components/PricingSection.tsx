@@ -5,12 +5,11 @@ import { motion } from "framer-motion";
 import { Shield, Clock, BadgeCheck } from "lucide-react";
 import Link from "next/link";
 
-type PricingTier = "fixed" | "monthly" | "hourly";
+type PricingTier = "fixed" | "hourly";
 
 interface PriceRow {
   service: string;
   fixed: string;
-  monthly: string;
   hourly: string;
 }
 
@@ -18,44 +17,37 @@ const prices: PriceRow[] = [
   {
     service: "Consultation",
     fixed: "Free",
-    monthly: "Free",
     hourly: "Free",
   },
   {
     service: "Custom Software Development",
-    fixed: "$9,500+",
-    monthly: "$950",
-    hourly: "$100",
+    fixed: "$2,000+",
+    hourly: "$30+",
   },
   {
     service: "Mobile App Development",
-    fixed: "$8,000+",
-    monthly: "$850",
-    hourly: "$100",
+    fixed: "$1,500+",
+    hourly: "$30+",
   },
   {
     service: "Desktop Development",
-    fixed: "$7,500+",
-    monthly: "$800",
-    hourly: "$95",
+    fixed: "$2,000+",
+    hourly: "$35+",
   },
   {
     service: "IT Consulting / Fractional CTO",
-    fixed: "$4,000+",
-    monthly: "$500",
-    hourly: "$125",
+    fixed: "$1,000+",
+    hourly: "$60+",
   },
   {
     service: "Software Maintenance & Support",
-    fixed: "$2,000+",
-    monthly: "$400",
-    hourly: "$80",
+    fixed: "$500+",
+    hourly: "$20+",
   },
   {
     service: "AI & Automation",
-    fixed: "$5,000+",
-    monthly: "$600",
-    hourly: "$125",
+    fixed: "$1,000+",
+    hourly: "$50+",
   },
 ];
 
@@ -68,15 +60,7 @@ const tierInfo: Record<PricingTier, { subtitle: string; bullets: string[] }> = {
       "20% initial deposit",
     ],
   },
-  monthly: {
-    subtitle: "Flat monthly rate",
-    bullets: [
-      "6–12 month contracts",
-      "$0 down to start",
-      "Dedicated team hours",
-    ],
-  },
-  hourly: {
+hourly: {
     subtitle: "Pay as you go",
     bullets: [
       "No long-term contracts",
@@ -100,14 +84,14 @@ const PricingSection: React.FC = () => {
             Transparent Pricing for Every Budget
           </h2>
           <p className="text-gray-300 max-w-xl mx-auto">
-            Choose from fixed, monthly, or hourly tiers. Every engagement
+            Choose from fixed or hourly tiers. Every engagement
             includes a free consultation.
           </p>
         </div>
 
         <div className="flex justify-center mb-10">
           <div className="inline-flex bg-slate-800 border border-white/10 rounded-full p-1">
-            {(["fixed", "monthly", "hourly"] as PricingTier[]).map((t) => (
+            {(["fixed", "hourly"] as PricingTier[]).map((t) => (
               <button
                 key={t}
                 onClick={() => setTier(t)}
@@ -172,10 +156,24 @@ const PricingSection: React.FC = () => {
             >
               Get Started
             </Link>
+            
           </div>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10">
+        <div className="flex items-center justify-between gap-4 mt-6 px-6 py-4 rounded-xl bg-violet-600/10 border border-violet-500/20">
+          <p className="text-gray-300 text-sm">
+            <span className="text-white font-medium">Need ongoing support?</span>{" "}
+            Custom monthly plans are available for maintenance and long-term engagements — tailored to your team and budget.
+          </p>
+          <Link
+            href="/contact"
+            className="shrink-0 text-sm font-medium text-violet-400 hover:text-violet-300 transition-colors whitespace-nowrap"
+          >
+            Contact Us →
+          </Link>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
           {badges.map((badge, i) => (
             <div
               key={i}
