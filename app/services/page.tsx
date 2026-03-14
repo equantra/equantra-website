@@ -27,14 +27,14 @@ export const metadata: Metadata = {
     description:
       "End-to-end custom software development, IT consulting, and maintenance services for US businesses.",
     url: "https://equantra.in/services",
-    images: [{ url: "/logo-full.svg", width: 1200, height: 630, alt: "Equantra Services" }],
+    images: [{ url: "/og-image.jpg", width: 2738, height: 1664, alt: "Equantra Services" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Software Development Services | Equantra",
     description:
       "End-to-end custom software development, IT consulting, and maintenance services for US businesses.",
-    images: ["/logo-full.svg"],
+    images: ["/og-image.jpg"],
   },
 };
 

@@ -25,14 +25,14 @@ export const metadata: Metadata = {
     description:
       "Technical articles and guides from expert software engineers. Frameworks, architecture, SaaS, and more.",
     url: "https://equantra.in/blog",
-    images: [{ url: "/logo-full.svg", width: 1200, height: 630, alt: "Equantra Blog" }],
+    images: [{ url: "/og-image.jpg", width: 2738, height: 1664, alt: "Equantra Blog" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Blog — Software Development Insights | Equantra",
     description:
       "Technical articles and guides from expert software engineers. Frameworks, architecture, SaaS, and more.",
-    images: ["/logo-full.svg"],
+    images: ["/og-image.jpg"],
   },
 };
 

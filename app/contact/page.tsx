@@ -22,14 +22,14 @@ export const metadata: Metadata = {
     description:
       "Start your project with a free consultation. Custom software development, IT consulting, and maintenance services.",
     url: "https://equantra.in/contact",
-    images: [{ url: "/logo-full.svg", width: 1200, height: 630, alt: "Contact Equantra" }],
+    images: [{ url: "/og-image.jpg", width: 2738, height: 1664, alt: "Contact Equantra" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Contact Equantra — Get a Free Quote",
     description:
       "Start your project with a free consultation. Custom software development, IT consulting, and maintenance services.",
-    images: ["/logo-full.svg"],
+    images: ["/og-image.jpg"],
   },
 };
 

@@ -1,14 +1,16 @@
 import type { Metadata } from "next";
+import dynamic from "next/dynamic";
 import Navbar from "./Navbar";
 import HeroSection from "./LandingPage/HeroSection";
 import ServicesSection from "./LandingPage/Services";
-import CategoryChooser from "./components/CategoryChooser";
-import PricingSection from "./components/PricingSection";
-import WhyChooseUs from "./components/WhyChooseUs";
-import Portfolio from "./LandingPage/CaseStudies";
-import TechStack from "./components/TechStack";
-import Footer from "./LandingPage/Footer";
 import GlowEffect from "./LandingPage/GlowEffect";
+
+const CategoryChooser = dynamic(() => import("./components/CategoryChooser"));
+const PricingSection = dynamic(() => import("./components/PricingSection"));
+const WhyChooseUs = dynamic(() => import("./components/WhyChooseUs"));
+const Portfolio = dynamic(() => import("./LandingPage/CaseStudies"));
+const TechStack = dynamic(() => import("./components/TechStack"));
+const Footer = dynamic(() => import("./LandingPage/Footer"));
 
 export const metadata: Metadata = {
   title:
@@ -32,9 +34,9 @@ export const metadata: Metadata = {
     url: "https://equantra.in",
     images: [
       {
-        url: "/logo-full.svg",
-        width: 1200,
-        height: 630,
+        url: "/og-image.jpg",
+        width: 2738,
+        height: 1664,
         alt: "Equantra - Custom Software Development",
       },
     ],
@@ -44,7 +46,7 @@ export const metadata: Metadata = {
     title: "Equantra — Custom Software Development Company",
     description:
       "Expert software teams delivering end-to-end custom development, IT consulting, and maintenance for US businesses.",
-    images: ["/logo-full.svg"],
+    images: ["/og-image.jpg"],
   },
 };
 
