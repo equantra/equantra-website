@@ -62,9 +62,9 @@ export const metadata: Metadata = {
       "End-to-end software development, IT consulting, and maintenance services for US businesses. Expert teams, fractional cost.",
     images: [
       {
-        url: "/og-image.webp",
-        width: 1200,
-        height: 630,
+        url: "/og-image.jpg",
+        width: 2738,
+        height: 1664,
         alt: "Equantra - Custom Software Development",
       },
     ],
@@ -74,7 +74,7 @@ export const metadata: Metadata = {
     title: "Equantra — Custom Software Development Company",
     description:
       "End-to-end software development, IT consulting, and maintenance services. Expert teams, fractional cost.",
-    images: ["/og-image.webp"],
+    images: ["/og-image.jpg"],
   },
   robots: {
     index: true,
