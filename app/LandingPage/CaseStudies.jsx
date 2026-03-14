@@ -44,8 +44,16 @@ const Portfolio = () => {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="group relative overflow-hidden rounded-2xl bg-gray-900 border border-white/10 hover:border-violet-500/20 transition-all duration-300"
             >
-              <div className="aspect-video bg-gradient-to-br from-violet-600/20 to-slate-800 flex items-center justify-center">
-                <span className="text-4xl">{item.emoji}</span>
+              <div className="aspect-video bg-gradient-to-br from-violet-600/20 to-slate-800 flex items-center justify-center overflow-hidden">
+                {item.image ? (
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    className="w-full h-full object-cover"
+                  />
+                ) : (
+                  <span className="text-4xl">{item.emoji}</span>
+                )}
               </div>
               <div className="p-6">
                 <span className="text-violet-400 text-xs font-semibold uppercase tracking-wider">
@@ -57,9 +65,11 @@ const Portfolio = () => {
                 <p className="text-gray-300 text-sm leading-relaxed mb-4">
                   {item.description}
                 </p>
-                <div className="flex items-center gap-2 text-violet-400 text-sm font-medium group-hover:gap-3 transition-all">
-                  View Details <ArrowRight className="h-4 w-4" />
-                </div>
+                {item.detailsEnabled && (
+                  <div className="flex items-center gap-2 text-violet-400 text-sm font-medium group-hover:gap-3 transition-all">
+                    View Details <ArrowRight className="h-4 w-4" />
+                  </div>
+                )}
               </div>
             </motion.div>
           ))}
@@ -71,46 +81,49 @@ const Portfolio = () => {
 
 const portfolioItems = [
   {
-    emoji: "\u{1F4F1}",
-    category: "Mobile Development",
-    title: "Cross-Platform Health App",
+    emoji: "📱",
+    category: "React Native · Mobile Development",
+    title: "Real Estate Investment App",
     description:
-      "A React Native health tracking application serving 10k+ users with real-time data sync and HIPAA compliance.",
+      "Cross-platform React Native app for a real estate investment firm. Investors can browse properties, track portfolio performance, and receive deal alerts — on iOS and Android from a single shared codebase.",
+    image: "/real-state-mobile.webp",
+    detailsEnabled: false,
   },
   {
-    emoji: "\u{1F310}",
+    emoji: "🌐",
     category: "Web Development",
-    title: "E-Commerce SaaS Platform",
+    title: "Real Estate Investment Website",
     description:
-      "Custom multi-tenant SaaS platform processing $2M+ in transactions with automated inventory management.",
+      "Marketing and lead generation website for the same firm, featuring property listings, investment opportunity showcases, and an integrated inquiry system to capture and qualify investor leads.",
+    image: "/real-state-client.webp",
+    detailsEnabled: false,
   },
   {
-    emoji: "\u{1F916}",
+    emoji: "🏢",
+    category: "Web / SaaS",
+    title: "Administo.com | Space Management Solution",
+    description:
+      "Web platform to manage and optimise physical space utilisation. Includes booking flows, occupancy tracking, and reporting dashboards for administrators and end users.",
+    image: "/administo.webp",
+    detailsEnabled: false,
+  },
+  {
+    emoji: "🖥️",
+    category: "Desktop · Mobile",
+    title: "Billing & Inventory POS - Shopkeeper",
+    description:
+      "Full-featured point-of-sale system with real-time inventory tracking, order request management, and product cataloguing. Supports mobile billing workflows and multi-location stock visibility.",
+    image: "/lokocity.webp",
+    detailsEnabled: false,
+  },
+  {
+    emoji: "🤖",
     category: "AI & Automation",
-    title: "Intelligent Document Processing",
+    title: "Telegram Inventory Bot",
     description:
-      "AI-powered document extraction system reducing manual data entry by 85% for a financial services firm.",
-  },
-  {
-    emoji: "\u{1F5A5}",
-    category: "Desktop Application",
-    title: "Enterprise Inventory System",
-    description:
-      "Cross-platform desktop application managing 50k+ SKUs with barcode scanning and real-time reporting.",
-  },
-  {
-    emoji: "\u{1F527}",
-    category: "Maintenance & Support",
-    title: "Legacy System Modernization",
-    description:
-      "Migrated a 15-year-old monolith to microservices architecture, reducing downtime by 99% and costs by 60%.",
-  },
-  {
-    emoji: "\u{1F4CB}",
-    category: "Consulting",
-    title: "Startup Technical Strategy",
-    description:
-      "Provided fractional CTO services for a Series A startup, defining architecture and hiring the engineering team.",
+      "AI-powered Telegram bot that removes the need for a traditional inventory interface. Suppliers photograph an item and send it directly in Telegram — the bot identifies the product and updates inventory records automatically.",
+    image: "/telegram-bot.webp",
+    detailsEnabled: false,
   },
 ];
 

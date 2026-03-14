@@ -103,9 +103,9 @@ const HeroSection = () => {
 };
 
 const stats = [
-  { intValue: 50, value: "50+", symbol: "+", label: "Projects Delivered", icon: Briefcase },
+  { intValue: 10, value: "10+", symbol: "+", label: "Projects Delivered", icon: Briefcase },
   { intValue: 98, value: "98%", symbol: "%", label: "Client Satisfaction", icon: Smile },
-  { intValue: 5, value: "5+", symbol: "+", label: "Years Experience", icon: Clock },
+  { intValue: 7, value: "7+", symbol: "+", label: "Years Experience", icon: Clock },
   { value: "24/7", label: "Support Available", icon: Headphones },
 ];
 

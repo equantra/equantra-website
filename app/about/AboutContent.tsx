@@ -65,9 +65,9 @@ const teamMembers = [
 ];
 
 const stats = [
-  { value: "50+", label: "Projects Delivered" },
+  { value: "10+", label: "Projects Delivered" },
   { value: "100%", label: "Custom Development" },
-  { value: "5+", label: "Years of Experience" },
+  { value: "7+", label: "Years of Experience" },
   { value: "98%", label: "Client Retention" },
 ];
 
