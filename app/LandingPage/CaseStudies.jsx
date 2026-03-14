@@ -50,6 +50,7 @@ const Portfolio = () => {
                     src={item.image}
                     alt={item.title}
                     className="w-full h-full object-cover"
+                    loading="lazy"
                   />
                 ) : (
                   <span className="text-4xl">{item.emoji}</span>

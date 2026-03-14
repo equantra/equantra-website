@@ -5,7 +5,7 @@ const Blog = () => {
     <React.Fragment>
       <section className='z-10 bg-white w-full pb-10 flex flex-col'>
         <div className="relative inline-block flex items-center justify-center select-none w-full">
-          <img className="w-full" src="./other/headingContainerLeft.svg" />
+          <img className="w-full" src="./other/headingContainerLeft.svg" loading="lazy" />
           <div className="w-full h-full top-0 left-0 absolute flex justify-start items-center ml-20 sm:ml-32 md:ml-36 lg:ml-64">
             <h2 className="text-white text-xl md:text-3xl">Blog</h2>
           </div>
@@ -16,7 +16,7 @@ const Blog = () => {
           <div className='grid grid-cols-1 md:grid-cols-3 gap-10 text-black'>
             {blogs.map((blog, index) => (
               <div key={index} className='flex flex-col space-y-2 items-start'>
-                <img src={blog.imageSource} />
+                <img src={blog.imageSource} loading="lazy" />
                 <h2 className='text-xl'>{blog.title}</h2>
                 <p className='text-left'>{blog.description}</p>
               </div>
