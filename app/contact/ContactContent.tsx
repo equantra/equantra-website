@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import { Mail, MessageSquare, Clock } from "lucide-react";
 import GlowEffect from "../LandingPage/GlowEffect";
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL ?? "https://shopkeeper.equantra.in";
+const API_URL = process.env.NEXT_PUBLIC_API_URL ?? "https://api.dukaanlok.com";
 
 interface FormState {
   name: string;
