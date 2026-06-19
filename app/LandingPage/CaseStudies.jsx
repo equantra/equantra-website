@@ -2,6 +2,7 @@
 
 import React, { useRef, useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 
 const Portfolio = () => {
@@ -44,12 +45,14 @@ const Portfolio = () => {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="group relative overflow-hidden rounded-2xl bg-gray-900 border border-white/10 hover:border-violet-500/20 transition-all duration-300"
             >
-              <div className="aspect-video bg-gradient-to-br from-violet-600/20 to-slate-800 flex items-center justify-center overflow-hidden">
+              <div className="relative aspect-video bg-gradient-to-br from-violet-600/20 to-slate-800 flex items-center justify-center overflow-hidden">
                 {item.image ? (
-                  <img
+                  <Image
                     src={item.image}
                     alt={item.title}
-                    className="w-full h-full object-cover"
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    className="object-cover"
                     loading="lazy"
                   />
                 ) : (

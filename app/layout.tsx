@@ -18,12 +18,11 @@ const BASE_URL = "https://equantra.in";
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
   title: {
-    default:
-      "Equantra — Custom Software Development Company | End-to-End Solutions",
+    default: "Equantra — Custom Software Development Company",
     template: "%s | Equantra",
   },
   description:
-    "Equantra is a custom software development company offering end-to-end solutions: web & mobile development, IT consulting, software maintenance, and AI automation for US businesses.",
+    "Custom software development end-to-end: web & mobile apps, IT consulting, maintenance, and AI automation for US businesses.",
   keywords: [
     "custom software development services",
     "software engineering consultants",

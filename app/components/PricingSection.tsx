@@ -154,7 +154,7 @@ const PricingSection: React.FC = () => {
               href="/contact"
               className="block w-full text-center px-6 py-3 rounded-full bg-violet-600 text-white font-medium hover:bg-violet-500 transition-colors"
             >
-              Get Started
+              Get a Free Quote
             </Link>
             
           </div>
