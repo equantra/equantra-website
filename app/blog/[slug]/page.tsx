@@ -23,6 +23,11 @@ registerContent(
   () => import("../content/elixir-phoenix-saas")
 );
 
+registerContent(
+  "ruby-on-rails-vs-phoenix-framework-2026",
+  () => import("../content/ruby-on-rails-vs-phoenix-2026")
+);
+
 export function generateStaticParams() {
   return getAllSlugs().map((slug) => ({ slug }));
 }
@@ -35,6 +40,8 @@ export async function generateMetadata({
   const { slug } = await params;
   const post = getPostBySlug(slug);
   if (!post) return {};
+
+  const ogImage = post.ogImage ?? "/og-image.jpg";
 
   return {
     title: post.title,
@@ -50,11 +57,13 @@ export async function generateMetadata({
       type: "article",
       publishedTime: post.date,
       authors: [post.author],
+      images: [{ url: ogImage, alt: post.title }],
     },
     twitter: {
       card: "summary_large_image",
       title: post.title,
       description: post.description,
+      images: [ogImage],
     },
   };
 }

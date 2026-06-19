@@ -37,6 +37,33 @@ export const blogPosts: BlogPost[] = [
       "scalable SaaS backend",
     ],
   },
+  {
+    slug: "ruby-on-rails-vs-phoenix-framework-2026",
+    title:
+      "Ruby on Rails vs. Phoenix Framework in 2026: The Ultimate Guide for Web Developers",
+    description:
+      "Discover the ultimate comparison between Ruby on Rails and the Phoenix Framework in 2026. Explore performance, scalability, developer experience, and real-world case studies to choose the best backend for your next web application.",
+    excerpt:
+      "Rails or Phoenix in 2026? A deep comparison of architecture, performance, real-time frontends (Hotwire vs LiveView), ecosystem, and ideal use cases to pick the right backend.",
+    date: "2026-06-19",
+    author: "Equantra",
+    readingTime: "14 min read",
+    category: "Engineering",
+    keywords: [
+      "Ruby on Rails vs Phoenix Framework",
+      "web development frameworks 2026",
+      "Elixir vs Ruby",
+      "Rails 8 features",
+      "Phoenix LiveView",
+      "backend frameworks comparison",
+      "Hotwire vs LiveView",
+      "elixir vs ruby",
+      "phoenix liveview vs hotwire",
+      "rails 8 solid queue",
+      "best backend framework 2026",
+      "phoenix framework performance",
+    ],
+  },
 ];
 
 export function getPostBySlug(slug: string): BlogPost | undefined {
