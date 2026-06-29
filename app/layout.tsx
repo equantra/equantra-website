@@ -15,6 +15,11 @@ const inter = Inter({
 
 const BASE_URL = "https://equantra.in";
 
+// TODO: replace with the exact public profile URLs before deploy.
+// Wrong/placeholder sameAs URLs hurt entity recognition — do not ship these as-is.
+const LINKEDIN_URL = "https://www.linkedin.com/company/equantra";
+const GITHUB_URL = "https://github.com/orgs/equantra";
+
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
   title: {
@@ -105,7 +110,7 @@ const jsonLd = {
     contactType: "sales",
     availableLanguage: "English",
   },
-  sameAs: [],
+  sameAs: [LINKEDIN_URL, GITHUB_URL],
   serviceArea: {
     "@type": "Country",
     name: "United States",
@@ -153,6 +158,18 @@ const jsonLd = {
   },
 };
 
+const websiteJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "Equantra",
+  url: BASE_URL,
+  publisher: {
+    "@type": "Organization",
+    name: "Equantra",
+    url: BASE_URL,
+  },
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -164,6 +181,10 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
         />
       </head>
       <body className={inter.className} suppressHydrationWarning>

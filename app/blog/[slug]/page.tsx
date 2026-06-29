@@ -28,6 +28,11 @@ registerContent(
   () => import("../content/ruby-on-rails-vs-phoenix-2026")
 );
 
+registerContent(
+  "phoenix-vs-nodejs-2026",
+  () => import("../content/phoenix-vs-nodejs-2026")
+);
+
 export function generateStaticParams() {
   return getAllSlugs().map((slug) => ({ slug }));
 }
