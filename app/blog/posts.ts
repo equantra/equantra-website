@@ -87,6 +87,52 @@ export const blogPosts: BlogPost[] = [
       "best backend framework 2026",
     ],
   },
+  {
+    slug: "phoenix-vs-django-2026",
+    title:
+      "Phoenix vs Django in 2026: Concurrency, Real-Time, and Productivity Compared",
+    description:
+      "Phoenix (Elixir) vs Django (Python) for web development in 2026. Compare the BEAM vs GIL-bound workers, LiveView vs Django Channels, Ecto vs the Django ORM, and when to choose each.",
+    excerpt:
+      "Django runs Python on worker processes; Phoenix runs Elixir on the BEAM. Here is how they compare on concurrency, real-time, the data layer, fault tolerance, and ecosystem — and when to pick each.",
+    date: "2026-06-30",
+    author: "Equantra",
+    readingTime: "9 min read",
+    category: "Engineering",
+    keywords: [
+      "phoenix vs django",
+      "django vs phoenix",
+      "elixir vs python",
+      "django vs elixir",
+      "liveview vs django channels",
+      "ecto vs django orm",
+      "real-time backend framework",
+      "best backend framework 2026",
+    ],
+  },
+  {
+    slug: "phoenix-liveview-guide-2026",
+    title:
+      "Phoenix LiveView: The Complete Guide to Real-Time UIs in 2026",
+    description:
+      "What Phoenix LiveView is, how it works, what you can build, and how it compares to a React SPA. A practical guide to real-time, server-rendered UIs in Elixir for 2026.",
+    excerpt:
+      "Phoenix LiveView builds rich, real-time UIs in server-rendered Elixir — no separate JavaScript front-end or API. Here is how the lifecycle works, what to build with it, and when to use it.",
+    date: "2026-06-30",
+    author: "Equantra",
+    readingTime: "10 min read",
+    category: "Engineering",
+    keywords: [
+      "phoenix liveview",
+      "what is liveview",
+      "liveview tutorial",
+      "liveview vs react",
+      "elixir real-time",
+      "server rendered ui",
+      "phoenix framework",
+      "liveview guide 2026",
+    ],
+  },
 ];
 
 export function getPostBySlug(slug: string): BlogPost | undefined {

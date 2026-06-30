@@ -64,6 +64,14 @@ const Footer = () => {
                   AI & Automation
                 </Link>
               </li>
+              <li>
+                <Link
+                  href="/phoenix"
+                  className="text-gray-300 text-sm hover:text-white transition-colors"
+                >
+                  Phoenix Development
+                </Link>
+              </li>
             </ul>
           </div>
 

@@ -33,6 +33,16 @@ registerContent(
   () => import("../content/phoenix-vs-nodejs-2026")
 );
 
+registerContent(
+  "phoenix-vs-django-2026",
+  () => import("../content/phoenix-vs-django-2026")
+);
+
+registerContent(
+  "phoenix-liveview-guide-2026",
+  () => import("../content/phoenix-liveview-guide-2026")
+);
+
 export function generateStaticParams() {
   return getAllSlugs().map((slug) => ({ slug }));
 }

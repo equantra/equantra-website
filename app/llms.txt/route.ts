@@ -19,6 +19,7 @@ export function GET() {
 
 ## Services
 - [Software Development Services](${BASE_URL}/services): Custom software, mobile apps, IT consulting & fractional CTO, software maintenance, and AI automation.
+- [Phoenix Framework Development](${BASE_URL}/phoenix): Real-time, high-concurrency, fault-tolerant application development with Elixir, Phoenix, and LiveView.
 
 ## Pages
 - [About Equantra](${BASE_URL}/about): Who we are, our team model, and how we work.
