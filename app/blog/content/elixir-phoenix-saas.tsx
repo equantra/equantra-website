@@ -531,7 +531,14 @@ export default function ElixirPhoenixSaasContent() {
         >
           explore our custom software development services
         </Link>{" "}
-        to see how we work.
+        to see how we work, or{" "}
+        <Link
+          href="/phoenix"
+          className="text-violet-400 hover:text-violet-300 font-medium"
+        >
+          hire Phoenix Framework developers
+        </Link>{" "}
+        directly.
       </p>
     </>
   );

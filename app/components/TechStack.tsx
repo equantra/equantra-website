@@ -55,14 +55,25 @@ const TechStack: React.FC = () => {
                 {cat.label}
               </h3>
               <div className="flex flex-wrap gap-2">
-                {cat.techs.map((tech) => (
-                  <span
-                    key={tech}
-                    className="px-4 py-2 rounded-full bg-slate-800/60 border border-white/10 text-gray-200 text-sm hover:border-violet-500/30 hover:text-white transition-all duration-200"
-                  >
-                    {tech}
-                  </span>
-                ))}
+                {cat.techs.map((tech) =>
+                  tech === "Elixir / Phoenix" ? (
+                    <Link
+                      key={tech}
+                      href="/phoenix"
+                      title="Hire Phoenix Framework developers"
+                      className="px-4 py-2 rounded-full bg-slate-800/60 border border-white/10 text-gray-200 text-sm hover:border-violet-500/30 hover:text-white transition-all duration-200"
+                    >
+                      {tech}
+                    </Link>
+                  ) : (
+                    <span
+                      key={tech}
+                      className="px-4 py-2 rounded-full bg-slate-800/60 border border-white/10 text-gray-200 text-sm hover:border-violet-500/30 hover:text-white transition-all duration-200"
+                    >
+                      {tech}
+                    </span>
+                  )
+                )}
               </div>
             </div>
           ))}

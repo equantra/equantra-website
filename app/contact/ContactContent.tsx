@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import { trackEvent } from "@/lib/gtag";
 import { Mail, MessageSquare, Clock } from "lucide-react";
 import GlowEffect from "../LandingPage/GlowEffect";
 
@@ -55,10 +56,13 @@ const ContactContent: React.FC = () => {
       }
 
       setStatus("success");
+      trackEvent("generate_lead", { form_name: "contact", service: form.service });
       setForm(emptyForm);
     } catch (err: unknown) {
       setStatus("error");
-      setErrorMsg(err instanceof Error ? err.message : "Something went wrong. Please try again.");
+      const message = err instanceof Error ? err.message : "Something went wrong. Please try again.";
+      trackEvent("form_error", { form_name: "contact", message });
+      setErrorMsg(message);
     }
   };
 

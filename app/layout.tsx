@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Geist } from "next/font/google";
 import "./globals.css";
 import GoogleAnalytics from "./components/GoogleAnalytics";
+import CtaTracker from "./components/CtaTracker";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/next";
 import { cn } from "@/lib/utils";
@@ -15,8 +16,7 @@ const inter = Inter({
 
 const BASE_URL = "https://equantra.in";
 
-// TODO: replace with the exact public profile URLs before deploy.
-// Wrong/placeholder sameAs URLs hurt entity recognition — do not ship these as-is.
+
 const LINKEDIN_URL = "https://www.linkedin.com/company/equantra";
 const GITHUB_URL = "https://github.com/orgs/equantra";
 
@@ -195,6 +195,7 @@ export default function RootLayout({
           Skip to content
         </a>
         <GoogleAnalytics />
+        <CtaTracker />
         <main id="main-content" className="min-h-screen bg-background">{children}</main>
         <SpeedInsights />
         <Analytics />

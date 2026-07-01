@@ -13,8 +13,10 @@ const TechStack = dynamic(() => import("./components/TechStack"));
 const Footer = dynamic(() => import("./LandingPage/Footer"));
 
 export const metadata: Metadata = {
-  title:
-    "Equantra — Custom Software Development Company | End-to-End Solutions",
+  title: {
+    absolute:
+      "Equantra — Custom Software Development Company | End-to-End Solutions",
+  },
   description:
     "Equantra is a custom software development company offering end-to-end solutions: web & mobile development, IT consulting, software maintenance, and AI automation for US businesses.",
   keywords: [

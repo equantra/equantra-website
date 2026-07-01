@@ -20,6 +20,7 @@ interface ServiceDetail {
   title: string;
   description: string;
   items: string[];
+  specialtyLink?: { href: string; label: string };
 }
 
 const serviceDetails: ServiceDetail[] = [
@@ -37,6 +38,10 @@ const serviceDetails: ServiceDetail[] = [
       "Cloud-Native Applications",
       "Database Architecture",
     ],
+    specialtyLink: {
+      href: "/phoenix",
+      label: "Hire Phoenix Framework developers",
+    },
   },
   {
     id: "mobile-development",
@@ -143,6 +148,18 @@ const ServiceBlock: React.FC<{
         </div>
         <p className="text-gray-300 leading-relaxed mb-8">
           {service.description}
+          {service.specialtyLink && (
+            <>
+              {" "}
+              <Link
+                href={service.specialtyLink.href}
+                className="text-violet-400 hover:text-violet-300 font-medium"
+              >
+                {service.specialtyLink.label}
+              </Link>
+              .
+            </>
+          )}
         </p>
         <Link
           href="/contact"
