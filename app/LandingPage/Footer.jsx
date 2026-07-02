@@ -72,6 +72,14 @@ const Footer = () => {
                   Phoenix Development
                 </Link>
               </li>
+              <li>
+                <Link
+                  href="/hire-elixir-developers"
+                  className="text-gray-300 text-sm hover:text-white transition-colors"
+                >
+                  Elixir Development
+                </Link>
+              </li>
             </ul>
           </div>
 

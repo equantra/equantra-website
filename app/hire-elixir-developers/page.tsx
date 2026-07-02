@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Calendar, Clock, ArrowRight, Zap, Users, Radio, RefreshCw, Server, Wrench } from "lucide-react";
+import { Calendar, Clock, ArrowRight, Boxes, Zap, Network, Server, RefreshCw, Radio } from "lucide-react";
 import Navbar from "../Navbar";
 import Footer from "../LandingPage/Footer";
 import GlowEffect from "../LandingPage/GlowEffect";
@@ -9,124 +9,125 @@ import { blogPosts } from "../blog/posts";
 const BASE_URL = "https://equantra.in";
 
 export const metadata: Metadata = {
-  title: "Hire Phoenix Framework Developers — Elixir & LiveView Experts",
+  title: "Hire Elixir Developers — OTP, Concurrency & Backend Experts",
   description:
-    "Hire dedicated Phoenix Framework developers from Equantra. Expert Elixir, Phoenix LiveView & OTP engineers for real-time SaaS, dashboards, and fault-tolerant systems — onboarded in days, at a fraction of US rates.",
+    "Hire dedicated Elixir developers from Equantra. Senior engineers in OTP, concurrency, distributed systems, and Phoenix — for high-throughput backends and fault-tolerant apps. Onboarded in days, at a fraction of US rates.",
   keywords: [
-    "phoenix framework developers",
-    "hire phoenix framework developers",
-    "hire elixir phoenix developers",
-    "phoenix framework development",
+    "hire elixir developers",
+    "elixir developers for hire",
+    "dedicated elixir developers",
     "elixir development company",
-    "phoenix liveview development",
-    "real-time application development",
     "elixir consulting",
+    "hire elixir programmers",
+    "elixir phoenix developers",
+    "hire elixir engineers",
   ],
   alternates: {
-    canonical: `${BASE_URL}/phoenix`,
+    canonical: `${BASE_URL}/hire-elixir-developers`,
   },
   openGraph: {
-    title: "Hire Phoenix Framework Developers — Elixir & LiveView Experts | Equantra",
+    title: "Hire Elixir Developers — OTP, Concurrency & Backend Experts | Equantra",
     description:
-      "Dedicated Phoenix & LiveView development teams for real-time, high-concurrency, fault-tolerant applications. Onboarded in days.",
-    url: `${BASE_URL}/phoenix`,
+      "Dedicated Elixir developers for high-concurrency, fault-tolerant backends and Phoenix apps. Onboarded in days.",
+    url: `${BASE_URL}/hire-elixir-developers`,
     type: "website",
-    images: [{ url: "/og-image.jpg", width: 2738, height: 1664, alt: "Hire Phoenix Framework Developers at Equantra" }],
+    images: [{ url: "/og-image.jpg", width: 2738, height: 1664, alt: "Hire Elixir Developers at Equantra" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Hire Phoenix Framework Developers — Elixir & LiveView Experts | Equantra",
+    title: "Hire Elixir Developers — OTP, Concurrency & Backend Experts | Equantra",
     description:
-      "Dedicated Phoenix & LiveView development teams for real-time, high-concurrency, fault-tolerant applications.",
+      "Dedicated Elixir developers for high-concurrency, fault-tolerant backends and Phoenix apps.",
     images: ["/og-image.jpg"],
   },
 };
 
-const PHOENIX_RE = /phoenix|elixir|liveview|beam/i;
+const ELIXIR_RE = /phoenix|elixir|liveview|beam/i;
 
-function getPhoenixPosts() {
+function getElixirPosts() {
   return blogPosts.filter((post) => {
     const haystack = [post.slug, post.title, post.excerpt, ...post.keywords]
       .join(" ")
       .toLowerCase();
-    return PHOENIX_RE.test(haystack);
+    return ELIXIR_RE.test(haystack);
   });
 }
 
 const capabilities = [
   {
-    icon: Radio,
-    title: "Phoenix LiveView Applications",
+    icon: Boxes,
+    title: "OTP & Supervision Trees",
     description:
-      "Rich, real-time interfaces without a heavy JavaScript framework — live dashboards, collaborative tools, and admin panels rendered server-side over WebSockets.",
+      "GenServers, supervisors, and the actor model that make Elixir systems self-healing — background processing and stateful services without bolt-on queues.",
   },
   {
     icon: Zap,
-    title: "Real-Time Systems & Channels",
+    title: "High-Concurrency Backends",
     description:
-      "Chat, notifications, live tracking, and multiplayer features built on Phoenix Channels and Presence, holding hundreds of thousands of concurrent connections.",
+      "Millions of lightweight processes on the BEAM, using every CPU core efficiently. Handle massive concurrent load on modest hardware.",
+  },
+  {
+    icon: Network,
+    title: "Distributed & Clustered Systems",
+    description:
+      "Multi-node Elixir clusters with built-in distribution, hot code deploys, and fault tolerance for systems that must stay up for years.",
   },
   {
     icon: Server,
-    title: "Scalable APIs & Backends",
+    title: "Scalable APIs",
     description:
-      "High-throughput JSON and GraphQL APIs with Ecto-backed data layers that make full use of every CPU core — fewer servers, lower infrastructure cost.",
+      "High-throughput REST and GraphQL APIs with Ecto data layers and Absinthe — clean, tested, and built to scale.",
   },
   {
     icon: RefreshCw,
     title: "Migrations to Elixir",
     description:
-      "Incremental migrations from Rails, Node.js, Django, or PHP to Phoenix — carving out slow or unreliable services first, with zero-downtime cutovers.",
+      "Incremental migrations from Rails, Node.js, Django, or PHP — moving your slowest, highest-load services to Elixir first, with zero-downtime cutovers.",
   },
   {
-    icon: Users,
-    title: "OTP & Distributed Systems",
+    icon: Radio,
+    title: "Phoenix Web Development",
     description:
-      "Supervision trees, GenServers, and clustered deployments for systems that must self-heal and stay up — background processing without external queues.",
-  },
-  {
-    icon: Wrench,
-    title: "Maintenance & Rescue",
-    description:
-      "Audits, upgrades, and rescue work for existing Elixir codebases — performance tuning, test coverage, and Phoenix/OTP version upgrades.",
+      "Full web products with the Phoenix Framework — LiveView UIs, Channels, and real-time features. Learn more on our Phoenix development page.",
+    href: "/phoenix",
   },
 ];
 
 const faqs = [
   {
-    question: "How much does it cost to hire Phoenix Framework developers?",
+    question: "How much does it cost to hire Elixir developers?",
     answer:
-      "Rates for Phoenix developers typically range from $30 to $100+ per hour depending on seniority and location. Equantra offers dedicated senior Elixir & Phoenix engineers at a fraction of typical US rates, with flexible monthly engagements instead of long lock-in contracts.",
+      "Elixir developer rates typically range from $30 to $100+ per hour depending on seniority and location. Equantra offers dedicated senior Elixir engineers at a fraction of typical US rates, with flexible monthly engagements instead of long lock-in contracts.",
   },
   {
-    question: "How quickly can your Phoenix developers start?",
+    question: "How quickly can your Elixir developers start?",
     answer:
-      "After a free consultation to scope your project, we can usually match and onboard a dedicated Phoenix developer or team within a few business days — not weeks.",
+      "After a free consultation to scope your project, we can usually match and onboard a dedicated Elixir developer or team within a few business days — not weeks.",
   },
   {
-    question: "Do I need React or another JavaScript framework with Phoenix?",
+    question: "Why hire Elixir developers instead of Node.js or Go?",
     answer:
-      "Often not. Phoenix LiveView delivers rich, real-time interactivity rendered on the server, which removes the need for a separate frontend framework for most dashboards, SaaS tools, and internal apps. Where a heavy client is justified, our teams also integrate Phoenix APIs with React or Vue frontends.",
+      "Elixir runs on the BEAM, a runtime purpose-built for concurrency and fault tolerance. It handles millions of lightweight processes, recovers from failures automatically via supervisors, and scales across cores and nodes without the callback complexity of Node.js or the manual concurrency management of Go. That usually means fewer servers, less glue infrastructure, and fewer 3am incidents.",
   },
   {
-    question: "Why choose Phoenix over Node.js or Rails for a new product?",
+    question: "Is Elixir talent hard to find?",
     answer:
-      "Phoenix runs on the BEAM, the same runtime behind telecom systems with years of uninterrupted uptime. It handles massive concurrency on modest hardware, has first-class WebSocket support, and recovers from failures automatically via supervisors. That usually means fewer servers, less glue infrastructure, and fewer 3am incidents than an equivalent Node.js or Rails stack.",
+      "Good Elixir engineers are scarcer than Node or Python developers, which is exactly why teams struggle to hire them directly. Equantra maintains a bench of vetted senior Elixir developers, so you skip the months-long search and get productive engineers in days.",
   },
   {
-    question: "Can you migrate our existing Rails or Node.js application to Phoenix?",
+    question: "Do you build with the Phoenix Framework?",
     answer:
-      "Yes. We run incremental migrations: we identify the highest-pain services (slow endpoints, WebSocket layers, background jobs), move those to Phoenix first, and keep the rest of your stack running until each piece is proven in production.",
+      "Yes. Phoenix is the standard web framework for Elixir, and it's a core specialty of ours — LiveView interfaces, Phoenix Channels, and REST/GraphQL APIs. Our Elixir developers ship full products with it. See our dedicated Phoenix Framework development page for details.",
+  },
+  {
+    question: "Can you migrate our existing app to Elixir?",
+    answer:
+      "Yes. We run incremental migrations: we identify the highest-pain services (slow endpoints, real-time layers, background jobs), move those to Elixir first, and keep the rest of your stack running until each piece is proven in production.",
   },
   {
     question: "Do you provide ongoing maintenance after launch?",
     answer:
-      "Yes. We offer ongoing maintenance and support engagements covering monitoring, dependency and Phoenix/OTP upgrades, performance tuning, and feature development after the initial build.",
-  },
-  {
-    question: "What engagement models do you offer?",
-    answer:
-      "Three models: a dedicated development team (full ownership of delivery), staff augmentation (our Phoenix engineers embedded in your team), and fixed-scope projects. All start with a free consultation and can scale up or down monthly.",
+      "Yes. We offer ongoing maintenance and support engagements covering monitoring, dependency and OTP upgrades, performance tuning, and feature development after the initial build.",
   },
   {
     question: "Do your developers overlap with US time zones?",
@@ -138,17 +139,17 @@ const faqs = [
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Service",
-  name: "Phoenix Framework Development",
-  serviceType: "Elixir & Phoenix Framework Development",
+  name: "Elixir Development",
+  serviceType: "Elixir Software Development & Consulting",
   provider: {
     "@type": "Organization",
     name: "Equantra",
     url: BASE_URL,
   },
   areaServed: { "@type": "Country", name: "United States" },
-  url: `${BASE_URL}/phoenix`,
+  url: `${BASE_URL}/hire-elixir-developers`,
   description:
-    "Hire dedicated Phoenix Framework developers for real-time, high-concurrency, fault-tolerant application development with Elixir, Phoenix LiveView, and OTP.",
+    "Hire dedicated Elixir developers for high-concurrency, fault-tolerant backends, distributed systems, OTP, and Phoenix Framework applications.",
 };
 
 const faqJsonLd = {
@@ -172,14 +173,14 @@ const breadcrumbJsonLd = {
     {
       "@type": "ListItem",
       position: 2,
-      name: "Hire Phoenix Framework Developers",
-      item: `${BASE_URL}/phoenix`,
+      name: "Hire Elixir Developers",
+      item: `${BASE_URL}/hire-elixir-developers`,
     },
   ],
 };
 
-export default function PhoenixHubPage() {
-  const phoenixPosts = getPhoenixPosts();
+export default function HireElixirDevelopersPage() {
+  const elixirPosts = getElixirPosts();
 
   return (
     <div className="flex flex-col min-h-screen">
@@ -201,16 +202,16 @@ export default function PhoenixHubPage() {
         <GlowEffect className="z-0" size={700} top="35%" />
         <div className="max-w-3xl mx-auto text-center relative z-10">
           <p className="text-violet-400 text-sm font-semibold tracking-wider uppercase mb-3">
-            Elixir &amp; Phoenix
+            Elixir Engineering
           </p>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
-            Hire Phoenix Framework Developers
+            Hire Elixir Developers
           </h1>
           <p className="text-gray-300 text-lg max-w-2xl mx-auto">
-            Get dedicated Phoenix Framework developers who build real-time,
-            high-concurrency, fault-tolerant applications with Elixir. From
-            LiveView dashboards to systems holding hundreds of thousands of live
-            connections — onboarded in days, at a fraction of US rates.
+            Get dedicated Elixir developers who build high-concurrency,
+            fault-tolerant backends on the BEAM. From OTP and distributed
+            systems to Phoenix web apps — senior engineers, onboarded in days,
+            at a fraction of US rates.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
             <Link
@@ -226,49 +227,79 @@ export default function PhoenixHubPage() {
       <section className="px-6 pb-16">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-2xl md:text-3xl font-bold text-white mb-3 text-center">
-            What Our Phoenix Developers Build
+            What Our Elixir Developers Build
           </h2>
           <p className="text-gray-400 text-center max-w-2xl mx-auto mb-10">
-            Senior Elixir engineers covering the full Phoenix stack — LiveView,
-            Channels, Ecto, OTP, and clustered deployments.
+            Senior engineers across the Elixir ecosystem — OTP, Ecto, clustered
+            deployments, and the Phoenix Framework.
           </p>
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {capabilities.map((cap) => (
-              <div
-                key={cap.title}
-                className="rounded-2xl bg-slate-800/60 border border-white/10 p-6"
-              >
-                <cap.icon className="w-7 h-7 text-violet-400 mb-4" />
-                <p className="text-white font-semibold mb-2">{cap.title}</p>
-                <p className="text-gray-400 text-sm leading-relaxed">
-                  {cap.description}
-                </p>
-              </div>
-            ))}
+            {capabilities.map((cap) => {
+              const inner = (
+                <>
+                  <cap.icon className="w-7 h-7 text-violet-400 mb-4" />
+                  <p className="text-white font-semibold mb-2">{cap.title}</p>
+                  <p className="text-gray-400 text-sm leading-relaxed">
+                    {cap.description}
+                  </p>
+                </>
+              );
+              return cap.href ? (
+                <Link
+                  key={cap.title}
+                  href={cap.href}
+                  className="rounded-2xl bg-slate-800/60 border border-white/10 p-6 hover:border-violet-500/30 transition-colors"
+                >
+                  {inner}
+                </Link>
+              ) : (
+                <div
+                  key={cap.title}
+                  className="rounded-2xl bg-slate-800/60 border border-white/10 p-6"
+                >
+                  {inner}
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
 
       <section className="px-6 pb-12">
         <div className="max-w-3xl mx-auto prose prose-lg prose-invert prose-headings:text-white prose-a:text-violet-400 hover:prose-a:text-violet-300 prose-strong:text-white">
-          <h2>Why We Build With Phoenix</h2>
+          <h2>Why Hire Elixir Developers</h2>
           <p>
-            Phoenix runs Elixir on the BEAM&mdash;the runtime that powers systems
-            requiring years of uptime and millions of concurrent connections. For
-            modern products that depend on real-time interactivity and reliability,
-            it is an unfair advantage: native WebSockets via Phoenix Channels and
-            LiveView, supervisor-based fault tolerance, and efficient use of every
-            CPU core. The result is fewer servers, lower cost, and self-healing
-            systems.
+            Elixir runs on the BEAM&mdash;the runtime built for
+            telecommunications systems that need years of uptime and millions of
+            concurrent connections. It is a functional, immutable language where
+            work runs as millions of cheap, isolated processes. When one crashes,
+            supervisors restart it&mdash;the &ldquo;let it crash&rdquo; philosophy
+            that produces genuinely self-healing systems.
           </p>
           <p>
-            Whether you are launching a new SaaS product, building a live dashboard
-            or collaborative tool, or migrating a slow service to Elixir for
-            better concurrency, our dedicated team can take you from architecture
-            to production. Phoenix is built on Elixir, so if your project is
-            backend- or concurrency-heavy you can also{" "}
-            <Link href="/hire-elixir-developers">hire Elixir developers</Link>{" "}
-            for OTP, distributed systems, and API work.
+            For teams, that translates to fewer servers, lower infrastructure
+            cost, and far fewer late-night incidents than an equivalent Node.js,
+            Python, or Ruby stack. Whether you are building a high-throughput API,
+            a real-time platform, or migrating a service that buckles under load,
+            dedicated Elixir developers can take you from architecture to
+            production.
+          </p>
+
+          <h2>Elixir + Phoenix</h2>
+          <p>
+            Phoenix is <em>the</em> web framework for Elixir, and it is a core
+            specialty of ours. When your Elixir project needs a web layer&mdash;a
+            SaaS product, a live dashboard, real-time features, or REST/GraphQL
+            APIs&mdash;our developers build it with Phoenix: LiveView for rich
+            server-rendered interfaces without a heavy JavaScript framework,
+            Phoenix Channels for WebSockets, and Ecto for the data layer. Elixir
+            gives you the concurrency and reliability; Phoenix gives you a
+            productive, batteries-included way to ship the product on top of it.
+          </p>
+          <p>
+            If your project is primarily web and real-time focused, you can{" "}
+            <Link href="/phoenix">hire dedicated Phoenix Framework developers</Link>{" "}
+            for a deeper look at how we build with LiveView and Channels.
           </p>
 
           <h2>How Hiring Works</h2>
@@ -278,26 +309,26 @@ export default function PhoenixHubPage() {
           </p>
           <p>
             <strong>2. Team match.</strong> We propose the engineers and
-            engagement model that fit: a dedicated Phoenix team that owns delivery
+            engagement model that fit: a dedicated Elixir team that owns delivery
             end to end, staff augmentation embedded in your existing team, or a
             fixed-scope project.
           </p>
           <p>
-            <strong>3. Onboard in days.</strong> Your Phoenix developers start
+            <strong>3. Onboard in days.</strong> Your Elixir developers start
             within a few business days, with US time-zone overlap for standups,
             pairing, and incident response. Engagements scale up or down monthly.
           </p>
         </div>
       </section>
 
-      {phoenixPosts.length > 0 && (
+      {elixirPosts.length > 0 && (
         <section className="px-6 pb-12">
           <div className="max-w-5xl mx-auto">
             <h2 className="text-2xl md:text-3xl font-bold text-white mb-8 text-center">
-              Phoenix &amp; Elixir Guides
+              Elixir &amp; Phoenix Guides
             </h2>
             <div className="grid gap-8 md:grid-cols-2">
-              {phoenixPosts.map((post) => (
+              {elixirPosts.map((post) => (
                 <Link
                   key={post.slug}
                   href={`/blog/${post.slug}`}
@@ -373,11 +404,11 @@ export default function PhoenixHubPage() {
         <div className="max-w-3xl mx-auto">
           <div className="relative bg-gradient-to-r from-violet-600/10 via-slate-800 to-violet-600/10 border border-white/10 rounded-2xl p-10 md:p-14 text-center">
             <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
-              Build Your Phoenix Application With Us
+              Build With Elixir &amp; Our Team
             </h2>
             <p className="text-gray-300 mb-8 max-w-lg mx-auto">
-              Get a dedicated Elixir &amp; Phoenix engineering team that ships
-              fast and scales reliably&mdash;at a fraction of the cost.
+              Get a dedicated Elixir engineering team that ships fast and scales
+              reliably&mdash;at a fraction of the cost.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -387,10 +418,10 @@ export default function PhoenixHubPage() {
                 Get a Free Consultation
               </Link>
               <Link
-                href="/services#software-development"
+                href="/phoenix"
                 className="inline-block px-8 py-3.5 rounded-full border border-gray-500 text-white font-medium hover:bg-white/5 transition-colors"
               >
-                View Our Services
+                Explore Phoenix Development
               </Link>
             </div>
           </div>

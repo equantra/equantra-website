@@ -538,6 +538,13 @@ export default function ElixirPhoenixSaasContent() {
         >
           hire Phoenix Framework developers
         </Link>{" "}
+        or{" "}
+        <Link
+          href="/hire-elixir-developers"
+          className="text-violet-400 hover:text-violet-300 font-medium"
+        >
+          hire Elixir developers
+        </Link>{" "}
         directly.
       </p>
     </>
