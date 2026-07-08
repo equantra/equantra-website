@@ -9,6 +9,7 @@ export interface BlogPost {
   category: string;
   keywords: string[];
   ogImage?: string;
+  lastModified?: string;
 }
 
 export const blogPosts: BlogPost[] = [
@@ -115,22 +116,27 @@ export const blogPosts: BlogPost[] = [
     title:
       "Phoenix LiveView: The Complete Guide to Real-Time UIs in 2026",
     description:
-      "What Phoenix LiveView is, how it works, what you can build, and how it compares to a React SPA. A practical guide to real-time, server-rendered UIs in Elixir for 2026.",
+      "Phoenix LiveView vs React, a full tutorial with code, plus testing, deployment, and scaling. A practical guide to real-time, server-rendered UIs in Elixir for 2026.",
     excerpt:
-      "Phoenix LiveView builds rich, real-time UIs in server-rendered Elixir — no separate JavaScript front-end or API. Here is how the lifecycle works, what to build with it, and when to use it.",
+      "Phoenix LiveView vs React, explained: build rich, real-time UIs in server-rendered Elixir with no separate JavaScript front-end or API. Full tutorial with code, testing, and deployment.",
     date: "2026-06-30",
+    lastModified: "2026-07-08",
     author: "Equantra",
-    readingTime: "10 min read",
+    readingTime: "16 min read",
     category: "Engineering",
     keywords: [
+      "phoenix liveview vs react",
+      "phoenix liveview tutorial",
+      "phoenix liveview example",
+      "how does phoenix liveview work",
+      "phoenix liveview deployment",
+      "phoenix liveview forms",
+      "phoenix liveview testing",
       "phoenix liveview",
       "what is liveview",
-      "liveview tutorial",
-      "liveview vs react",
-      "elixir real-time",
-      "server rendered ui",
-      "phoenix framework",
       "liveview guide 2026",
+      "elixir real-time",
+      "phoenix framework",
     ],
   },
 ];

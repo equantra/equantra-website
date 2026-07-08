@@ -6,7 +6,7 @@ const BASE_URL = "https://equantra.in";
 export default function sitemap(): MetadataRoute.Sitemap {
   const blogEntries: MetadataRoute.Sitemap = blogPosts.map((post) => ({
     url: `${BASE_URL}/blog/${post.slug}`,
-    lastModified: new Date(post.date),
+    lastModified: new Date(post.lastModified ?? post.date),
     changeFrequency: "monthly",
     priority: 0.7,
   }));

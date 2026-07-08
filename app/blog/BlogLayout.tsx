@@ -38,7 +38,7 @@ export function generateArticleJsonLd(post: BlogPost) {
       },
     },
     datePublished: post.date,
-    dateModified: post.date,
+    dateModified: post.lastModified ?? post.date,
     mainEntityOfPage: {
       "@type": "WebPage",
       "@id": `${BASE_URL}/blog/${post.slug}`,

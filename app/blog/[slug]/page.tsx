@@ -71,6 +71,7 @@ export async function generateMetadata({
       url: `${BASE_URL}/blog/${post.slug}`,
       type: "article",
       publishedTime: post.date,
+      modifiedTime: post.lastModified ?? post.date,
       authors: [post.author],
       images: [{ url: ogImage, alt: post.title }],
     },
