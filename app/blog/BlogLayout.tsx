@@ -12,9 +12,26 @@ interface BlogLayoutProps {
 }
 
 function getRelatedPosts(currentSlug: string): BlogPost[] {
+  const current = blogPosts.find((p) => p.slug === currentSlug);
+  if (!current) return blogPosts.slice(0, 3);
+
+  const currentKeywords = new Set(
+    current.keywords.map((k) => k.toLowerCase())
+  );
+
   return blogPosts
     .filter((p) => p.slug !== currentSlug)
-    .slice(0, 3);
+    .map((p) => {
+      const sharedKeywords = p.keywords.filter((k) =>
+        currentKeywords.has(k.toLowerCase())
+      ).length;
+      const categoryBonus = p.category === current.category ? 1 : 0;
+      return { post: p, score: sharedKeywords * 2 + categoryBonus };
+    })
+    // stable sort by score desc; equal scores keep array order (fills to 3)
+    .sort((a, b) => b.score - a.score)
+    .slice(0, 3)
+    .map((entry) => entry.post);
 }
 
 export function generateArticleJsonLd(post: BlogPost) {

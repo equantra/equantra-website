@@ -60,7 +60,9 @@ export default function BlogPage() {
       <section className="px-6 pb-24 flex-1">
         <div className="max-w-5xl mx-auto">
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-2">
-            {blogPosts.map((post) => (
+            {[...blogPosts]
+              .sort((a, b) => b.date.localeCompare(a.date))
+              .map((post) => (
               <Link
                 key={post.slug}
                 href={`/blog/${post.slug}`}

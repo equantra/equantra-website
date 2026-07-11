@@ -139,6 +139,76 @@ export const blogPosts: BlogPost[] = [
       "phoenix framework",
     ],
   },
+  {
+    slug: "elixir-vs-go-2026",
+    title:
+      "Elixir vs Go in 2026: Concurrency, Real-Time, and Fault Tolerance Compared",
+    description:
+      "Elixir vs Go for backend development in 2026: concurrency models, error handling, real-time, performance, ecosystem, and hiring. A practical guide to choosing between them.",
+    excerpt:
+      "Elixir vs Go, compared head to head: goroutines vs the BEAM, error handling, real-time workloads, performance, and hiring. Here is how to choose the right one for your backend.",
+    date: "2026-07-11",
+    author: "Equantra",
+    readingTime: "14 min read",
+    category: "Engineering",
+    keywords: [
+      "elixir vs go",
+      "elixir vs golang",
+      "go vs elixir concurrency",
+      "beam vs goroutines",
+      "elixir real-time",
+      "backend concurrency 2026",
+      "phoenix framework",
+      "fault tolerance",
+    ],
+  },
+  {
+    slug: "what-is-the-beam-and-otp",
+    title:
+      "What Is the BEAM and OTP? Elixir's Concurrency Model Explained",
+    description:
+      "A clear explanation of the BEAM VM and OTP: lightweight processes, schedulers, GenServer, supervisors, and 'let it crash'. The foundation of Elixir and Phoenix concurrency.",
+    excerpt:
+      "The BEAM and OTP are why Elixir handles massive concurrency and self-heals from failure. Here is how processes, schedulers, GenServer, and supervision trees actually work.",
+    date: "2026-07-11",
+    author: "Equantra",
+    readingTime: "13 min read",
+    category: "Engineering",
+    keywords: [
+      "what is the beam",
+      "otp explained",
+      "genserver",
+      "what is genserver",
+      "beam vm",
+      "elixir concurrency",
+      "supervisor tree",
+      "let it crash",
+      "phoenix framework",
+    ],
+  },
+  {
+    slug: "is-elixir-worth-learning-2026",
+    title:
+      "Is Elixir Worth Learning in 2026? Jobs, Demand, and Real-World Use",
+    description:
+      "Is Elixir worth learning in 2026? An honest look at job demand, salaries, what Elixir is good at, the learning path, and who should invest in it.",
+    excerpt:
+      "Is Elixir worth learning in 2026? A practical, honest take on demand, jobs, salaries, what it is great at, and how to learn it — plus who should and should not bother.",
+    date: "2026-07-11",
+    author: "Equantra",
+    readingTime: "12 min read",
+    category: "Engineering",
+    keywords: [
+      "is elixir worth learning",
+      "learn elixir 2026",
+      "elixir jobs",
+      "elixir salary",
+      "why learn elixir",
+      "elixir demand",
+      "phoenix framework",
+      "elixir real-time",
+    ],
+  },
 ];
 
 export function getPostBySlug(slug: string): BlogPost | undefined {
