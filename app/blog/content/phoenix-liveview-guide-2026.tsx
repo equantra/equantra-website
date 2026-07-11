@@ -342,9 +342,15 @@ end`}</code>
         </li>
       </ul>
       <p>
-        The concurrency and fault-tolerance of the BEAM are exactly why LiveView
-        scales the way it does&mdash;a crashed connection is isolated and
-        supervised, not a page-wide failure.
+        The concurrency and fault-tolerance of the{" "}
+        <Link
+          href="/blog/what-is-the-beam-and-otp"
+          className="text-violet-400 hover:text-violet-300 font-medium"
+        >
+          BEAM and OTP
+        </Link>{" "}
+        are exactly why LiveView scales the way it does&mdash;a crashed
+        connection is isolated and supervised, not a page-wide failure.
       </p>
 
       <h2>When Not to Use LiveView</h2>

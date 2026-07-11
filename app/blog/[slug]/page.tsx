@@ -43,6 +43,21 @@ registerContent(
   () => import("../content/phoenix-liveview-guide-2026")
 );
 
+registerContent(
+  "elixir-vs-go-2026",
+  () => import("../content/elixir-vs-go-2026")
+);
+
+registerContent(
+  "what-is-the-beam-and-otp",
+  () => import("../content/what-is-the-beam-and-otp")
+);
+
+registerContent(
+  "is-elixir-worth-learning-2026",
+  () => import("../content/is-elixir-worth-learning-2026")
+);
+
 export function generateStaticParams() {
   return getAllSlugs().map((slug) => ({ slug }));
 }

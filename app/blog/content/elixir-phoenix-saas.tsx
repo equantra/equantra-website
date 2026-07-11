@@ -78,7 +78,15 @@ export default function ElixirPhoenixSaasContent() {
       <p>
         Those constraints sound almost identical to what a modern SaaS
         application needs. That is not a coincidence&mdash;it is the reason
-        Phoenix excels where other frameworks struggle.
+        Phoenix excels where other frameworks struggle. For a deeper look at how
+        the runtime works, see our explainer on{" "}
+        <Link
+          href="/blog/what-is-the-beam-and-otp"
+          className="text-violet-400 hover:text-violet-300 font-medium"
+        >
+          the BEAM and OTP
+        </Link>
+        .
       </p>
       <p>Here is what the BEAM gives you for free:</p>
       <ul>
