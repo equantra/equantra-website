@@ -58,6 +58,16 @@ registerContent(
   () => import("../content/is-elixir-worth-learning-2026")
 );
 
+registerContent(
+  "migrating-from-rails-to-phoenix-2026",
+  () => import("../content/migrating-from-rails-to-phoenix-2026")
+);
+
+registerContent(
+  "when-rails-hits-scaling-limits",
+  () => import("../content/when-rails-hits-scaling-limits")
+);
+
 export function generateStaticParams() {
   return getAllSlugs().map((slug) => ({ slug }));
 }
