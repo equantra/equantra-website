@@ -14,6 +14,56 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "when-rails-hits-scaling-limits",
+    title:
+      "When Ruby on Rails Hits Its Scaling Limits (and What to Do About It)",
+    description:
+      "Where Ruby on Rails actually hits scaling walls—the GIL, WebSocket density, background-job throughput, tail latency—how far to push Rails first, and when Elixir Phoenix is the right escape hatch.",
+    excerpt:
+      "Rails scales by adding servers—until concurrency and real-time load bend the cost curve the wrong way. Here is where the limits are, how far to push Rails first, and when Phoenix is the answer.",
+    date: "2026-07-18",
+    author: "Equantra",
+    readingTime: "10 min read",
+    category: "Engineering",
+    keywords: [
+      "rails scaling limits",
+      "ruby on rails performance",
+      "rails performance at scale",
+      "rails concurrency limits",
+      "ruby GIL scaling",
+      "rails websocket scaling",
+      "actioncable scaling",
+      "sidekiq throughput",
+      "rails vs phoenix scaling",
+      "scale ruby on rails",
+    ],
+  },
+  {
+    slug: "migrating-from-rails-to-phoenix-2026",
+    title:
+      "Migrating From Rails to Phoenix in 2026: An Incremental, No-Rewrite Strategy",
+    description:
+      "How to migrate a production Ruby on Rails app to Elixir Phoenix without a risky big-bang rewrite. The Strangler Fig pattern, shared-database Ecto, Rails-to-Phoenix mapping, and common pitfalls.",
+    excerpt:
+      "Hit the GIL ceiling, WebSocket pain, or a growing infra bill on Rails? Here is a pragmatic, incremental path to Phoenix that ships to production at every step—no big-bang rewrite required.",
+    date: "2026-07-18",
+    author: "Equantra",
+    readingTime: "12 min read",
+    category: "Engineering",
+    keywords: [
+      "migrating from rails to phoenix",
+      "rails to phoenix migration",
+      "ruby on rails to elixir",
+      "rails to elixir migration",
+      "strangler fig pattern",
+      "phoenix ecto shared database",
+      "sidekiq to oban",
+      "actioncable to phoenix channels",
+      "rails scaling limits",
+      "elixir phoenix migration strategy",
+    ],
+  },
+  {
     slug: "why-elixir-phoenix-is-the-best-framework-for-saas",
     title:
       "Why Elixir Phoenix Is the Best Framework for Building SaaS Applications",
